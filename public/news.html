@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=1024"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>БелИнтерТранс</title>
+  <meta name="keywords" content="БелИнтерТранс" />
+  <meta name="description" content="БелИнтерТранс" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no" />  
+
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+  integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />  
+
+  <!-- <link rel=" shortcut icon" href="./images/favicon.png" type="image/x-icon"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- header start -->
+    <header class="header">      
+        <div class="header-top">
+          <div class="container">
+            <div class="header-top-wrapper">
+              <div class="header-feedback">
+                <a href="tel:+375296253030" class="header-top-item">
+                  <svg class="header-top-item-icon">
+                    <use xlink:href="svg/svg/symbols.svg#icon-phone" />
+                  </svg>
+                  <span class="header-top-item-text">
+                    +375 29 625 30 30
+                  </span>
+                </a>
+                <a href="#" class="header-top-item">
+                  <svg class="header-top-item-icon">
+                    <use xlink:href="svg/svg/symbols.svg#icon-mail" />
+                  </svg>
+                  <span class="header-top-item-text">
+                    Эл. обращение
+                  </span>
+                </a>
+              </div>
+              <div class="header-options">
+                <a href="#" class="header-top-item">
+                  <svg class="header-top-item-icon">
+                    <use xlink:href="svg/svg/symbols.svg#icon-eye" />
+                  </svg>
+                  <span class="header-top-item-text">
+                    Версия для слабовидящих
+                  </span>
+                </a>
+                <div class="header-top-item">
+                  <select class="ui-select">
+                    <option value="ru">
+                      Рус
+                    </option>
+                    <option value="by">
+                      Бел
+                    </option>
+                    <option value="en">
+                      En
+                    </option>
+                  </select>
+                </div>             
+                
+                <div class="header-top-item">
+                  <svg class="header-search">
+                    <use xlink:href="svg/svg/symbols.svg#icon-search" />
+                  </svg>
+                </div>            
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="header-bottom-wrapper">
+              <button class="header-burger">
+                <span></span>
+              </button>
+              <div class="header-nav">
+                <ul>
+                  <li>
+                    <a href="#">
+                      О нас
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Услуги
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Структура
+                    </a>
+                  </li>
+                  <li>                    
+                    Информация                    
+                    <ul>
+                      <li>
+                        <a href="#">
+                          Внутриорганизационная информация
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Справочная информация
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Новости
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="header-logo">
+                <img src="./images/logo.svg" alt="logo" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+           
+    </header>
+    <!-- header end -->
+
+    <!-- main screen start -->
+    <main class="main">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li>            
+            Новости            
+          </li>
+        </ul>
+        <div class="news-head">
+          <div class="row">
+            <div class="col-md-6">
+              <h1 class="h1 page-title">
+                Новости
+              </h1>
+            </div>
+            <div class="col-md-6">
+              <div class="subscribe">
+                <div class="subscribe-text">
+                  Самые актуальные и важные новости нашей компании<br> 
+                  в наших социальных сетях, подпишись, чтобы быть в курсе!
+                </div>
+                <div class="subscribe-links">
+                  <a href="#" class="ui-btn ui-btn-transparent">
+                    telegram
+                  </a>
+                  <a href="#" class="ui-btn ui-btn-transparent">
+                    VIBER
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+        <div class="news">
+          <div class="row">
+            <div class="col-md-6">
+              <a href="#" class="news-card news-card__simple">
+                <div class="news-card-head">
+                  <div class="news-card-date">
+                    3 октября 2023 г.
+                  </div>
+                  <svg class="news-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>                  
+                </div>
+                <div class="news-card-title">
+                  Государственное предприятие «БТЛЦ» приняло участие в конференции «РЫНОК ЩЕБНЯ РОССИИ 2023»
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="news-card news-card__picture">
+                <div class="news-card-image">
+                  <img src="./images/examples/thumb.jpeg" alt="news-image">
+                  <div class="news-card-icon-wrapper">
+                    <svg class="news-card-icon">
+                      <use xlink:href="svg/svg/symbols.svg#shape-short" />
+                    </svg>
+                  </div>                  
+                </div>
+                <div class="news-card-text">
+                  <div class="news-card-date">
+                    12 июня 2023 г.
+                  </div>
+                  <div class="news-card-title">
+                    Фестиваль песни и спорта среди молодежи предприятий и организаций Октябрьского района г. Минска
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="news-card news-card__colored">
+                <div class="news-card-head">
+                  <div class="news-card-date">
+                    12 июня 2023 г.
+                  </div>
+                  <svg class="news-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="news-card-title">
+                  Государственное предприятие «БТЛЦ» приняло участие в международной выставке «Весна в Гомеле»
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="news-card news-card__simple">
+                <div class="news-card-head">
+                  <div class="news-card-date">
+                    3 октября 2023 г.
+                  </div>
+                  <svg class="news-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="news-card-title">
+                  Круглый стол по продвижению транспортно-логистического потенциала железнодорожного транспорта
+                  при перевозке грузов в сообщении между Республикой Беларусь и Республикой Казахстан
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="news-card news-card__simple">
+                <div class="news-card-head">
+                  <div class="news-card-date">
+                    3 октября 2023 г.
+                  </div>
+                  <svg class="news-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="news-card-title">
+                  Рабочая встреча руководства государственного предприятия «БТЛЦ» с делегацией АООТ «Демирёллары» Туркменистана
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="news-card news-card__picture">
+                <div class="news-card-image">
+                  <img src="./images/examples/thumb-2.jpeg" alt="news-image">
+                  <div class="news-card-icon-wrapper">
+                    <svg class="news-card-icon">
+                      <use xlink:href="svg/svg/symbols.svg#shape-short" />
+                    </svg>
+                  </div>                  
+                </div>
+                <div class="news-card-text">
+                  <div class="news-card-date">
+                    12 июня 2023 г.
+                  </div>
+                  <div class="news-card-title">
+                    Фестиваль песни и спорта среди молодежи предприятий и организаций Октябрьского района г. Минска
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="pagination">
+          <a href="avascript:void(0)" class="pagination-nav pagination-nav-prev">
+            <svg class="pagination-nav-icon pagination-nav-icon__prev">
+              <use xlink:href="svg/svg/symbols.svg#icon-chevron-right" />
+            </svg>
+          </a>
+          <ul class="pagination-list">
+            <li class="pagination-item">
+              <a class="pagination-item-link active" href="javascript:void(0)">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-item-link" href="javascript:void(0)">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-item-link" href="javascript:void(0)">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-item-link" href="javascript:void(0)">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-item-link" href="javascript:void(0)">5</a>
+            </li>
+            <li class="pagination-item pagination-item__dots">
+              ...
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-item-link" href="javascript:void(0)">54</a>
+            </li>                  
+          </ul>
+          <a href="avascript:void(0)" class="pagination-nav pagination-nav-next">
+            <svg class="pagination-nav-icon">
+              <use xlink:href="svg/svg/symbols.svg#icon-chevron-right" />
+            </svg>
+          </a>
+        </nav> 
+      </div>
+    </main>
+    <!-- main screen end -->
+
+
+    <!-- footer start   -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#" class="footer-logo">
+            <img src="./images/logo.svg" alt="logo" loading="lazy">
+          </a>
+          <div class="footer-contacts">
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                по общим вопросам
+              </div>
+              <a href="mailto:btlc@belint.by" class="footer-contacts-link">
+                btlc@belint.by
+              </a>
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                перевозки в вагонах
+              </div>
+              <a href="mailto:info@belint.by" class="footer-contacts-link">
+                info@belint.by
+              </a>  
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                перевозки в контейнерах
+              </div>
+              <a href="mailto:container@belint.by" class="footer-contacts-link">
+                container@belint.by
+              </a>  
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                головной офис
+              </div>
+              <a href="tel:+375296253030" class="footer-contacts-link">
+                +375 29 625 30 30
+              </a>  
+            </div>
+          </div>
+          <div class="footer-socials">
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#telegram" />
+              </svg>
+            </div>
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#whatsapp" />
+              </svg>
+            </div>
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#viber" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <nav class="footer-nav">
+            <ul>
+              <li>
+                <a href="#">
+                  О нас
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Структура
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Инфоцентр
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Справочник
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-middle-links">
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/october-district.png" alt="october-district">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/RB.png" alt="Belarus">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/MT.png" alt="MT">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/Circle.png" alt="circle">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/BC.png" alt="БЧ">
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-copy">
+            © 2009-2023 Государственное предприятие "БТЛЦ"
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#" class="footer-bottom-link">
+              Политика обработки персональных данных
+            </a>
+            <a href="#" class="footer-bottom-link">
+              Файлы cookie
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>
