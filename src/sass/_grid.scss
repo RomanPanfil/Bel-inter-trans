@@ -250,6 +250,41 @@
    padding-right: 10px;
   }
 }
+
+.row-max {
+  display: -webkit-box;
+	display: -webkit-flex;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	display: -ms-flex;
+	display: -ms-inline-flexbox;
+	display: -ms-flexbox;	
+	display: flex;
+  -webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  @media (max-width: 1366px) {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  [class*="col-"] {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (max-width: 1366px) {
+     padding-left: 10px;
+     padding-right: 10px;
+    }
+  }
+}
 // .inner, .container {
 //   max-width: $inner+px;
 // }

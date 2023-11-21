@@ -824,7 +824,7 @@ img {
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 .pagination-nav {
   position: relative;
@@ -1169,8 +1169,8 @@ img {
 }
 
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .inner:before,
@@ -1200,8 +1200,8 @@ img {
           flex-flow: row wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .row-no-margin {
   margin-left: 0;
@@ -1240,11 +1240,46 @@ img {
 
 [class*=col-] {
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (max-width: 1366px) {
+  [class*=col-] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.row-max {
+  display: -webkit-box;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  display: -ms-flex;
+  display: -ms-inline-flexbox;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (max-width: 1366px) {
+  .row-max {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
+.row-max [class*=col-] {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (max-width: 1366px) {
-  [class*=col-] {
+  .row-max [class*=col-] {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -2530,12 +2565,12 @@ img {
   margin-bottom: 40px;
 }
 .news-head {
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 .news-card {
   display: block;
   margin-bottom: 30px;
-  height: 410px;
+  aspect-ratio: 2.1;
   overflow: hidden;
 }
 .news-card-head {
@@ -2952,9 +2987,6 @@ img {
   letter-spacing: 0.01875rem;
 }
 
-.contacts {
-  margin-bottom: 24px;
-}
 .contacts-card {
   display: block;
   padding: 40px 40px 20px 40px;
@@ -3053,6 +3085,9 @@ img {
   margin-bottom: 20px;
 }
 
+.services-list {
+  margin-bottom: 20px;
+}
 .services-order {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3182,8 +3217,8 @@ img {
   -webkit-transition: border-color 0.3s;
   -o-transition: border-color 0.3s;
   transition: border-color 0.3s;
-  margin-bottom: 30px;
-  height: calc(100% - 30px);
+  margin-bottom: 20px;
+  height: calc(100% - 20px);
   aspect-ratio: 1.16;
 }
 .services-list-item-image {
@@ -3242,7 +3277,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #E3E8F2;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
 }
 .footer-logo {

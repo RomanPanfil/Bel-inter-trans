@@ -276,13 +276,13 @@
   }
 
   &-head {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
   }
 
   &-card {
     display: block;
-    margin-bottom: 30px;
-    height: 410px;
+    margin-bottom: 30px;    
+    aspect-ratio: 2.1;
     overflow: hidden;
 
     &-head {
@@ -685,7 +685,6 @@
 }
 
 .contacts {
-  margin-bottom: 24px;
 
   &-card {
     display: block;
@@ -786,6 +785,9 @@
 // services
 
 .services {
+  &-list {
+    margin-bottom: 20px;
+  }
   &-order {
     display: flex;
     // align-items: center;
@@ -899,8 +901,8 @@
       border-radius: 20px;
       border: 1px solid #E3E8F2;
       transition: border-color 0.3s;
-      margin-bottom: 30px;
-      height: calc(100% - 30px);      
+      margin-bottom: 20px;
+      height: calc(100% - 20px);    
       aspect-ratio: 1.16;
      
       &-image {
@@ -950,7 +952,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid $border;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
   }
 
