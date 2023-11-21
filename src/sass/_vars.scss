@@ -2,6 +2,7 @@
 $bgc: #FFFFFF;
 $bg-blue-light: #F4F8FF;
 $font: #1F2839;
+$font-white: #FFFFFF;
 $font-light: #9EA5B4;
 $font-dark-blue: #15355C;
 $primary: #2861CF;
@@ -41,7 +42,7 @@ $jq_hover: darken($jq_border,15%);
 
 // Layouts
 $base: 1760;
-$gutter: 20;
+$gutter: 50;
 $col_gutter: 15px;
 $block_margin: 0 0 25px;
 

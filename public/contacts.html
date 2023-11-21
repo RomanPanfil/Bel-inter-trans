@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=1024"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>БелИнтерТранс</title>
+  <meta name="keywords" content="БелИнтерТранс" />
+  <meta name="description" content="БелИнтерТранс" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no" />  
+
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+  integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />  
+
+  <!-- <link rel=" shortcut icon" href="./images/favicon.png" type="image/x-icon"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- header start -->
+    <header class="header">      
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <div class="header-feedback">
+              <a href="tel:+375296253030" class="header-top-item">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-phone" />
+                </svg>
+                <span class="header-top-item-text">
+                  +375 29 625 30 30
+                </span>
+              </a>
+              <a href="#" class="header-top-item">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-mail" />
+                </svg>
+                <span class="header-top-item-text">
+                  Эл. обращение
+                </span>
+              </a>
+            </div>
+            <div class="header-options">
+              <button class="header-top-item poor-vision-btn">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-eye" />
+                </svg>
+                <span class="header-top-item-text">
+                  Версия для слабовидящих
+                </span>
+              </button>
+              <div class="header-top-item">
+                <select class="ui-select">
+                  <option value="ru">
+                    Рус
+                  </option>
+                  <option value="by">
+                    Бел
+                  </option>
+                  <option value="en">
+                    En
+                  </option>
+                </select>
+              </div>             
+              
+              <div class="header-top-item">
+                <svg class="header-search">
+                  <use xlink:href="svg/svg/symbols.svg#icon-search" />
+                </svg>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <div class="header-bottom-wrapper">
+            <button class="header-burger">
+              <span></span>
+            </button>
+            <div class="header-nav">
+              <ul>
+                <li>
+                  <a href="#">
+                    О нас
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Услуги
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Структура
+                  </a>
+                </li>
+                <li>                    
+                  Информация                    
+                  <ul>
+                    <li>
+                      <a href="#">
+                        Внутриорганизационная информация
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Справочная информация
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    Новости
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="header-logo">
+              <img src="./images/logo.svg" alt="logo" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+         
+  </header>
+    <!-- header end -->
+
+    <!-- main screen start -->
+    <main class="main">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li>            
+            Контакты            
+          </li>
+        </ul>
+        <h1 class="h1 page-title">
+            Контакты
+        </h1>
+        <div class="ui-tabs">
+          <div class="ui-tab" data-tab="tab-1">
+            Головной офис
+          </div>
+          <div class="ui-tab active" data-tab="tab-2">
+            Филиалы
+          </div>
+          <div class="ui-tab" data-tab="tab-3">
+            Предприятия за рубежом
+          </div>
+          <div class="ui-tab" data-tab="tab-4">
+            Белорусская железная дорога
+          </div>
+        </div>
+        <div class="contacts ui-tabs-wrapper" id="tab-1">
+          1
+        </div>
+        <div class="contacts ui-tabs-wrapper active" id="tab-2">
+          <div class="row">
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Транспортно-логистический центр Минск
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Республика Беларусь, 220037 г. Минск, ул. Аннаева, 84
+                  </div>
+                  <a href="mailto:priem_minsk@belint.by" class="contacts-card-mail">
+                    priem_minsk@belint.by
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+375172258260">+375 17 225-82-60</a>
+                    <a href="tel:+375172258462">+375 17 225-84-62</a>
+                  </div>
+                  <a href="https://www.tlcminsk.by" target="_blank" class="contacts-card-link">
+                    https://www.tlcminsk.by
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Гомельский филиал
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Республика Беларусь, 246017 г. Гомель ул. Киселева, 1
+                  </div>
+                  <a href="mailto:gomel@belint.by" class="contacts-card-mail">
+                    gomel@belint.by
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+375232952494">+375 232 95-24-94</a>
+                    <a href="tel:+375232345327">+375 232 34-53-27</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Могилевский филиал
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Республика Беларусь, 212001 г. Могилев ул. Первомайская, 109
+                  </div>
+                  <a href="mailto:btlc@railway.mogilev.by" class="contacts-card-mail">
+                    btlc@railway.mogilev.by
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+375222393601">+375 222 39-36-01</a>
+                    <a href="tel:+375222649042">+375 222 64-90-42</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Брестский филиал
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Республика Беларусь, 224004 г. Брест ул. Кижеватова, 3Б
+                  </div>
+                  <a href="mailto:brest@belint.by" class="contacts-card-mail">
+                    brest@belint.by
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+375162309090">+375 162 30-90-90</a>
+                    <a href="tel:+375162309095">+375 162 30-90-95</a>
+                  </div>
+                  <a href="http://www.brit.by" target="_blank" class="contacts-card-link">
+                    http://www.brit.by
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Витебский филиал
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Республика Беларусь, 210001 г. Витебск ул. Космонавтов, 10 Г
+                  </div>
+                  <a href="mailto:vitebsk@belint.by" class="contacts-card-mail">
+                    vitebsk@belint.by
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+375212333530">+375 212 33-35-30</a>
+                    <a href="tel:+375 212 33-27-61">+375 212 33-27-61</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Гродненский филиал
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Республика Беларусь, 230001 г. Гродно ул. Суворова, 76а
+                  </div>
+                  <a href="mailto:grodno@belint.by" class="contacts-card-mail">
+                    grodno@belint.by
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+375152734703">+375 152 73-47-03</a>
+                    <a href="tel:+375 152 73-49-75">+375 152 73-49-75</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts ui-tabs-wrapper" id="tab-3">
+          <div class="row">
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    «Белинтертранс-Германия» ООО
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Германия, 61381, Фридрихсдорф ул. Индустриштрассе, 24
+                  </div>
+                  <a href="mailto:info@belint.de" class="contacts-card-mail">
+                    info@belint.de
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+4961729819182">+49 6172 / 98 19 18-2</a>
+                    <a href="tel:+4961729819189">+49 6172 / 98 19 18-9</a>
+                  </div>
+                  <a href="http://www.belint.de/" target="_blank" class="contacts-card-link">
+                    http://www.belint.de/
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    ООО «Белинтертранс-Москва»
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Российская Федерация, 101000 г. Москва ул. Маросейка, 17/6
+                  </div>
+                  <a href="mailto:info@belintertrans.ru" class="contacts-card-mail">
+                    info@belintertrans.ru
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+79199910954">+7 919 991 09 54</a>
+                    <a href="tel:+74956213793">+7 495-621-37-93 тел/факс</a>         
+                  </div>
+                  <a href="http://belintertrans.ru/" target="_blank" class="contacts-card-link">
+                    http://belintertrans.ru/
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    ЗАО «Белинтертранс Балтик»
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    LT-92127 Клайпеда, Литва ул. Науйойо Содо, 12
+                  </div>
+                  <a href="mailto:info@belinter.lt" class="contacts-card-mail">
+                    info@belinter.lt
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+37046210200">+370 46 210-200</a>
+                    <a href="tel:+37046471405">+370 46 471-405</a>
+                  </div>
+                  <a href="http://www.belinter.lt" target="_blank" class="contacts-card-link">
+                    http://www.belinter.lt
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Представительство ЗАО «Белинтертранс Балтик» в Латвии
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Латвия, Рига
+                  </div>
+                  <div class="contacts-card-call">
+                    <a href="tel:+37125141428">+371 251 414 28</a>               
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    «Белинтертранс Интернэшнл Лимитэд» в Китае
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    г. Гонконг, округ Коулун, ул. Натан Роуд 480, оф. 2, 3/F Руби коммершиал билдинг
+                  </div>
+                  <a href="mailto:info@belint.de" class="contacts-card-mail">
+                    info@belint.de
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+4961729819189">+49 6172 / 98 19 18-9</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Евразийский международный перевозчик (ERC)
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    ул. Слонимского 1А, офис «Зита Променаде», г. Вроцлав, Польша
+                  </div>
+                  <a href="mailto:info@eurasian-carrier.com." class="contacts-card-mail">
+                    info@eurasian-carrier.com.
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    ООО «Белинтертранс международный грузовой экспедитор»
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Офис №109В, Фонд финансовой поддержки Дубая, Бур-Дубай, Третий Аль-Коз, ОАЭ
+                  </div>
+                  <a href="mailto:dubai@belint.de" class="contacts-card-mail">
+                    dubai@belint.de
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Представительство «Белинтертранс-Германия» ООО в Польше
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Республика Польша, 21-540, г. Малашевиче, ул. Коляржи, 21
+                  </div>
+                  <div class="contacts-card-call">
+                    <a href="tel:+48603944759">+48 603 94 47 59</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    Представительство «Белинтертранс-Германия» ООО в Китае
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Китайская Народная Республика, 100004 г. Пекин, район Чаоян, Янгуоменвай,1 Китайский Международный Торговый Центр Башня, офис 15/Ф
+                  </div>
+                  <div class="contacts-card-call">
+                    <a href="tel:+86155021354629">+86 155 0213 5462</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div data-href="#" class="contacts-card">
+                <div class="contacts-card-head">
+                  <div class="contacts-card-title">
+                    ООО Транспортно-логистическое торговое предприятие «Белинтертранс» в Турции
+                  </div>
+                  <svg class="contacts-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <div class="contacts-card-content">
+                  <div class="contacts-card-address">
+                    Турция, 35 260 Конак - Измир, ул. Асланчак Мах. 1456 Сок Пунта. Д; Резиданс Нр.10/1 К; 9 Д; 1
+                  </div>
+                  <a href="mailto:info@belint.com.tr" class="contacts-card-mail">
+                    info@belint.com.tr
+                  </a>
+                  <div class="contacts-card-call">
+                    <a href="tel:+902323250088">+90 232 325 00 88</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts ui-tabs-wrapper" id="tab-4">
+            4
+        </div>
+      </div>
+    </main>
+    <!-- main screen end -->
+
+
+    <!-- footer start   -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#" class="footer-logo">
+            <img src="./images/logo.svg" alt="logo" loading="lazy">
+          </a>
+          <div class="footer-contacts">
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                по общим вопросам
+              </div>
+              <a href="mailto:btlc@belint.by" class="footer-contacts-link">
+                btlc@belint.by
+              </a>
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                перевозки в вагонах
+              </div>
+              <a href="mailto:info@belint.by" class="footer-contacts-link">
+                info@belint.by
+              </a>  
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                перевозки в контейнерах
+              </div>
+              <a href="mailto:container@belint.by" class="footer-contacts-link">
+                container@belint.by
+              </a>  
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                головной офис
+              </div>
+              <a href="tel:+375296253030" class="footer-contacts-link">
+                +375 29 625 30 30
+              </a>  
+            </div>
+          </div>
+          <div class="footer-socials">
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#telegram" />
+              </svg>
+            </div>
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#whatsapp" />
+              </svg>
+            </div>
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#viber" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <nav class="footer-nav">
+            <ul>
+              <li>
+                <a href="#">
+                  О нас
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Структура
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Инфоцентр
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Справочник
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-middle-links">
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/october-district.png" alt="october-district">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/RB.png" alt="Belarus">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/MT.png" alt="MT">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/Circle.png" alt="circle">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/BC.png" alt="БЧ">
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-copy">
+            © 2009-2023 Государственное предприятие "БТЛЦ"
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#" class="footer-bottom-link">
+              Политика обработки персональных данных
+            </a>
+            <a href="#" class="footer-bottom-link">
+              Файлы cookie
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>

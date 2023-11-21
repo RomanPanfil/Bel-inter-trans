@@ -145,40 +145,65 @@ img {
 	font-weight: 500;	
 	letter-spacing: -1px;
 	text-transform: uppercase;
+	margin-bottom: 44px;
+}
+
+.ui-more-title {
+	display: inline-block;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-right: 16px;
+	margin-bottom: 0;
+}
+
+.ui-tabs {
+	margin-bottom: 60px;
+	font-size: 0;
+}
+
+.ui-tab {
+	display: inline-block;
+	background-color: $bgc;
+	margin-right: 10px;	
+	cursor: pointer;	
+	color: #1F2839;
+	@include fz(20);	
+	font-weight: 500;
+	line-height: 1;
+	text-transform: uppercase;
+	border-radius: 24px;
+	border: 1px solid $font-light;
+	padding: 8px 16px;
+	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+	&.active {
+		background-color: $primary;
+		color: $bgc;
+		border-color: $primary;
+	}
+
+	&:hover {
+		border-color: $primary;
+		color: $primary;
+		background-color: $bgc;
+	}	
+}
+
+.ui-tabs-wrapper {
+	display: none;
+
+	&.active {
+		display: block;
+	}
 }
 
 
-
-// .ui-tabs {
-	
-// }
-
-// .ui-tab {
-// 	display: inline-block;
-// 	margin-right: 24px;
-// 	opacity: 0.6;	
-// 	@include fz(18);	
-// 	font-weight: 700;	
-// 	@include ls(0.18);
-// 	cursor: pointer;
-// 	transition: 0.3s opacity;
-// 	margin-bottom: 20px;	
-
-// 	&.active {
-// 		opacity: 1;
-// 		border-bottom: 1px dashed $dashed;
-// 	}
-
-// 	&:hover {
-// 		opacity: 1;
-// 	}
-// }
 
 .ui-btn {
 	text-transform: uppercase;
 	cursor: pointer;
 	outline: none;
-	transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 	font-weight: 500;
 	display: inline-block;
 
@@ -188,7 +213,7 @@ img {
 		border: 1px solid $primary;
 		color: $primary;
 		height: 30px;
-		line-height: 30px;
+		line-height: 28px;
 		padding-left: 12px;
 		padding-right: 12px;
 		@include fz(17);
@@ -200,33 +225,22 @@ img {
 	}
 
 	&-main {
-		display: flex;
-		align-items: center;	
-		width: max-content;
 		padding-left: 40px;
 		padding-right: 40px;
-		background-color: $button_main;
-		
-		@include fz(18);
-		height: 80px;
-		line-height: 80px;		
-		@include ls(2.7);		
-		text-transform: uppercase;
-		border-radius: 51px;
-		cursor: pointer;
-		border: 1px solid $button_main;
-		outline: none;
-		transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-		display: inline-block;
-		
-		&:hover {			
-			background-color: #fff;
-			color: $font;
-			border-color: $button_main;
-		}		
+		@include fz(20);
+		height: 64px;
+		line-height: 64px;		
+		border-radius: 40px;
+		flex-shrink: 0;		
 	}
 
-	
+	&-white {
+		background-color: $bgc;
+
+		&:hover {
+			color: $primary;
+		}
+	}
 }
 
 .ui-field {
@@ -358,8 +372,6 @@ img {
 .pagination {
 	display: flex;	
 	column-gap: 40px;
-	padding-top: 30px;
-	padding-bottom: 30px;
 	margin-bottom: 30px;
 
 	&-nav {
@@ -432,8 +444,8 @@ img {
 	transition: filter 0.3s;
 
 	&:hover {
-		.jq-selectbox__trigger {
-			filter: saturate(10);
+		.jq-selectbox__trigger-arrow {
+			background-image: url(../images/svg/icon-chevron-down_blue.svg);
 		}
 
 		.jq-selectbox__select-text {
@@ -442,8 +454,8 @@ img {
 	}
 
 	&.opened {
-		.jq-selectbox__trigger {
-			filter: saturate(10);
+		.jq-selectbox__trigger-arrow {
+			background-image: url(../images/svg/icon-chevron-down_blue.svg);
 		}
 
 		.jq-selectbox__select-text {
@@ -475,7 +487,7 @@ img {
 	width: 20px;
 	height: 20px;
 	background-size: 20px 20px;
-	transition: transform 0.3s;
+	transition: transform 0.3s, background-image 0.3s;
 }
 
 .jq-selectbox__dropdown {
@@ -535,4 +547,8 @@ img {
 		}
 		
 	}
+}
+
+.ui-poor-vision {
+	filter: grayscale(1);
 }

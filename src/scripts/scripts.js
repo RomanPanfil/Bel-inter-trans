@@ -31,22 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
    // form styler
    $('.ui-select').styler();
 
-   // добавление тугглера в nav
-  (function() {
-    if(!document.querySelector('.header-nav li')) return
+   // добавление тугглера в nav 
+  const navLis = document.querySelectorAll('.header-nav li');
 
-    const lis = document.querySelectorAll('.header-nav li');
+  navLis.forEach(li => {
+    const ul = li.querySelector('ul');
 
-    lis.forEach(li => {
-      const ul = li.querySelector('ul');
-
-      if (ul && li.querySelector('ul')) {
-        const icon = document.createElement('span');
-        icon.setAttribute('class', 'icon');
-        ul.insertAdjacentElement('afterend', icon);
-      }
-    });
-  })();
+    if (ul && li.querySelector('ul')) {
+      const icon = document.createElement('span');
+      icon.setAttribute('class', 'icon');
+      ul.insertAdjacentElement('afterend', icon);
+    }
+  });
 
   // открытие/закрытие подменю навигации
   (function() {
@@ -87,43 +83,104 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   })();
-});
 
-// Открытие попапа галлереи
-$(document).on("click", ".mfp-link__gallery", function () {
-  var a = $(this);
+  // переключение табов
+  (function() {
+    if (!document.querySelector('.ui-tab') || !document.querySelector('.ui-tabs-wrapper')) return
 
-  var index = $(this).index();
-  let links = a.parent().children();
+    const tabs = document.querySelectorAll('.ui-tab');
+    const tabsPanel = document.querySelectorAll('.ui-tabs-wrapper');
 
-  $.magnificPopup.open({
-    items: { src: a.attr("data-href"), links, index },
-    type: "ajax",
-    overflowY: "scroll",
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in',
-    ajax: {
-      tError: "Error. Not valid url"     
-    },
-    callbacks: {
-      open: function () {
-        setTimeout(function(){
-          $('.mfp-wrap').addClass('not_delay');
-          $('.mfp-popup').addClass('not_delay');
-        },700);
-
-        document.documentElement.style.overflow = 'hidden'
-      },
-
-      close: function() {
-        document.documentElement.style.overflow = '';
+    tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
         
-         // сброс данных
-          popupData = null;
-          links = null;
-          index = null;
+        let tabId = this.getAttribute('data-tab');
+        
+        tabs.forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        this.classList.add('active');
+
+        tabsPanel.forEach(panel => {
+        if(panel.id === tabId) {
+          panel.classList.add('active');
+        } else {
+          panel.classList.remove('active');
+        }
+      });
+
+      });
+    });
+  })();
+
+  // клик на контакт
+  (function() {
+    const contactCards = document.querySelectorAll('.contacts-card');   
+
+    contactCards.forEach(card => {
+      card.addEventListener('click', e => {
+        if (e.target.tagName === 'A') {
+          return;
+        }
+
+        const href = card.getAttribute('data-href');
+        console.log(href);
+        window.location.href = href;
+      });
+    });
+  })();
+
+  // Открытие попапа галлереи
+  $(document).on("click", ".mfp-link__gallery", function () {
+    var a = $(this);
+
+    var index = $(this).index();
+    let links = a.parent().children();
+
+    $.magnificPopup.open({
+      items: { src: a.attr("data-href"), links, index },
+      type: "ajax",
+      overflowY: "scroll",
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in',
+      ajax: {
+        tError: "Error. Not valid url"     
+      },
+      callbacks: {
+        open: function () {
+          setTimeout(function(){
+            $('.mfp-wrap').addClass('not_delay');
+            $('.mfp-popup').addClass('not_delay');
+          },700);
+
+          document.documentElement.style.overflow = 'hidden'
+        },
+
+        close: function() {
+          document.documentElement.style.overflow = '';
+          
+          // сброс данных
+            popupData = null;
+            links = null;
+            index = null;
+        }
       }
-    }
+    });
+    return false;
   });
-  return false;
+
+  // версия для слабовидящих
+  (function() {
+    if (!document.querySelector('.poor-vision-btn')) return
+    
+    const poorVisionBtn = document.querySelector('.poor-vision-btn');
+    const body = document.querySelector('body');
+
+    poorVisionBtn.addEventListener('click', () => {
+      body.classList.toggle('ui-poor-vision');
+    })
+  })();
+
 });
+

@@ -164,6 +164,10 @@
 			<path d="M5.59 6.91a.833.833 0 0 0-1.18 1.18l5 5a.833.833 0 0 0 1.18 0l5-5a.833.833 0 0 0-1.18-1.18L10 11.322l-4.41-4.41z" fill="#1F2839"></path>
 		</symbol>
 	
+		<symbol id="icon-chevron-down_blue" viewBox="0 0 20 20">
+			<path d="M5.59 6.91a.833.833 0 0 0-1.18 1.18l5 5a.833.833 0 0 0 1.18 0l5-5a.833.833 0 0 0-1.18-1.18L10 11.322l-4.41-4.41z" fill="#2861CF"></path>
+		</symbol>
+	
 		<symbol id="icon-chevron-right" viewBox="0 0 18 18">
 			<path d="M7.28 3.97a.75.75 0 0 0-1.06 1.06L10.19 9l-3.97 3.97a.75.75 0 1 0 1.06 1.06l4.5-4.5a.75.75 0 0 0 0-1.06l-4.5-4.5z" fill="#9EA5B4"></path>
 		</symbol>
@@ -211,7 +215,7 @@
 </svg>
 
 <header>
-    <h1 id="logo">Gulp SVG Sprites <small>(13 icons in &lt;symbol&gt; mode)</small></h1>
+    <h1 id="logo">Gulp SVG Sprites <small>(14 icons in &lt;symbol&gt; mode)</small></h1>
     <h4>Files Generated:</h4>
     <ol>
         <li><a href="svg/symbols.svg">svg/symbols.svg</a></li>
@@ -260,6 +264,23 @@
             <button onclick="invertBackground('icon-box-icon-chevron-down')">Invert Background</button>
             <div class="snippet-popover" id="snippet-icon-chevron-down">
                 <pre><code>&lt;svg class=&quot;icon icon-chevron-down&quot;&gt;&lt;use xlink:href=&quot;#icon-chevron-down&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="icon-chevron-down_blue">
+            <div class="icon-box" id="icon-box-icon-chevron-down_blue">
+                <svg class="icon icon-chevron-down_blue">
+                    <use xlink:href="#icon-chevron-down_blue" />
+                </svg>
+            </div>
+            <h2>icon-chevron-down_blue</h2>
+            <button onclick="showPopover('snippet-icon-chevron-down_blue')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-icon-chevron-down_blue')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-icon-chevron-down_blue">
+                <pre><code>&lt;svg class=&quot;icon icon-chevron-down_blue&quot;&gt;&lt;use xlink:href=&quot;#icon-chevron-down_blue&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
                 <button onclick="hidePopover()">Close</button>
             </div>
         </li>
