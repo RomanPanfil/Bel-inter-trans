@@ -185,18 +185,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // фиксирование блока при прокрутке
   (function() {
+    if (!document.querySelector('.post-wrapper') || !document.querySelector('.post-side')) return
+    
     let scrollTimer;
-    let newHeaderBottom = $(".new-head").css("margin-bottom");
+    let postHeaderBottom = $(".post-head").css("margin-bottom");
     
     function handleScroll() {
-      if (parseInt($(".new-wrapper").offset().top) < $(window).scrollTop()) {
-        let tops = parseInt($(window).scrollTop() - $(".new-wrapper").offset().top + parseInt(newHeaderBottom));
+      if (parseInt($(".post-wrapper").offset().top) < $(window).scrollTop()) {
+        let tops = parseInt($(window).scrollTop() - $(".post-wrapper").offset().top + parseInt(postHeaderBottom));
         
-        if (tops < $(".new-wrapper").height() - $(".new-side").height()) {
-          $(".new-side").css("top", tops);
+        if (tops < $(".post-wrapper").height() - $(".post-side").height()) {
+          $(".post-side").css("top", tops);
         }
       } else {
-        $(".new-side").css("top", 0);
+        $(".post-side").css("top", 0);
       }
     }
     

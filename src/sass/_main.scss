@@ -435,7 +435,7 @@
   }
 }
 
-.new {
+.post {
 
   &-wrapper {
     position: relative;
@@ -498,11 +498,11 @@
         &:hover {
           background-color: $primary;
           border-color: $primary;
-          .new-side-share-icon {
+          .post-side-share-icon {
             fill: $bgc;            
           }
 
-          .new-side-share-icon__link {
+          .post-side-share-icon__link {
             fill: $primary;
             stroke: $bgc;            
           }
