@@ -157,7 +157,7 @@ img {
 }
 
 .ui-tabs {
-	margin-bottom: 60px;
+	margin-bottom: 100px;
 	font-size: 0;
 }
 
@@ -175,6 +175,7 @@ img {
 	border: 1px solid $font-light;
 	padding: 8px 16px;
 	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+	margin-bottom: 20px;
 
 	&.active {
 		background-color: $primary;
@@ -206,6 +207,9 @@ img {
 	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 	font-weight: 500;
 	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 
 	&-transparent {
 		background-color: $bgc;		
@@ -239,6 +243,51 @@ img {
 
 		&:hover {
 			color: $primary;
+		}
+	}
+
+	&-youtube {
+		display: inline-block;
+		white-space: nowrap;
+		background-color: $youtube;
+		border-radius: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+		color: $font-white;
+		@include fz(20);		
+		font-weight: 500;
+		height: 64px;
+		line-height: 62px;		
+		text-transform: uppercase;		
+
+		.icon {
+			width: 26px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 0;
+			margin-right: 18px;
+		}
+
+		span {
+			vertical-align: middle;
+		}
+	}
+
+	&-play {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		background-color: $bgc;
+		border-radius: 50%;
+
+		.icon {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
 }

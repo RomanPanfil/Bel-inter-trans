@@ -170,6 +170,59 @@ document.addEventListener('DOMContentLoaded', () => {
     return false;
   });
 
+  // Открытие попапа
+  $(document).on("click", ".mfp-link", function() {
+    var $link = $(this);
+    // Если ссылка с классом .video-link
+    if($link.hasClass('video-link')) {
+      // Открыть попап
+      $.magnificPopup.open({
+        items: {
+          src: $link.attr("data-href"),  
+        },
+        type: 'ajax',
+        // Код для видео
+        callbacks: {
+          ajaxContentAdded: function() {
+            var videoURL = $link.data('video');
+            $(this.content).find('iframe').attr('src', videoURL);
+
+            document.documentElement.style.overflow = 'hidden'
+          },
+          close: function() {
+            document.documentElement.style.overflow = ''
+          }
+        }
+      });
+    } else {
+      // Обычное открытие
+      $.magnificPopup.open({
+        items: { src: $link.attr("data-href") },
+        type: "ajax",
+        overflowY: "scroll",
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in',
+        ajax: {
+          tError: "Error. Not valid url",
+        },
+        callbacks: {
+          open: function () {
+            setTimeout(function(){
+              $('.mfp-wrap').addClass('not_delay');
+              $('.mfp-popup').addClass('not_delay');                  
+            },700);
+    
+            document.documentElement.style.overflow = 'hidden'
+          },  
+          close: function() {
+            document.documentElement.style.overflow = ''
+          }
+        }
+      });
+    }
+    return false;
+  });
+
   // версия для слабовидящих
   (function() {
     if (!document.querySelector('.poor-vision-btn')) return
@@ -186,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // фиксирование блока при прокрутке
   (function() {
     if (!document.querySelector('.post-wrapper') || !document.querySelector('.post-side')) return
-    
+
     let scrollTimer;
     let postHeaderBottom = $(".post-head").css("margin-bottom");
     
@@ -213,6 +266,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   })();
+
+
+
   
 
 });
