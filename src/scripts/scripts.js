@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // Открытие попапа галлереи
-  $(document).on("click", ".mfp-link__gallery", function () {      
-      var gallery = $(this).closest('.new-gallery');      
-      var links = gallery.find('.mfp-link__gallery');
-      var a = $(this); 
-      var index = links.index(a);
+  $(document).on("click", ".mfp-link__gallery", function () {     
+    var gallery = $(this).closest('.post-gallery');      
+    var links = gallery.find('.mfp-link__gallery');      
+    var a = $(this); 
+    var index = links.index(a);
 
     $.magnificPopup.open({
       items: { src: a.attr("data-href"), links, index },
