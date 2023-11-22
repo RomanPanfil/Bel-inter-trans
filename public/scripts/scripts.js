@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // Открытие попапа галлереи
-  $(document).on("click", ".mfp-link__gallery", function () {
-    var a = $(this);
-
-    var index = $(this).index();
-    let links = a.parent().children();
+  $(document).on("click", ".mfp-link__gallery", function () {      
+      var gallery = $(this).closest('.new-gallery');      
+      var links = gallery.find('.mfp-link__gallery');
+      var a = $(this); 
+      var index = links.index(a);
 
     $.magnificPopup.open({
       items: { src: a.attr("data-href"), links, index },
@@ -181,6 +181,37 @@ document.addEventListener('DOMContentLoaded', () => {
       body.classList.toggle('ui-poor-vision');
     })
   })();
+
+
+  // фиксирование блока при прокрутке
+  (function() {
+    let scrollTimer;
+    let newHeaderBottom = $(".new-head").css("margin-bottom");
+    
+    function handleScroll() {
+      if (parseInt($(".new-wrapper").offset().top) < $(window).scrollTop()) {
+        let tops = parseInt($(window).scrollTop() - $(".new-wrapper").offset().top + parseInt(newHeaderBottom));
+        
+        if (tops < $(".new-wrapper").height() - $(".new-side").height()) {
+          $(".new-side").css("top", tops);
+        }
+      } else {
+        $(".new-side").css("top", 0);
+      }
+    }
+    
+    $(function() {
+      $(window).scroll(function() {
+        if(!scrollTimer) {
+          scrollTimer = setTimeout(function() {
+            handleScroll();
+            scrollTimer = null;
+          }, 1);
+        }
+      });
+    });
+  })();
+  
 
 });
 

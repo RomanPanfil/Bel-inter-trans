@@ -2745,6 +2745,10 @@ img {
           transform: translate(20%, -20%);
 }
 
+.new-wrapper {
+  position: relative;
+  margin-bottom: 200px;
+}
 .new-head {
   border-bottom: 1px solid #E3E8F2;
   padding-bottom: 60px;
@@ -2759,10 +2763,12 @@ img {
 }
 .new-inner {
   border-bottom: 1px solid #E3E8F2;
-  margin-bottom: 200px;
 }
 .new-container {
   max-width: 960px;
+}
+.new-side {
+  position: absolute;
 }
 .new-side-date {
   color: #9EA5B4;
@@ -2828,14 +2834,11 @@ img {
       flex-wrap: wrap;
   gap: 20px;
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 .new-gallery a {
   display: block;
-  width: calc(25% - 15px);
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(25% - 15px);
-          flex: 0 0 calc(25% - 15px);
+  margin-bottom: 20px;
   border-radius: 5px;
   aspect-ratio: 1.48;
   overflow: hidden;
@@ -2977,7 +2980,7 @@ img {
           filter: brightness(1.5);
 }
 
-.article {
+.article-content {
   margin-bottom: 60px;
 }
 .article p {

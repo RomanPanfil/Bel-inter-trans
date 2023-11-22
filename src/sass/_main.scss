@@ -436,6 +436,12 @@
 }
 
 .new {
+
+  &-wrapper {
+    position: relative;
+    margin-bottom: 200px;
+  }
+
   &-head {
     border-bottom: 1px solid $border;
     padding-bottom: 60px;
@@ -451,7 +457,7 @@
 
   &-inner {
     border-bottom: 1px solid $border;
-    margin-bottom: 200px;
+    // margin-bottom: 200px;
   }
 
   &-container {
@@ -459,6 +465,7 @@
   }
 
   &-side {
+    position: absolute;
     &-date {
       color: $font-light;
       margin-bottom: 40px;
@@ -526,12 +533,11 @@
     flex-wrap: wrap;
     gap: 20px;
     padding-top: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 
     a {
       display: block;
-      width: calc(25% - 15px);
-      flex: 0 0 calc(25% - 15px);
+      margin-bottom: 20px;
       border-radius: 5px;
       aspect-ratio: 1.48;
       overflow: hidden;
@@ -676,7 +682,10 @@
 }
 
 .article {
-  margin-bottom: 60px;
+
+  &-content {
+    margin-bottom: 60px;
+  }  
 
   p {
     @include fz(20);
