@@ -3437,6 +3437,102 @@ img {
   fill: #E53B3B;
 }
 
+.railway {
+  margin-bottom: 110px;
+}
+.railway-web {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #FFFFFF;
+  background-color: #2861CF;
+  padding: 40px;
+  border-radius: 20px;
+  min-height: 406px;
+  margin-bottom: 30px;
+}
+.railway-web:hover .railway-web-link span {
+  opacity: 0.8;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.railway-web-title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.railway-web-link {
+  margin-top: auto;
+  font-size: 20px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.railway-web-link span {
+  border-bottom: 1px solid #FFFFFF;
+}
+.railway-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 406px;
+  padding: 40px;
+  border: 1px solid #E3E8F2;
+  border-radius: 20px;
+}
+.railway-contacts-description {
+  color: #9EA5B4;
+  font-size: 20px;
+  font-size: 1.25rem;
+  letter-spacing: 0.2px;
+  letter-spacing: 0.0125rem;
+  margin-bottom: auto;
+  max-width: 740px;
+}
+.railway-contacts-title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+.railway-contacts-item {
+  position: relative;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.railway-contacts-item-text {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 34px;
+}
+.railway-contacts-item-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+}
+.railway-contacts-item span {
+  font-weight: 600;
+}
+.railway-contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .footer-top {
   display: -webkit-box;
   display: -ms-flexbox;
