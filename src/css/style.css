@@ -876,7 +876,7 @@ img {
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
-  margin-bottom: 36px;
+  margin-bottom: 66px;
 }
 .pagination-nav {
   position: relative;
@@ -2592,7 +2592,7 @@ img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
 }
 
 .subscribe-text {
@@ -3056,6 +3056,9 @@ img {
   letter-spacing: 0.01875rem;
 }
 
+.contacts {
+  margin-bottom: 30px;
+}
 .contacts-card {
   display: block;
   padding: 40px 40px 20px 40px;
@@ -3155,7 +3158,7 @@ img {
 }
 
 .services-list {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 .services-order {
   display: -webkit-box;
@@ -3409,7 +3412,7 @@ img {
   color: #9EA5B4;
 }
 .video-gallery-cards {
-  margin-bottom: 110px;
+  margin-bottom: 40px;
 }
 .video-gallery-card {
   display: block;
@@ -3531,6 +3534,61 @@ img {
 }
 .railway-contacts-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.search-request {
+  margin-top: -20px;
+  margin-bottom: 120px;
+  font-size: 20px;
+  font-size: 1.25rem;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+.search-request span {
+  color: #9EA5B4;
+}
+
+.results {
+  margin-bottom: 60px;
+}
+.results-item {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid #E3E8F2;
+}
+.results-item:last-child {
+  border-bottom: 1px solid #E3E8F2;
+}
+.results-item-section {
+  color: #2861CF;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+  margin-bottom: 20px;
+}
+.results-item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.results-item-title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+  text-transform: uppercase;
+  max-width: 900px;
+  margin-right: 30px;
+}
+.results-item-date {
+  color: #9EA5B4;
+  white-space: nowrap;
 }
 
 .footer-top {
