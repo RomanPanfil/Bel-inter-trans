@@ -119,12 +119,12 @@ img {
 }
 @media (min-width: 992px) {
 	::-webkit-scrollbar {
-		width: 4px;
-		height: 4px;		
+		width: 8px;
+		height: 8px;		
 	}
 	::-webkit-scrollbar-thumb {
-		width: 4px;
-		height: 4px;
+		width: 8px;
+		height: 8px;
 		background-color: $primary;
 	}
 	::-webkit-scrollbar-thumb:hover {
@@ -602,4 +602,46 @@ img {
 
 .ui-poor-vision {
 	filter: grayscale(1);
+}
+
+.search-field {
+	border-bottom: 1px solid $bgc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 14px;
+}
+
+.search-input {
+	border: none;
+	background: transparent;
+	outline: none;
+	flex-grow: 1;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: $font-white;
+	@include fz(18);
+
+	&::placeholder {
+		color: $font-white;
+		opacity: 0.7;
+		@include fz(18);
+	}
+}
+
+.search-btn {
+	@include fz(17);
+	font-weight: 500;	
+	text-transform: uppercase;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: $bgc;
+	border-radius: 24px;
+	transition: color 0.3s;
+
+	&:hover {
+		color: $primary;
+	}
 }

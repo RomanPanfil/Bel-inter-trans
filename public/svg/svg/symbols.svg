@@ -37,7 +37,11 @@
 		</symbol>
 	
 		<symbol id="icon-search" viewBox="0 0 20 20">
-			<circle cx="8.979" cy="8.979" r="7.979" stroke="#244082" stroke-width="2"></circle><path d="M17.542 18.96a1 1 0 0 0 1.414-1.414l-1.414 1.414zm-3.546-3.546l3.546 3.546 1.414-1.414L15.41 14l-1.414 1.414z" fill="#244082"></path>
+			<circle cx="8.979" cy="8.979" r="7.979" stroke="#2861CF" stroke-width="2"></circle><path d="M17.542 18.96a1 1 0 0 0 1.414-1.414l-1.414 1.414zm-3.546-3.546l3.546 3.546 1.414-1.414L15.41 14l-1.414 1.414z" fill="#2861CF"></path>
+		</symbol>
+	
+		<symbol id="icon-search_white" viewBox="0 0 20 20">
+			<ellipse cx="9.326" cy="9.324" rx="8.326" ry="8.324" stroke="#fff" stroke-width="2"></ellipse><path d="M18.293 19.707a1 1 0 0 0 1.415-1.414l-1.415 1.414zm-3.7-3.7l3.7 3.7 1.415-1.414-3.701-3.7-1.415 1.414z" fill="#fff"></path>
 		</symbol>
 	
 		<symbol id="link" viewBox="0 0 26 26">

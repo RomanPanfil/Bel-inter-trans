@@ -268,6 +268,25 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
 
+  // открытие попапа поиска
+  (function() {
+    if (!document.querySelector('.header-search') || !document.querySelector('.search-popup') || !document.querySelector('.search-popup-close')) return
+
+    const searchButton = document.querySelector('.header-search');
+    const searchPopup = document.querySelector('.search-popup');
+    const closePopup = document.querySelector('.search-popup-close');
+
+    searchButton.addEventListener('click', () => {
+      searchPopup.classList.add('active');
+      document.querySelector('body').classList.add('non-scroll');
+    });
+
+    closePopup.addEventListener('click', () => {
+      searchPopup.classList.remove('active');
+      document.querySelector('body').classList.remove('non-scroll');
+    });
+
+  })();
 
   
 
