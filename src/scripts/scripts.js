@@ -239,9 +239,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // фиксирование блока при прокрутке
   (function() {
     if (!document.querySelector('.post-wrapper') || !document.querySelector('.post-side')) return
-
+   
     let scrollTimer;
-    let postHeaderBottom = $(".post-head").css("margin-bottom");
+    let postHeaderBottom = $(".post-head").css("margin-bottom") || $(".article-title").css("margin-bottom") || 0;
     
     function handleScroll() {
       if (parseInt($(".post-wrapper").offset().top) < $(window).scrollTop()) {
@@ -286,6 +286,91 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('body').classList.remove('non-scroll');
     });
 
+  })();
+
+  // меню навигации по тексту
+  (function() {
+    const menuItems = document.querySelectorAll('.item-menu');
+    const menuList = document.querySelector('.post-side-navigation-list');
+    
+    if(!menuList) return
+
+    menuItems.forEach((item, index) => {      
+      const li = document.createElement('li');
+      li.classList.add('post-side-navigation-item');
+      
+      if (index === 0) {
+        li.classList.add('active');
+      }
+      
+      li.textContent = item.dataset.title || item.textContent;
+
+      li.addEventListener('click', () => {
+        menuList.querySelectorAll('.active').forEach(el => {
+          el.classList.remove('active');  
+        });        
+        
+        li.classList.add('active');
+
+        item.scrollIntoView({
+          behavior: 'smooth'  
+        });
+      });
+
+      menuList.appendChild(li);
+    });
+  
+   
+    let currentActive = menuList.querySelector('.active');
+
+    document.addEventListener('scroll', () => {
+      let maxVisible = 0;
+      let mostVisible;
+      let itemIndex;
+  
+      menuItems.forEach((item, index) => {
+        const rect = item.getBoundingClientRect();
+        const windowHeight = window.innerHeight;        
+        const topVisible = Math.max(0, rect.top);
+        const bottomVisible = Math.min(windowHeight, rect.bottom);
+        const visibleHeight = bottomVisible - topVisible;
+        const visiblePercentage = visibleHeight / rect.height * 100;
+  
+        if (visiblePercentage > maxVisible) {      
+          mostVisible = item;
+          maxVisible = visiblePercentage;
+          itemIndex = index;
+        }
+  
+      });
+  
+      if (mostVisible && mostVisible !== currentActive) {
+        if (currentActive) {
+          currentActive.classList.remove('active');
+        }
+        
+        if (mostVisible) {
+          document.querySelectorAll('.post-side-navigation-item')[itemIndex].classList.add('active');
+          currentActive = document.querySelectorAll('.post-side-navigation-item')[itemIndex];
+        }
+      }  
+    });
+
+  })();
+
+  // обертка для таблицы
+  (function(){
+    if (!document.querySelector('article table')) return
+
+    let tables = document.querySelectorAll('article table');
+
+    tables.forEach((table) => {
+        let wrapper = document.createElement('div');
+        wrapper.classList.add('article-table', 'article-table__full');
+
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+    })
   })();
 
   

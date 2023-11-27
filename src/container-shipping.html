@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=1024"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>БелИнтерТранс</title>
+  <meta name="keywords" content="БелИнтерТранс" />
+  <meta name="description" content="БелИнтерТранс" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no" />
+
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+  integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+
+  <!-- <link rel=" shortcut icon" href="./images/favicon.png" type="image/x-icon"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- header start -->
+    <header class="header">
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <div class="header-feedback">
+              <a href="tel:+375296253030" class="header-top-item">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-phone" />
+                </svg>
+                <span class="header-top-item-text">
+                  +375 29 625 30 30
+                </span>
+              </a>
+              <a href="#" class="header-top-item">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-mail" />
+                </svg>
+                <span class="header-top-item-text">
+                  Эл. обращение
+                </span>
+              </a>
+            </div>
+            <div class="header-options">
+              <button class="header-top-item poor-vision-btn">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-eye" />
+                </svg>
+                <span class="header-top-item-text">
+                  Версия для слабовидящих
+                </span>
+              </button>
+              <div class="header-top-item">
+                <select class="ui-select">
+                  <option value="ru">
+                    Рус
+                  </option>
+                  <option value="by">
+                    Бел
+                  </option>
+                  <option value="en">
+                    En
+                  </option>
+                </select>
+              </div>
+              
+              <div class="header-top-item">
+                <svg class="header-search">
+                  <use xlink:href="svg/svg/symbols.svg#icon-search" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <div class="header-bottom-wrapper">
+            <button class="header-burger">
+              <span></span>
+            </button>
+            <div class="header-nav">
+              <ul>
+                <li>
+                  <a href="#">
+                    О нас
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Услуги
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Структура
+                  </a>
+                </li>
+                <li>
+                  Информация
+                  <ul>
+                    <li>
+                      <a href="#">
+                        Внутриорганизационная информация
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Справочная информация
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    Новости
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="header-logo">
+              <img src="./images/logo.svg" alt="logo" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-popup">
+        <div class="search-popup-head">
+          <div class="container">
+            <div class="search-field">
+              <svg class="search-popup-icon">
+                <use xlink:href="svg/svg/symbols.svg#icon-search_white" />
+              </svg>
+              <input type="search" class="search-input" placeholder="Введите ваш запрос">
+              <svg class="search-popup-close">
+                <use xlink:href="svg/svg/symbols.svg#cross" />
+              </svg>
+              <a href="#" class="ui-btn search-btn">
+                Найти
+              </a>
+            </div>            
+          </div>
+        </div>
+        <div class="results results__popup">
+          <div class="results-title">
+            <div class="container">
+              Результаты поиска:
+            </div>
+          </div>
+          <div class="results-item">
+            <div class="container">
+              <div class="results-item-section">
+                Услуга
+              </div>
+              <div class="results-item-text">
+                <a href="#" class="results-item-title">
+                  Мультимодальные перевозки
+                </a>                
+              </div>
+            </div>
+          </div>
+          <div class="results-item">
+            <div class="container">
+              <div class="results-item-section">
+                Новость
+              </div>
+              <div class="results-item-text">
+                <a href="#" class="results-item-title">
+                  Государственное предприятие «БТЛЦ» приняло участие в конференции «РЫНОК ЩЕБНЯ РОССИИ 2023»
+                </a>
+                <div class="results-item-date">
+                  3 октября 2023 г.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="results-item">
+            <div class="container">
+              <div class="results-item-section">
+                Новость
+              </div>
+              <div class="results-item-text">
+                <a href="#" class="results-item-title">
+                  Фестиваль песни и спорта среди молодежи предприятий и организаций Октябрьского района г. Минска
+                </a>
+                <div class="results-item-date">
+                  3 октября 2023 г.
+                </div>
+              </div>
+            </div>
+          </div>          
+          <div class="results-item">
+            <div class="container">
+              <div class="results-item-section">
+                Новость
+              </div>
+              <div class="results-item-text">
+                <a href="#" class="results-item-title">
+                  Государственное предприятие «БТЛЦ» приняло участие в конференции «РЫНОК ЩЕБНЯ РОССИИ 2023»
+                </a>
+                <div class="results-item-date">
+                  3 октября 2023 г.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="results-item">
+            <div class="container">
+              <div class="results-item-section">
+                Новость
+              </div>
+              <div class="results-item-text">
+                <a href="#" class="results-item-title">
+                  Фестиваль песни и спорта среди молодежи предприятий и организаций Октябрьского района г. Минска
+                </a>
+                <div class="results-item-date">
+                  3 октября 2023 г.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="results-item">
+            <div class="container">
+              <div class="results-item-section">
+                Новость
+              </div>
+              <div class="results-item-text">
+                <a href="#" class="results-item-title">
+                  Государственное предприятие «БТЛЦ» приняло участие в конференции «РЫНОК ЩЕБНЯ РОССИИ 2023»
+                </a>
+                <div class="results-item-date">
+                  3 октября 2023 г.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+           
+    </header>
+    <!-- header end -->
+
+    <!-- main screen start -->
+    <main class="main">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Услуги
+            </a>
+          </li>
+          <li>
+            Контейнерные перевозки
+          </li>
+        </ul>     
+        <article class="article">
+          <div class="ui-tabs ui-tabs__min">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="ui-tab ui-tab__min">
+                  Экспедирование грузов
+                </div>
+                <div class="ui-tab ui-tab__min active">
+                  Контейнерные перевозки
+                </div>
+                <div class="ui-tab ui-tab__min">
+                  Мультимодальные перевозки
+                </div>
+                <div class="ui-tab ui-tab__min">
+                  Перевозки с предоставлением подвижного состава
+                </div>
+                <div class="ui-tab ui-tab__min">
+                  Таможенное оформление
+                </div>
+                <div class="ui-tab ui-tab__min">
+                  Терминальные услуги
+                </div>
+                <div class="ui-tab ui-tab__min">
+                  Оформление электронных перевозочных документов
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <header>
+            <div class="row">
+              <div class="col-xl-9">
+                <h1 class="h1 article-title">
+                  Контейнерные перевозки
+                </h1>
+                <div class="ui-tabs">
+                  <div class="ui-tab">
+                    Регулярные контейнерные поезда
+                  </div>
+                  <div class="ui-tab">
+                    Евразийский железнодорожный 
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <img src="./images/service-6.svg" alt="container" class="article-head-img">
+              </div>
+            </div>
+          </header>
+
+          <div class="post-wrapper post-wrapper__article post-wrapper__article-margin">
+            <div class="row">
+              <div class="col-md-2 col-sm-3">
+                <div class="post-side">
+                  <div class="post-side-navigation">
+                    <div class="post-side-navigation-title">
+                      Навигация:
+                    </div>
+                    <ul class="post-side-navigation-list">
+                    </ul>
+                  </div>
+                  <div class="post-side-share">
+                    <div class="post-side-share-title">
+                      Поделиться услугой:
+                    </div>
+                    <div class="post-side-share-links">
+                      <div class="post-side-share-item">
+                        <svg class="post-side-share-icon post-side-share-icon__link">
+                          <use xlink:href="svg/svg/symbols.svg#link" />
+                        </svg>
+                      </div>
+                      <div class="post-side-share-item">
+                        <svg class="post-side-share-icon">
+                          <use xlink:href="svg/svg/symbols.svg#telegram" />
+                        </svg>
+                      </div>
+                      <div class="post-side-share-item">
+                        <svg class="post-side-share-icon">
+                          <use xlink:href="svg/svg/symbols.svg#whatsapp" />
+                        </svg>
+                      </div>
+                      <div class="post-side-share-item">
+                        <svg class="post-side-share-icon">
+                          <use xlink:href="svg/svg/symbols.svg#viber" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-9">                  
+                <div class="post-container">
+                  <h3 class="item-menu">
+                    Введение
+                  </h3>
+                  <p>
+                    Контейнерные перевозки на сегодняшний день являются одним из наиболее быстрых и
+                    экономичных видов транспортировки практически любых видов грузов в международном сообщении.
+                    Железнодорожные, контейнерные перевозки грузов одно из приоритетных направлений в
+                    транспортно-экспедиционной деятельности государственного предприятия «БТЛЦ». Стоит отметить,
+                    что доставка грузов железнодорожными контейнерами обладает целым рядом дополнительных преимуществ,
+                    в сравнении с другими вариантами грузоперевозок:
+                  </p>
+                  <ul>
+                    <li>
+                      Перевозка грузов контейнерами имеет более низкую стоимость. Цена ниже за счет отсутствия
+                      необходимости перегружать груз при перевозке несколькими видами транспорта (мультимодальные перевозки).
+                    </li>
+                    <li>
+                      Отлаженная система позволяет значительно сократить время на перевозку.  
+                    </li>
+                    <li>
+                      Контейнерные перевозки имеют высокий уровень безопасности.  
+                    </li>
+                    <li>
+                      Доставка контейнеров может осуществляться от двери отправителя до двери получателя.
+                    </li>
+                    <li>
+                      Перевозка грузов в контейнерах наиболее оптимальна при осуществлении международных грузоперевозок на большие расстояния.
+                    </li>
+                  </ul>
+                  <p>
+                    Доставка контейнеров государственным предприятием «БТЛЦ» осуществляется до склада грузополучателя с помощью новейших,
+                    уникальных для Беларуси погрузчиков-контейнеровозов (сайдлифтеров), а также стандартными платформами.
+                  </p>
+                  <h3 class="item-menu">
+                    Параметры и типы контейнеров
+                  </h3>
+                  <p>
+                    Железнодорожные контейнеры имеют специальную международную спецификацию — ISO 830-1981,
+                    они отличаются размерами и назначением, при этом все контейнеры подходят в том числе для осуществления
+                    грузоперевозок водным (морским) и автомобильным видами транспорта, что значительно снижает затраты на перевозку.
+                  </p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>
+                          НАИМЕНОВАНИЕ
+                        </th>
+                        <th>
+                          НАРУЖНЫЕ РАЗМЕРЫ, (ММ)
+                        </th>
+                        <th>
+                          ВНУТРЕННИЕ РАЗМЕРЫ, (ММ)
+                        </th>
+                        <th>
+                          ОБЪЕМ, (КУБ.М.)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          20-ти футовый стандартный контейнер
+                        </td>
+                        <td>
+                          6 058х2 438х2 591
+                        </td>
+                        <td>
+                          5 898х2 350х2 390
+                        </td>
+                        <td>
+                          33
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          40-ка футовый стандартный контейнер
+                        </td>
+                        <td>
+                          12 192х2 438х2 591
+                        </td>
+                        <td>
+                          12 093х2 350х2 372
+                        </td>
+                        <td>
+                          67
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    Помимо стандартных контейнеров для перевозки груза могут использоваться другие модификации:
+                  </p>
+                  <table>                        
+                    <tbody>
+                      <tr>
+                        <td>
+                          High Cube (HC)
+                        </td>
+                        <td>
+                          Обладают увеличенной вместимостью, данные контейнеры выше универсальных почти на 300 мм.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Open Top (OT)
+                        </td>
+                        <td>
+                          Открытые с верхней стороны
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Open Side (OS)
+                        </td>
+                        <td>
+                          С дверями, расположенными по бокам
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Контейнеры-танкеры
+                        </td>
+                        <td>
+                          Контейнеры предназначены для перевозки наливных грузов различного назначения
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Рефрижераторы
+                        </td>
+                        <td>
+                          Оборудованы холодильной установкой, предназначены для доставки продовольственных,
+                          медикаментов и других товаров, требующих соблюдения заданного температурного режима на всем пути следования
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Вентилируемые
+                        </td>
+                        <td>
+                          Оптимальны для грузов, которым необходима постоянная вентиляция
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    Логистами и другими специалистами государственного предприятия «БТЛЦ» будут подобраны наиболее подходящие
+                    для вашего груза контейнеры, а также самые выгодные условия и маршруты доставки вашего груза.
+                    Мы являемся лидером рынка контейнерных перевозок в Беларуси.
+                  </p>
+                  <h3 class="item-menu">
+                    Параметры и типы контейнеров
+                  </h3>
+                  <p>
+                    Государственное предприятие «БТЛЦ» организовывает следующие международные контейнерные грузоперевозки:
+                  </p>
+                  <a href="#" class="article-link">
+                    <svg class="icon">
+                      <use xlink:href="svg/svg/symbols.svg#link" />
+                    </svg>
+                    <span class="text">
+                      Китай - Европа - Китай
+                    </span>
+                  </a>
+                  <ul>
+                    <li>
+                      «ВИКИНГ» Литва - Беларусь - Украина - Молдова – Румыния (сухопутный маршрут);
+                      Литва - Беларусь – Украина (через порт Одесский/ Ильичевский и далее морем) – Грузия
+                      (порт Поти/Батуми – Тбилиси-узловая/ Гарбани экп.) – Болгария (порт Варна) – Турция (порты Турции).
+                    </li>
+                    <li>
+                      «ZUBR» Эстония – Латвия – Беларусь (Минск) – Украина – Молдова.
+                    </li>
+                    <li>
+                      «Монгольский вектор» Брест (Беларусь) – Осиновка (Беларусь)/Красное (Россия) – Наушки
+                      (Россия)/Сухэ-Батор (Монголия) – Улан-Батор (Монголия).
+                    </li>
+                  </ul>
+                  <p>
+                    Оператором контейнерных поездов на территории Республики Беларусь является государственное предприятие «БТЛЦ».
+                    Преимущества контейнерных перевозок ускоренными поездами заключаются в льготных тарифах на перевозку,
+                    оперативное таможенное оформление, движение по графику, информационное сопровождение, обеспечение сохранности груза.
+                  </p>
+                  <h3 class="item-menu">
+                    Виды грузов
+                  </h3>
+                  <p>
+                    Техническое оснащение предприятия даёт возможность осуществлять доставку грузов практически любого назначения:
+                    всевозможные полезные ископаемые, металл, негабаритные конструкции, химические материалы и субстанции,
+                    скоропортящиеся товары, сырьё для различных отраслей промышленности, продукты пищевой промышленности и другие виды грузов.
+                  </p>                    
+                </div>             
+              </div>
+            </div>
+          </div>
+        </article>
+        <div class="services-order services-order__margin">
+          <div class="services-order-content">
+            <h1 class="services-order-title">
+              Тарифы на перевозки
+            </h1>
+            <div class="services-order-content-wrapper">
+              <a href="#" class="ui-btn ui-btn-main ui-btn-white">
+                Заказать перевозку
+              </a>
+              <div class="services-order-text">
+                В связи с тем, что каждая перевозка фактически является индивидуальной,
+                расчёт её стоимости также производится исходя из полученных данных. Просьба заполните форму заявки
+              </div>
+            </div>
+          </div>
+          <div class="services-order-dash">
+            <div class="services-order-dash-line">
+            </div>
+          </div>
+          <div class="services-order-qr">
+            <div class="services-order-qr-image">
+              <img src="./images/qr.svg" alt="qr-code">
+            </div>
+          </div>
+        </div>
+        <div class="post-more">
+          <h2 class="h1 ui-more-title">
+            Возможно, Вас заинтересует
+          </h2>
+          <div class="post-more-link">
+            <span>
+              /
+            </span>
+            <a href="#">
+              перейти в раздел
+            </a>
+          </div>          
+        </div>
+        <div class="services-list">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+              <a href="#" class="services-list-item">
+                <div class="services-list-item-image">
+                  <img src="./images/service-5.svg" alt="экспедирование">
+                </div>
+                <div class="services-list-item-title">
+                  <div class="services-list-item-text">
+                    Экспедирование грузов
+                  </div>
+                  <svg class="services-list-item-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <a href="#" class="services-list-item">
+                <div class="services-list-item-image">
+                  <img src="./images/service-6.svg" alt="экспедирование">
+                </div>
+                <div class="services-list-item-title">
+                  <div class="services-list-item-text">
+                    Контейнерные перевозки
+                  </div>
+                  <svg class="services-list-item-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <a href="#" class="services-list-item">
+                <div class="services-list-item-image">
+                  <img src="./images/service-7.svg" alt="экспедирование">
+                </div>
+                <div class="services-list-item-title">
+                  <div class="services-list-item-text">
+                    Мультимодальные перевозки
+                  </div>
+                  <svg class="services-list-item-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </main>
+    <!-- main screen end -->
+
+
+    <!-- footer start   -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#" class="footer-logo">
+            <img src="./images/logo.svg" alt="logo" loading="lazy">
+          </a>
+          <div class="footer-contacts">
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                по общим вопросам
+              </div>
+              <a href="mailto:btlc@belint.by" class="footer-contacts-link">
+                btlc@belint.by
+              </a>
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                перевозки в вагонах
+              </div>
+              <a href="mailto:info@belint.by" class="footer-contacts-link">
+                info@belint.by
+              </a>  
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                перевозки в контейнерах
+              </div>
+              <a href="mailto:container@belint.by" class="footer-contacts-link">
+                container@belint.by
+              </a>  
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                головной офис
+              </div>
+              <a href="tel:+375296253030" class="footer-contacts-link">
+                +375 29 625 30 30
+              </a>  
+            </div>
+          </div>
+          <div class="footer-socials">
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#telegram" />
+              </svg>
+            </div>
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#whatsapp" />
+              </svg>
+            </div>
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#viber" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <nav class="footer-nav">
+            <ul>
+              <li>
+                <a href="#">
+                  О нас
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Структура
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Инфоцентр
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Справочник
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-middle-links">
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/october-district.png" alt="october-district">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/RB.png" alt="Belarus">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/MT.png" alt="MT">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/Circle.png" alt="circle">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/BC.png" alt="БЧ">
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-copy">
+            © 2009-2023 Государственное предприятие "БТЛЦ"
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#" class="footer-bottom-link">
+              Политика обработки персональных данных
+            </a>
+            <a href="#" class="footer-bottom-link">
+              Файлы cookie
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>

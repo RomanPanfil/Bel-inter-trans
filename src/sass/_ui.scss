@@ -157,37 +157,75 @@ img {
 }
 
 .ui-tabs {
-	margin-bottom: 100px;
+	margin-bottom: 110px;
 	font-size: 0;
+
+	&__min {
+		margin-bottom: 54px;
+	}
 }
 
 .ui-tab {
 	display: inline-block;
+	vertical-align: middle;	
 	background-color: $bgc;
 	margin-right: 10px;	
 	cursor: pointer;	
 	color: #1F2839;
-	@include fz(20);	
-	font-weight: 500;
-	line-height: 1;
+	@include fz(20);
+	font-weight: 500;	
+	height: 35px;
+	line-height: 35px;
+	// min-height: 35px;	
 	text-transform: uppercase;
 	border-radius: 24px;
-	border: 1px solid $font-light;
-	padding: 8px 16px;
+	border: 1px solid $font-light;	
+	padding-left: 16px;
+	padding-right: 16px;
 	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 
 	&.active {
 		background-color: $primary;
 		color: $bgc;
 		border-color: $primary;
+
+		.ui-tab-icon {
+			stroke: $bgc;
+		}
 	}
 
 	&:hover {
 		border-color: $primary;
 		color: $primary;
 		background-color: $bgc;
-	}	
+	}
+
+	&-icon {
+		fill: none;
+		width: 24px;
+		height: 24px;
+		stroke: $primary;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 0;
+		margin-right: 5px;
+		stroke-width: 2px;
+		margin-top: -4px;
+	}
+
+	&__min {
+		@include fz(16);
+		@include ls(-0.1);	
+		font-weight: 400;
+		text-transform: unset;
+		height: 40px;
+		line-height: 38px;
+		background-color: $bg-blue-light;
+		border-color: $bg-blue-light;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
 }
 
 .ui-tabs-wrapper {

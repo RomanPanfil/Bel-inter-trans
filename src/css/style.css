@@ -450,8 +450,8 @@ h2, .h2, .ui-h2 {
 }
 
 h3, .h3, .ui-h3 {
-  font-size: 32px;
-  font-size: 2rem;
+  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 1.2;
 }
 
@@ -588,12 +588,16 @@ img {
 }
 
 .ui-tabs {
-  margin-bottom: 100px;
+  margin-bottom: 110px;
   font-size: 0;
+}
+.ui-tabs__min {
+  margin-bottom: 54px;
 }
 
 .ui-tab {
   display: inline-block;
+  vertical-align: middle;
   background-color: #FFFFFF;
   margin-right: 10px;
   cursor: pointer;
@@ -601,25 +605,56 @@ img {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 1;
+  height: 35px;
+  line-height: 35px;
   text-transform: uppercase;
   border-radius: 24px;
   border: 1px solid #9EA5B4;
-  padding: 8px 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   -webkit-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   -o-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .ui-tab.active {
   background-color: #2861CF;
   color: #FFFFFF;
   border-color: #2861CF;
 }
+.ui-tab.active .ui-tab-icon {
+  stroke: #FFFFFF;
+}
 .ui-tab:hover {
   border-color: #2861CF;
   color: #2861CF;
   background-color: #FFFFFF;
+}
+.ui-tab-icon {
+  fill: none;
+  width: 24px;
+  height: 24px;
+  stroke: #2861CF;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  margin-right: 5px;
+  stroke-width: 2px;
+  margin-top: -4px;
+}
+.ui-tab__min {
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: -0.1px;
+  letter-spacing: -0.00625rem;
+  font-weight: 400;
+  text-transform: unset;
+  height: 40px;
+  line-height: 38px;
+  background-color: #F4F8FF;
+  border-color: #F4F8FF;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .ui-tabs-wrapper {
@@ -2897,6 +2932,12 @@ img {
   position: relative;
   margin-bottom: 200px;
 }
+.post-wrapper__article {
+  margin-bottom: 0;
+}
+.post-wrapper__article-margin {
+  margin-bottom: 174px;
+}
 .post-head {
   border-bottom: 1px solid #E3E8F2;
   padding-bottom: 60px;
@@ -2916,7 +2957,8 @@ img {
   max-width: 960px;
 }
 .post-side {
-  position: absolute;
+  position: relative;
+  padding-right: 20px;
 }
 .post-side-date {
   color: #9EA5B4;
@@ -2924,6 +2966,8 @@ img {
 }
 .post-side-share-title {
   margin-bottom: 10px;
+  font-size: 16px;
+  font-size: 1rem;
 }
 .post-side-share-links {
   font-size: 0;
@@ -2973,6 +3017,40 @@ img {
   fill: none;
   stroke: #2861CF;
   stroke-width: 2px;
+}
+.post-side-navigation {
+  border-bottom: 1px solid #E3E8F2;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.post-side-navigation-title {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #9EA5B4;
+  margin-bottom: 20px;
+}
+.post-side-navigation-item {
+  position: relative;
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.27px;
+  letter-spacing: 0.016875rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.post-side-navigation-item.active {
+  padding-left: 16px;
+}
+.post-side-navigation-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: #2861CF;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
 }
 .post-gallery {
   display: -webkit-box;
@@ -3128,14 +3206,143 @@ img {
           filter: brightness(1.5);
 }
 
-.article-content {
-  margin-bottom: 60px;
-}
-.article p {
+.article {
   font-size: 20px;
   font-size: 1.25rem;
   letter-spacing: 0.3px;
   letter-spacing: 0.01875rem;
+}
+.article-head {
+  margin-bottom: 40px;
+  padding-bottom: 0;
+  border: none;
+}
+.article-head-img {
+  aspect-ratio: 1.6;
+}
+.article-title {
+  font-weight: 500;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.article-content {
+  margin-bottom: 60px;
+}
+.article ul:not(.post-side-navigation-list) {
+  margin-bottom: 40px;
+}
+.article ul:not(.post-side-navigation-list) li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 22px;
+  line-height: 1.2;
+}
+.article ul:not(.post-side-navigation-list) li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: #2861CF;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.article ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+  margin-bottom: 60px;
+}
+.article ol li {
+  list-style-position: inside;
+  list-style: unset;
+}
+.article h3 {
+  font-weight: 500;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+  margin-bottom: 44px;
+}
+.article h5 {
+  font-weight: 600;
+}
+.article a {
+  color: #2861CF;
+}
+.article a[href*=tel] {
+  white-space: nowrap;
+}
+.article-link {
+  display: inline-block;
+  color: #2861CF;
+  position: relative;
+  margin-bottom: 20px;
+}
+.article-link .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke-width: 2px;
+  stroke: #2861CF;
+}
+.article-link .text {
+  display: inline-block;
+  padding-left: 34px;
+}
+.article-table {
+  overflow-x: auto;
+  border: 1px solid #E3E8F2;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+.article-table__full {
+  width: 100%;
+  table-layout: fixed;
+}
+.article table {
+  border-collapse: collapse;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+}
+.article thead {
+  background: #F2F7FF;
+  color: #2861CF;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  letter-spacing: -0.03125rem;
+  text-transform: uppercase;
+}
+.article thead th {
+  padding: 20px;
+  text-align: left;
+}
+.article thead th:not(:last-child) {
+  border-right: 1px solid #E3E8F2;
+}
+.article tbody tr:not(:last-child) {
+  border-bottom: 1px solid #E3E8F2;
+}
+.article td {
+  padding: 20px;
+  min-width: 140px;
+  line-height: 1.2;
+  vertical-align: top;
+}
+.article td:not(:last-child) {
+  border-right: 1px solid #E3E8F2;
+}
+.article td:first-child {
+  width: 320px;
 }
 
 .contacts {
@@ -3248,6 +3455,9 @@ img {
   display: flex;
   min-height: 340px;
   margin-bottom: 60px;
+}
+.services-order__margin {
+  margin-bottom: 200px;
 }
 .services-order-title {
   color: #FFFFFF;
