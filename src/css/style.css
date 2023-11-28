@@ -3822,7 +3822,7 @@ img {
 }
 
 .railway {
-  margin-bottom: 110px;
+  margin-bottom: 80px;
 }
 .railway-web {
   display: -webkit-box;
@@ -3838,6 +3838,7 @@ img {
   border-radius: 20px;
   min-height: 406px;
   margin-bottom: 30px;
+  height: calc(100% - 30px);
 }
 .railway-web:hover .railway-web-link span {
   opacity: 0.8;
@@ -3874,6 +3875,8 @@ img {
   padding: 40px;
   border: 1px solid #E3E8F2;
   border-radius: 20px;
+  margin-bottom: 30px;
+  height: calc(100% - 30px);
 }
 .railway-contacts-description {
   color: #9EA5B4;
@@ -3883,6 +3886,7 @@ img {
   letter-spacing: 0.0125rem;
   margin-bottom: auto;
   max-width: 740px;
+  padding-bottom: 20px;
 }
 .railway-contacts-title {
   font-size: 20px;
