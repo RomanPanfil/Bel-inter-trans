@@ -284,6 +284,17 @@ img {
 		}
 	}
 
+	&-primary {
+		background-color: $primary;
+		color: $font-white;
+		border: 1px solid $primary;
+
+		&:hover {
+			color: $primary;
+			background-color: $bgc;		
+		}
+	}
+
 	&-youtube {
 		display: inline-block;
 		white-space: nowrap;
@@ -334,7 +345,7 @@ img {
 
 .ui-field {
 	position: relative;
-	// height: 38px;	
+	margin-bottom: 40px;	
 
 	label.error {
 		position: absolute;
@@ -344,88 +355,39 @@ img {
 		color: $error;
 		@include fz(12);		
 		width: max-content;		
-	}
-
-	.ui-star {
-		position: absolute;
-		left: 10px;
-		@include fz(18);
-		cursor: text;
-		z-index: 0;
-		pointer-events: none;	
-	}
-
-	input:invalid ~ .ui-star::before {
-		content: attr(placeholder);
-		position: relative;
-		margin-right: 4px;		
-	}
-	  
-	input:invalid ~ .ui-star::after {
-		content: '*';
-		position: relative;				
-		color: $error;		
-	}
-
-	textarea:invalid ~ .ui-star::before {
-		content: attr(placeholder);
-		position: relative;
-		margin-right: 4px;		
-	}
-	  
-	textarea:invalid ~ .ui-star::after {
-		content: '*';
-		position: relative;				
-		color: $error;
-	}
+	}	
 }
 
-.ui-send {
+.ui-label {
+	position: absolute;
+	left: 0;
+	top: 0;
 	display: inline-block;
-	cursor: pointer;
+	@include fz(14);
+	text-transform: uppercase;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 10px;
 
-	span {
-		display: inline-block;
-		vertical-align: middle;
-		line-height: 162.5%;
-		@include ls(0.32);
-		max-width: 200px;
-		white-space: nowrap;
-      	text-overflow: ellipsis;
-      	overflow: hidden;
-		border-bottom: 1px dashed rgba(42, 45, 51, 0.50);
-	}
-
-	.icon {
-		fill: none;
-		width: 32px;
-		height: 32px;
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: 8px;
-		stroke-width: 1.5px;
-
-		@media(max-width: 420px) {
-			width: 24px;
-			height: 24px;
-			margin-right: 4px;
-		}
+	&-required {
+		@include fz(20);
+		color: $primary;
 	}
 }
 
-.ui-input {
+.ui-input {	
 	border: none;
 	border-bottom: 1px solid $input_border;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 12px;
-	@include fz(18);	
-	line-height: 144.444%;
+	padding-top: 38px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	@include fz(20);	
 	outline: none;	
 	width: 100%;
 
 	&::placeholder {
-		color: $font;
+		color: $font-light;		
 	}
 
 	&-file {
@@ -555,6 +517,73 @@ img {
 			transform: rotate(180deg);
 		}		
 	}
+
+	&__form {
+		position: relative;
+		border-bottom: 1px solid $input_border;
+		width: 100%;
+		@include fz(20);		
+
+		.jq-selectbox__select {
+			position: relative;
+			padding-top: 37px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px;
+			overflow: hidden;
+			&-text {
+				color: $font-light;
+				display: block;
+				line-height: 1.2;				
+			}
+		}
+
+		.jq-selectbox__trigger {
+			position: absolute;
+			right: 20px;
+			top: 50%;			
+		}
+		
+		&.changed {
+			.jq-selectbox__select {
+				&-text {
+					color: $font;
+				}
+			}
+		}		
+	}
+
+	&__lang {
+		// position: unset;
+		.jq-selectbox__dropdown {			
+			z-index: 1;
+			left: -8px;
+			ul {			
+				background-color: $primary;
+				margin-top: 10px;
+				border-radius: 5px;
+				li {
+					color: $font-blue-light;
+					padding: 10px;
+					width: 80px;
+					&:hover {
+						color: $font-white;
+						opacity: 1;
+					}
+					&:not(:last-child) {
+						border-bottom: 1px solid $font-blue-light;
+					}
+					&.selected {
+						color: $font-white;
+					}
+				}
+			}	
+		}
+		.jq-selectbox__select-text {
+			width: 40px !important;
+		}
+		
+	}
 }
 .jq-selectbox__select-text {
 	display: inline-block;
@@ -584,11 +613,13 @@ img {
 	left: 0;
 	border-radius: 5px;	
 	box-shadow: -4px 2px 8.7px 0px rgba(36, 64, 130, 0.06);
+	overflow-y: auto;
 }
 
 .jq-selectbox li {
 	transition: color 0.3s;
 	padding: 10px 20px;
+	white-space: inherit;
 
 	&:not(:last-child) {
 		border-bottom: 1px solid $border;
@@ -596,6 +627,11 @@ img {
 
 	&:hover {
 		color: $link;
+	}
+
+	&.disabled {
+		color: $font-light;
+		cursor: not-allowed;
 	}
 }
 

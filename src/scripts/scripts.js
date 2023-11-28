@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
    $('.ui-select').styler();
 
    // добавление тугглера в nav 
-  const navLis = document.querySelectorAll('.header-nav li');
+  const navLis = document.querySelectorAll('.header-nav > ul > li');
 
   navLis.forEach(li => {
     const ul = li.querySelector('ul');
@@ -372,7 +372,6 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.appendChild(table);
     })
   })();
-
   
 
 });
