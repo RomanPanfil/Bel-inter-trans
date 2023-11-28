@@ -666,6 +666,7 @@
   }
 
   &-other {
+    margin-bottom: 50px;
     &-link {
       display: inline-block;
       @include fz(14);
@@ -673,7 +674,7 @@
       background-color: $bg-blue-light;
       margin-right: 10px;
       padding: 8px 16px;
-      margin-bottom: 60px;
+      margin-bottom: 10px;
       transition: background-color 0.3s, color 0.3s;  
 
       &:hover {

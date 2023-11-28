@@ -3172,6 +3172,9 @@ img {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
+.post-other {
+  margin-bottom: 50px;
+}
 .post-other-link {
   display: inline-block;
   font-size: 14px;
@@ -3180,7 +3183,7 @@ img {
   background-color: #F4F8FF;
   margin-right: 10px;
   padding: 8px 16px;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   -webkit-transition: background-color 0.3s, color 0.3s;
   -o-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
