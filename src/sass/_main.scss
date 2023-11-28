@@ -485,6 +485,17 @@
     // margin-bottom: 200px;
   }
 
+  &-approve {
+    max-width: 1000px;
+
+    &-text {      
+      max-width: 274px;
+      margin-left: auto;
+      margin-bottom: 60px;
+      text-align: right;
+    }
+  }
+
   &-container {
     max-width: 960px;
   }
@@ -496,6 +507,7 @@
     &-date {
       color: $font-light;
       margin-bottom: 40px;
+      @include fz(16);
     }
     
     &-share {
@@ -928,6 +940,11 @@
     &:first-child {
       width: 320px;
     }
+  }
+
+  &-image {
+    border-radius: 20px;
+    margin-top: 40px;
   }
 }
 
@@ -1497,6 +1514,97 @@
     padding-top: 56px;
     padding-bottom: 58px;
     margin-bottom: 20px;
+  }
+}
+
+.documents {
+  margin-bottom: 70px;
+
+  &-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    // border-bottom: 1px solid $border;
+
+    &:first-child {
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        height: 1px;
+        width: 100vw;
+        background-color: $border;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      width: 100vw;
+      background-color: $border;
+    }
+
+    &-text {
+      position: relative;
+      padding-left: 40px;
+      margin-right: 20px;
+
+      &-icon {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &-essence {
+      color: $font-light;
+      @include fz(14);
+      margin-bottom: 10px;   
+    }
+
+    &-title {
+      @include fz(18);
+      color: $font;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &-download {
+      font-size: 0;
+      white-space: nowrap;
+      display: block;
+      width: max-content;
+      height: max-content;
+      font-size: 0;
+      margin-bottom: 10px;
+
+      &-icon {
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      
+      &-text {
+        @include fz(14);
+        display: inline-block;
+        vertical-align: middle;
+        color: $primary;
+      }
+    }
   }
 }
 

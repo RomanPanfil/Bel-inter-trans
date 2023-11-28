@@ -2953,6 +2953,15 @@ img {
 .post-inner {
   border-bottom: 1px solid #E3E8F2;
 }
+.post-approve {
+  max-width: 1000px;
+}
+.post-approve-text {
+  max-width: 274px;
+  margin-left: auto;
+  margin-bottom: 60px;
+  text-align: right;
+}
 .post-container {
   max-width: 960px;
 }
@@ -2963,6 +2972,8 @@ img {
 .post-side-date {
   color: #9EA5B4;
   margin-bottom: 40px;
+  font-size: 16px;
+  font-size: 1rem;
 }
 .post-side-share-title {
   margin-bottom: 10px;
@@ -3343,6 +3354,10 @@ img {
 }
 .article td:first-child {
   width: 320px;
+}
+.article-image {
+  border-radius: 20px;
+  margin-top: 40px;
 }
 
 .contacts {
@@ -3927,6 +3942,96 @@ img {
   padding-top: 56px;
   padding-bottom: 58px;
   margin-bottom: 20px;
+}
+
+.documents {
+  margin-bottom: 70px;
+}
+.documents-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+.documents-item:first-child::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 1px;
+  width: 100vw;
+  background-color: #E3E8F2;
+}
+.documents-item::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  width: 100vw;
+  background-color: #E3E8F2;
+}
+.documents-item-text {
+  position: relative;
+  padding-left: 40px;
+  margin-right: 20px;
+}
+.documents-item-text-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+.documents-item-essence {
+  color: #9EA5B4;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+.documents-item-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #1F2839;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.documents-item-title:hover {
+  color: #2861CF;
+}
+.documents-item-download {
+  font-size: 0;
+  white-space: nowrap;
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.documents-item-download-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.documents-item-download-text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  display: inline-block;
+  vertical-align: middle;
+  color: #2861CF;
 }
 
 .footer-top {
