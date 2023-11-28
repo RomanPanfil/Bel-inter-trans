@@ -3458,6 +3458,10 @@ img {
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
+  margin-bottom: 20px;
+}
+.contacts-card a[href*=mailto] {
+  margin-bottom: 8px;
 }
 .contacts-card:hover {
   background-color: #2861CF;
@@ -3511,7 +3515,6 @@ img {
 .contacts-card-mail {
   display: inline-block;
   color: #2861CF;
-  margin-bottom: 8px;
 }
 .contacts-card-call {
   margin-bottom: 20px;
@@ -3530,7 +3533,6 @@ img {
 .contacts-card-link {
   color: #2861CF;
   display: inline-block;
-  margin-bottom: 20px;
 }
 
 .services-list {

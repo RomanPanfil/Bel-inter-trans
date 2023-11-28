@@ -996,6 +996,11 @@
 
     a {
       transition: color 0.3s;
+      margin-bottom: 20px;
+
+      &[href *= mailto] {
+        margin-bottom: 8px;
+      }
     }
 
     &:hover {
@@ -1005,7 +1010,7 @@
 
       a {
         color: $font-white;
-        transition: color 0.3s;
+        transition: color 0.3s;        
       }
 
       .contacts-card-icon {
@@ -1047,7 +1052,7 @@
     &-mail {
       display: inline-block;
       color: $primary;
-      margin-bottom: 8px;   
+      // margin-bottom: 8px;   
     }
 
     &-call {
@@ -1072,7 +1077,7 @@
     &-link {
       color: $link;
       display: inline-block;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
     }
   }
 }
