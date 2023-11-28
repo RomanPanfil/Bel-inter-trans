@@ -184,7 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Код для видео
         callbacks: {
           ajaxContentAdded: function() {
-            var videoURL = $link.data('video');
+            var videoId = $link.data('video-id');
+            var videoURL = `https://www.youtube.com/embed/${videoId}`;
             $(this.content).find('iframe').attr('src', videoURL);
 
             document.documentElement.style.overflow = 'hidden'

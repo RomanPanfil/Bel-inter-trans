@@ -3804,10 +3804,14 @@ img {
 .video-gallery-card-image {
   border-radius: 5px;
   overflow: hidden;
-  aspect-ratio: 1.52;
 }
 .video-gallery-card-image img {
-  width: 100%;
+  aspect-ratio: 1.52;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .video-gallery-card-play {
   position: absolute;
@@ -3913,9 +3917,6 @@ img {
   top: 2px;
   width: 24px;
   height: 24px;
-}
-.railway-contacts-item span {
-  font-weight: 600;
 }
 .railway-contacts-item:not(:last-child) {
   margin-bottom: 20px;

@@ -1336,10 +1336,14 @@
     &-image {
       border-radius: 5px;
       overflow: hidden;
-      aspect-ratio: 1.52;
+      // aspect-ratio: 1.52;
 
       img {
-        width: 100%;
+        // width: 100%;
+        aspect-ratio: 1.52;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
       }
     }
 
@@ -1443,11 +1447,8 @@
         top: 2px;
         width: 24px;
         height: 24px;
-      }
+      }     
      
-      span {
-        font-weight: 600;
-      }
       &:not(:last-child) {
         margin-bottom: 20px;
       }
