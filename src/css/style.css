@@ -3477,25 +3477,20 @@ img {
           transform: translate(20%, -20%);
 }
 .contacts-card-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  position: relative;
   margin-bottom: 20px;
+  padding-right: 48px;
 }
 .contacts-card-title {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
-  margin-right: 26px;
 }
 .contacts-card-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 24px;
   height: 24px;
   -ms-flex-negative: 0;

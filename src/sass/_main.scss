@@ -1015,20 +1015,21 @@
     }
 
     &-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      position: relative;
       margin-bottom: 20px;
+      padding-right: 48px;
     }
 
     &-title {
       @include fz(24);
       font-weight: 500;
       text-transform: uppercase;
-      margin-right: 26px;
     }
 
     &-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
       width: 24px;
       height: 24px;
       flex-shrink: 0;
