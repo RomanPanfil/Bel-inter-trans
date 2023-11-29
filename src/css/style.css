@@ -578,9 +578,6 @@ img {
   text-transform: uppercase;
   margin-bottom: 44px;
 }
-.page-title-wrapper {
-  margin-bottom: 24px;
-}
 
 .ui-more {
   margin-bottom: 60px;
@@ -947,12 +944,10 @@ img {
      -moz-column-gap: 20px;
           column-gap: 20px;
 }
-.pagination-item {
+.pagination-item-link {
   text-align: center;
   font-size: 20px;
   font-size: 1.25rem;
-}
-.pagination-item-link {
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -3370,6 +3365,17 @@ img {
   color: #2861CF;
   position: relative;
   margin-bottom: 20px;
+  padding-left: 34px;
+}
+.article-link-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke-width: 2px;
+  stroke: #2861CF;
 }
 .article-link .icon {
   position: absolute;

@@ -146,10 +146,6 @@ img {
 	letter-spacing: -1px;
 	text-transform: uppercase;
 	margin-bottom: 44px;
-
-	&-wrapper {
-		margin-bottom: 24px;
-	}
 }
 
 .ui-more {
@@ -490,12 +486,12 @@ img {
 		column-gap: 20px;
 	}
 
-	&-item {		
-		text-align: center;		
-		@include fz(20);		
+	&-item {
 
 		&-link {
-			display: inline-block;			
+			text-align: center;
+			@include fz(20);
+			display: inline-block;
 			width: 48px;
 			height: 48px;
 			line-height: 46px;

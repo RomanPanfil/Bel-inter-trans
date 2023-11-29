@@ -893,6 +893,18 @@
     color: $link;
     position: relative;
     margin-bottom: 20px;
+    padding-left: 34px;
+
+    &-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke-width: 2px;
+      stroke: $link;
+    }
 
     .icon {
       position: absolute;
