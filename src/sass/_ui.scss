@@ -146,6 +146,10 @@ img {
 	letter-spacing: -1px;
 	text-transform: uppercase;
 	margin-bottom: 44px;
+
+	&-wrapper {
+		margin-bottom: 24px;
+	}
 }
 
 .ui-more {
