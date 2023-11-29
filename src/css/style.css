@@ -3741,19 +3741,8 @@ img {
      object-position: center;
   height: 100%;
 }
-.video-gallery-banner-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-left: 80px;
-  padding-right: 58px;
-}
 .video-gallery-banner-logo {
+  margin-left: 80px;
   margin-top: -30px;
   display: block;
   position: relative;
@@ -3778,19 +3767,25 @@ img {
   height: 18px;
 }
 .video-gallery-banner-text {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  margin-right: 40px;
+  padding-right: 40px;
   margin-bottom: 20px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .video-gallery-banner-title {
+  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 .video-gallery-banner-desc {
   color: #9EA5B4;
+}
+.video-gallery-banner-btn {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 0 auto;
 }
 .video-gallery-cards {
   margin-bottom: 40px;
