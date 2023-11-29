@@ -800,6 +800,27 @@
 
     &-img {
       aspect-ratio: 1.6;
+
+    }
+  }
+
+  &-header {
+    position: relative;    
+
+    &-wrapper {
+      margin-bottom: 120px;
+    }
+
+    .ui-tabs {
+      margin-bottom: 0;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;     
+      width: 25%;
+      max-height: 320px;
+      aspect-ratio: 1.6;      
     }
   }
 

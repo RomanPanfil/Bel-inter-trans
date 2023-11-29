@@ -3306,6 +3306,22 @@ img {
 .article-head-img {
   aspect-ratio: 1.6;
 }
+.article-header {
+  position: relative;
+}
+.article-header-wrapper {
+  margin-bottom: 120px;
+}
+.article-header .ui-tabs {
+  margin-bottom: 0;
+}
+.article-header-img {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  max-height: 320px;
+  aspect-ratio: 1.6;
+}
 .article-title {
   font-weight: 500;
   letter-spacing: -1px;
