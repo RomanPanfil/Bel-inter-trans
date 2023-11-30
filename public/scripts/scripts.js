@@ -316,74 +316,121 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // меню навигации по тексту
-  (function() {
-    const menuItems = document.querySelectorAll('.item-menu');
-    const menuList = document.querySelector('.post-side-navigation-list');
+  // (function() {
+  //   const menuItems = document.querySelectorAll('.item-menu');
+  //   const menuList = document.querySelector('.post-side-navigation-list');
     
-    if(!menuList) return
+  //   if(!menuList) return
 
-    menuItems.forEach((item, index) => {      
-      const li = document.createElement('li');
-      li.classList.add('post-side-navigation-item');
+  //   menuItems.forEach((item, index) => {      
+  //     const li = document.createElement('li');
+  //     li.classList.add('post-side-navigation-item');
       
-      if (index === 0) {
-        li.classList.add('active');
-      }
+  //     if (index === 0) {
+  //       li.classList.add('active');
+  //     }
       
-      li.textContent = item.dataset.title || item.textContent;
+  //     li.textContent = item.dataset.title || item.textContent;
 
-      li.addEventListener('click', () => {
-        menuList.querySelectorAll('.active').forEach(el => {
-          el.classList.remove('active');  
-        });        
+  //     li.addEventListener('click', () => {
+  //       menuList.querySelectorAll('.active').forEach(el => {
+  //         el.classList.remove('active');  
+  //       });        
         
-        li.classList.add('active');
+  //       li.classList.add('active');
 
-        item.scrollIntoView({
-          behavior: 'smooth'  
-        });
-      });
+  //       item.scrollIntoView({
+  //         behavior: 'smooth'  
+  //       });
+  //     });
 
-      menuList.appendChild(li);
-    });
+  //     menuList.appendChild(li);
+  //   });
   
    
-    let currentActive = menuList.querySelector('.active');
+  //   let currentActive = menuList.querySelector('.active');
 
-    document.addEventListener('scroll', () => {
-      let maxVisible = 0;
-      let mostVisible;
-      let itemIndex;
+  //   document.addEventListener('scroll', () => {
+  //     let maxVisible = 0;
+  //     let mostVisible;
+  //     let itemIndex;
   
-      menuItems.forEach((item, index) => {
-        const rect = item.getBoundingClientRect();
-        const windowHeight = window.innerHeight;        
-        const topVisible = Math.max(0, rect.top);
-        const bottomVisible = Math.min(windowHeight, rect.bottom);
-        const visibleHeight = bottomVisible - topVisible;
-        const visiblePercentage = visibleHeight / rect.height * 100;
+  //     menuItems.forEach((item, index) => {
+  //       const rect = item.getBoundingClientRect();
+  //       const windowHeight = window.innerHeight;        
+  //       const topVisible = Math.max(0, rect.top);
+  //       const bottomVisible = Math.min(windowHeight, rect.bottom);
+  //       const visibleHeight = bottomVisible - topVisible;
+  //       const visiblePercentage = visibleHeight / rect.height * 100;
   
-        if (visiblePercentage > maxVisible) {      
-          mostVisible = item;
-          maxVisible = visiblePercentage;
-          itemIndex = index;
-        }
+  //       if (visiblePercentage > maxVisible) {      
+  //         mostVisible = item;
+  //         maxVisible = visiblePercentage;
+  //         itemIndex = index;
+  //       }
   
-      });
+  //     });
   
-      if (mostVisible && mostVisible !== currentActive) {
-        if (currentActive) {
-          currentActive.classList.remove('active');
-        }
+  //     if (mostVisible && mostVisible !== currentActive) {
+  //       if (currentActive) {
+  //         currentActive.classList.remove('active');
+  //       }
         
-        if (mostVisible) {
-          document.querySelectorAll('.post-side-navigation-item')[itemIndex].classList.add('active');
-          currentActive = document.querySelectorAll('.post-side-navigation-item')[itemIndex];
+  //       if (mostVisible) {
+  //         document.querySelectorAll('.post-side-navigation-item')[itemIndex].classList.add('active');
+  //         currentActive = document.querySelectorAll('.post-side-navigation-item')[itemIndex];
+  //       }
+  //     }  
+  //   });
+
+  // })();
+
+
+
+  // меню навигации по тексту
+  (function() {
+    const items = document.querySelectorAll('.post-wrapper .item-menu');
+    const menu = document.querySelector('.post-side-navigation-list');
+
+    if(!menu) return
+    
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.classList.add('post-side-navigation-item');
+      li.dataset.title = item.dataset.title || item.textContent;
+      li.textContent = item.dataset.title || item.textContent;      
+    
+      li.addEventListener('click', () => {
+        item.scrollIntoView({block: 'start', behavior: 'smooth'}); 
+      });
+    
+      menu.appendChild(li);
+    });
+    
+    let activeItem = menu.querySelector('li');
+    
+    activeItem.classList.add('active');
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry) => {
+       
+        if(entry.isIntersecting) {
+          const index = entry.target.index;
+         
+          activeItem.classList.remove('active');          
+          activeItem = document.querySelectorAll('.post-side-navigation-item')[index];
+          activeItem.classList.add('active');
         }
-      }  
+      }); 
+    });
+    
+    items.forEach((item, index) => {     
+      item.index = index;  
+      observer.observe(item);
     });
 
   })();
+
 
   // обертка для таблицы
   (function(){
