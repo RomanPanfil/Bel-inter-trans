@@ -3014,6 +3014,12 @@ body.sticky-wrap {
 .post-wrapper__article-margin {
   margin-bottom: 174px;
 }
+.post-wrapper a {
+  color: #2861CF;
+}
+.post-wrapper a[href*=tel] {
+  white-space: nowrap;
+}
 .post-head {
   border-bottom: 1px solid #E3E8F2;
   padding-bottom: 60px;
@@ -3399,12 +3405,6 @@ body.sticky-wrap {
 }
 .article h5 {
   font-weight: 600;
-}
-.article a {
-  color: #2861CF;
-}
-.article a[href*=tel] {
-  white-space: nowrap;
 }
 .article-link {
   display: inline-block;
@@ -3894,12 +3894,6 @@ body.sticky-wrap {
   margin-bottom: 30px;
   height: calc(100% - 30px);
 }
-.railway-web:hover .railway-web-link span {
-  opacity: 0.8;
-  -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
 .railway-web-title {
   font-size: 36px;
   font-size: 2.25rem;
@@ -3914,8 +3908,15 @@ body.sticky-wrap {
   font-size: 1.25rem;
   text-transform: uppercase;
 }
-.railway-web-link span {
+.railway-web-link a {
+  color: #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.railway-web-link a:hover {
+  opacity: 0.8;
 }
 .railway-contacts {
   display: -webkit-box;

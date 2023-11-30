@@ -499,6 +499,14 @@ body.sticky-wrap {
         margin-bottom: 174px;
       }
     }
+
+    a {   
+      color: $link;
+  
+      &[href*="tel"] {
+        white-space: nowrap;
+      }
+    }
   }
 
   &-head {
@@ -931,15 +939,7 @@ body.sticky-wrap {
   }
   h5 {
     font-weight: 600;
-  }
-
-  a {   
-    color: $link;
-
-    &[href*="tel"] {
-      white-space: nowrap;
-    }
-  }
+  }  
   
   &-link {
     display: inline-block;
@@ -1448,16 +1448,7 @@ body.sticky-wrap {
     // aspect-ratio: 2.1;
     min-height: 406px;
     margin-bottom: 30px;
-    height: calc(100% - 30px);
-
-    &:hover {
-      .railway-web-link {
-        span {
-          opacity: 0.8;
-          transition: opacity 0.3s;
-        }
-      }
-    }
+    height: calc(100% - 30px);    
 
     &-title {
       @include fz(36);     
@@ -1471,8 +1462,14 @@ body.sticky-wrap {
       margin-top: auto;
       @include fz(20);
       text-transform: uppercase;
-      span {
+      a {
+        color: $font-white;
         border-bottom: 1px solid $font-white;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
   }
