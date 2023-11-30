@@ -315,6 +315,7 @@
     margin-bottom: 30px;    
     aspect-ratio: 2.1;
     overflow: hidden;
+    cursor: pointer;
 
     &-head {
       display: flex;
@@ -460,6 +461,10 @@
       border: 1px solid $border;
       background-color: $primary;
       color: $bgc;
+
+      .news-card-title {
+        color: $font-white;
+      }
 
       .news-card-date {
         color: rgba(238, 242, 251, 0.7);

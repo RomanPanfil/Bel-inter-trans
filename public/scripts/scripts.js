@@ -124,9 +124,26 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        const href = card.getAttribute('data-href');
-        console.log(href);
+        const href = card.getAttribute('data-href');       
         window.location.href = href;
+      });
+    });
+  })();
+
+  // клик на карточку новостей
+  (function() {
+    const newsCards = document.querySelectorAll('.news-card');   
+
+    newsCards.forEach(card => {
+      card.addEventListener('click', e => {
+        if (e.target.tagName === 'A') {
+          return;
+        }
+
+        const href = card.querySelector('.news-card-title').getAttribute('href');        
+        if(href) {
+          window.location.href = href;
+        }        
       });
     });
   })();
@@ -458,6 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //   });
   // })();
 
+  // копирование ссылки текущей страницы в буфер обмена в блоке "поделиться"
   (function() {
     const shareIcon = document.querySelector('.post-side-share-icon__link');
 

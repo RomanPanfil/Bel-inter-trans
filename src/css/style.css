@@ -2808,6 +2808,7 @@ img {
   margin-bottom: 30px;
   aspect-ratio: 2.1;
   overflow: hidden;
+  cursor: pointer;
 }
 .news-card-head {
   display: -webkit-box;
@@ -2983,6 +2984,9 @@ img {
   border-radius: 10px;
   border: 1px solid #E3E8F2;
   background-color: #2861CF;
+  color: #FFFFFF;
+}
+.news-card__colored .news-card-title {
   color: #FFFFFF;
 }
 .news-card__colored .news-card-date {
