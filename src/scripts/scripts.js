@@ -446,6 +446,17 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.appendChild(table);
     })
   })();
+
+  // копирование ссылки текущей страницы в буфер обмена в блоке "поделиться"
+  (function() {
+    const shareIcon = document.querySelector('.post-side-share-icon__link');
+
+    if(!shareIcon) return
+  
+    shareIcon.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href);        
+    });
+  })();
   
 
 });
