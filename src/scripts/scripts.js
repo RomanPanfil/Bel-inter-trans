@@ -238,36 +238,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // фиксирование блока при прокрутке
-  (function() {
-    if (!document.querySelector('.post-wrapper') || !document.querySelector('.post-side')) return
+  // (function() {
+  //   if (!document.querySelector('.post-wrapper') || !document.querySelector('.post-side')) return
    
-    let scrollTimer;
-    let postHeaderBottom = $(".post-head").css("margin-bottom") || $(".article-title").css("margin-bottom") || 0;
+  //   let scrollTimer;
+  //   let postHeaderBottom = $(".post-head").css("margin-bottom") || $(".article-title").css("margin-bottom") || 0;
     
-    function handleScroll() {
-      if (parseInt($(".post-wrapper").offset().top) < $(window).scrollTop()) {
-        let tops = parseInt($(window).scrollTop() - $(".post-wrapper").offset().top + parseInt(postHeaderBottom));
+  //   function handleScroll() {
+  //     if (parseInt($(".post-wrapper").offset().top) < $(window).scrollTop()) {
+  //       let tops = parseInt($(window).scrollTop() - $(".post-wrapper").offset().top + parseInt(postHeaderBottom));
         
-        if (tops < $(".post-wrapper").height() - $(".post-side").height()) {
-          $(".post-side").css("top", tops);
-        }
-      } else {
-        $(".post-side").css("top", 0);
-      }
-    }
+  //       if (tops < $(".post-wrapper").height() - $(".post-side").height()) {
+  //         $(".post-side").css("top", tops);
+  //       }
+  //     } else {
+  //       $(".post-side").css("top", 0);
+  //     }
+  //   }
     
-    $(function() {
-      $(window).scroll(function() {
-        if(!scrollTimer) {
-          scrollTimer = setTimeout(function() {
-            handleScroll();
-            scrollTimer = null;
-          }, 1);
-        }
-      });
-    });
-  })();
+  //   $(function() {
+  //     $(window).scroll(function() {
+  //       if(!scrollTimer) {
+  //         scrollTimer = setTimeout(function() {
+  //           handleScroll();
+  //           scrollTimer = null;
+  //         }, 1);
+  //       }
+  //     });
+  //   });
+  // })();
 
+  // фиксирование блока при прокрутке
+  if ( $('.post-side').length) {
+
+    $(window).on('scroll', function(){
+      var windowOffset = $(window).scrollTop(),
+          floatOffset = $('.post-side-spase').offset().top,
+          contentHeight = $('.post-wrapper').height(),
+          floatHeight = $('.post-side').outerHeight();
+          floatStop = floatOffset + contentHeight - floatHeight;
+
+      if (windowOffset > floatOffset && windowOffset < floatStop) {
+        $('.post-side').addClass('float').removeClass('flip-bottom');
+      } else {
+        $('.post-side').removeClass('float').addClass('flip-bottom');
+
+        if (windowOffset < floatStop) {
+          $('.post-side').removeClass('flip-bottom');
+        }
+      }
+    });
+
+    $(window).resize(function() {
+      var parentWidth = $(".post-side-spase").width();
+      $(".post-side").css({"width": parentWidth + "px"});
+    }).resize();
+  }
 
   // открытие попапа поиска
   (function() {

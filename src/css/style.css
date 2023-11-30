@@ -612,7 +612,7 @@ img {
 }
 
 .ui-tabs {
-  margin-bottom: 110px;
+  margin-bottom: 90px;
   font-size: 0;
 }
 .ui-tabs__min {
@@ -3000,6 +3000,10 @@ img {
   color: #eef2fb;
 }
 
+body.sticky-wrap {
+  overflow: visible;
+}
+
 .post-wrapper {
   position: relative;
   margin-bottom: 200px;
@@ -3013,7 +3017,7 @@ img {
 .post-head {
   border-bottom: 1px solid #E3E8F2;
   padding-bottom: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .post-title {
   font-weight: 500;
@@ -3024,6 +3028,7 @@ img {
 }
 .post-inner {
   border-bottom: 1px solid #E3E8F2;
+  padding-top: 20px;
 }
 .post-approve {
   max-width: 1000px;
@@ -3036,10 +3041,35 @@ img {
 }
 .post-container {
   max-width: 960px;
+  padding-top: 20px;
 }
 .post-side {
   position: relative;
+  top: 0;
+  bottom: auto;
   padding-right: 20px;
+  -webkit-transition: top 0.3s;
+  -o-transition: top 0.3s;
+  transition: top 0.3s;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.post-side__big-padding {
+  padding-bottom: 50px;
+}
+.post-side-spase {
+  position: relative;
+}
+.post-side.float {
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+}
+.post-side.flip-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  z-index: 2;
 }
 .post-side-date {
   color: #9EA5B4;

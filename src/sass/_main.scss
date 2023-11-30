@@ -482,11 +482,15 @@
   }
 }
 
+body.sticky-wrap {
+  overflow: visible;  
+}
+
 .post {
 
   &-wrapper {
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 200px;   
     
     &__article {
       margin-bottom: 0;
@@ -500,7 +504,7 @@
   &-head {
     border-bottom: 1px solid $border;
     padding-bottom: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   &-title {    
     font-weight: 500;
@@ -513,6 +517,7 @@
   &-inner {
     border-bottom: 1px solid $border;
     // margin-bottom: 200px;
+    padding-top: 20px;
   }
 
   &-approve {
@@ -528,11 +533,38 @@
 
   &-container {
     max-width: 960px;
+    padding-top: 20px;
   }
 
   &-side {
     position: relative;
+    top: 0;   
+    bottom: auto;
     padding-right: 20px;
+    transition: top 0.3s;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    &__big-padding {
+      padding-bottom: 50px;
+    }
+    
+    &-spase {
+      position: relative;
+    }
+    
+    &.float {
+      position: fixed;
+      top: 0px;     
+      z-index: 2;     
+    }
+
+    &.flip-bottom {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      z-index: 2;   
+    }
 
     &-date {
       color: $font-light;
