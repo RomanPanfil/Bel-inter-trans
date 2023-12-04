@@ -1813,8 +1813,9 @@ body.sticky-wrap {
 
     &-item {
       display: inline-block;
+      vertical-align: top;
       margin-right: 40px;
-      padding-top: 10px;
+      // padding-top: 10px;
       padding-bottom: 10px;
 
       &:nth-last-child(2) {
@@ -1837,11 +1838,23 @@ body.sticky-wrap {
         color: $link;
       }
     }
+
+    &-tel {
+      display: block;
+      @include fz(16);
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $link;
+      }
+    }
   }
 
   &-socials {
     font-size: 0;
     white-space: nowrap;
+    align-self: flex-start;
     
     &-item {
       position: relative;

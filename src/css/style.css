@@ -4265,8 +4265,8 @@ body.sticky-wrap {
 }
 .footer-contacts-item {
   display: inline-block;
+  vertical-align: top;
   margin-right: 40px;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 .footer-contacts-item:nth-last-child(2) {
@@ -4289,9 +4289,23 @@ body.sticky-wrap {
 .footer-contacts-link:hover {
   color: #2861CF;
 }
+.footer-contacts-tel {
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.footer-contacts-tel:hover {
+  color: #2861CF;
+}
 .footer-socials {
   font-size: 0;
   white-space: nowrap;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .footer-socials-item {
   position: relative;
