@@ -370,7 +370,7 @@ img {
 
 .ui-field {
 	position: relative;
-	margin-bottom: 40px;	
+	margin-bottom: 34px;	
 
 	label.error {
 		position: absolute;
@@ -380,7 +380,13 @@ img {
 		color: $error;
 		@include fz(12);		
 		width: max-content;		
-	}	
+	}
+
+	.jq-selectbox__trigger-arrow {
+		width: 24px;
+		height: 24px;
+		background-size: 24px 24px;
+	}
 }
 
 .ui-label {
@@ -392,7 +398,7 @@ img {
 	text-transform: uppercase;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin-bottom: 10px;
+	margin-bottom: 10px;	
 
 	&-required {
 		@include fz(20);
@@ -403,13 +409,14 @@ img {
 .ui-input {	
 	border: none;
 	border-bottom: 1px solid $input_border;
-	padding-top: 38px;
+	// padding-top: 38px;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
 	@include fz(20);	
 	outline: none;	
 	width: 100%;
+	margin-top: 34px;
 
 	&::placeholder {
 		color: $font-light;		
@@ -418,24 +425,31 @@ img {
 	&-file {
 		display: none;
 	}
+
+	&.error {
+		border-color: $error;
+	}
+
+	&.valid {
+		border-color: $primary;
+	}
 }
 
 .ui-textarea {
 	border: none;
 	border-bottom: 1px solid $input_border;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 12px;
-	@include fz(18);	
-	line-height: 144.444%;
+	margin-top: 34px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	@include fz(20);	
 	outline: none;
 	width: 100%;
-	resize: none;
-	// height: 38px;
-	max-height: 150px;	
+	resize: none;	
+	height: 160px;
 
 	&::placeholder {
-		color: $font;
+		color: $font-light;	
 	}
 
 	-ms-overflow-style: none;  
@@ -551,7 +565,7 @@ img {
 
 		.jq-selectbox__select {
 			position: relative;
-			padding-top: 37px;
+			padding-top: 33px;
 			padding-left: 20px;
 			padding-right: 20px;
 			padding-bottom: 20px;

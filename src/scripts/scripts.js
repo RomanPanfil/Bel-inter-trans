@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.post-wrapper .item-menu');
     const menu = document.querySelector('.post-side-navigation-list');
 
-    if(!menu) return
+    if(!menu) return    
     
     items.forEach(item => {
       const li = document.createElement('li');
@@ -418,15 +418,26 @@ document.addEventListener('DOMContentLoaded', () => {
       li.textContent = item.dataset.title || item.textContent;      
     
       li.addEventListener('click', () => {
-        item.scrollIntoView({block: 'start', behavior: 'smooth'}); 
+        item.scrollIntoView({block: 'start', behavior: 'smooth'});
       });
     
       menu.appendChild(li);
     });
     
-    let activeItem = menu.querySelector('li');
-    
+    let activeItem = menu.querySelector('li');    
     activeItem.classList.add('active');
+
+    const hash = location.hash;
+
+    if(hash && hash.includes('item')) {
+
+      const index = hash.replace('#item', '') - 1;
+      
+      setTimeout(() => {
+        document.querySelectorAll('.post-side-navigation-item')[index].click();
+      }, 1000)
+    }
+
     
     const observer = new IntersectionObserver(entries => {
       entries.forEach((entry) => {
@@ -436,7 +447,9 @@ document.addEventListener('DOMContentLoaded', () => {
          
           activeItem.classList.remove('active');          
           activeItem = document.querySelectorAll('.post-side-navigation-item')[index];
-          activeItem.classList.add('active');
+          activeItem.classList.add('active');          
+
+          history.pushState(null, '', `${location.pathname}#item${index+1}`);
         }
       }); 
     });

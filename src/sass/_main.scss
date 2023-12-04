@@ -1755,14 +1755,33 @@ body.sticky-wrap {
 }
 
 .order {
-  &-item {
+  margin-bottom: 30px;
+  
+  &-item {   
+    margin-bottom: 56px;     
     
     &-title {
       @include fz(36);
       font-weight: 400;
       @include ls(-1);
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
+  }
+
+  .ui-btn {
+    width: 100%;
+  }
+}
+
+.required {
+  @include fz(14);
+  @include ls(-1);
+  padding-left: 20px;
+  margin-bottom: 20px;
+
+  &-icon {
+    width: 11px;
+    height: 12px;
   }
 }
 

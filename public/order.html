@@ -214,7 +214,7 @@
         <div class="order">
           <div class="row">
             <div class="col-lg-6">
-              <form>
+              <form class="order-form">
                 <div class="order-item">
                   <div class="order-item-title">
                     Информация о заказе перевозки
@@ -226,22 +226,28 @@
                     <input type="text" placeholder="Ваше полное название организации" required name="organization" id="organization" class="ui-input">
                   </div>
                   <div class="ui-field">
-                    <label for="organization" class="ui-label">
+                    <label for="organizationAddress" class="ui-label">
                       Место нахождения <span class="ui-label-required">*</span>
                     </label>
-                    <input type="text" placeholder="Адрес организации" required name="organization-address" id="organization-address" class="ui-input">
+                    <input type="text" placeholder="Адрес организации" required name="organizationAddress" id="organizationAddress" class="ui-input">
                   </div>
                   <div class="ui-field">
-                    <label for="organization" class="ui-label">
+                    <label for="unp" class="ui-label">
                       УНП/ИНН/РНН
                     </label>
-                    <input type="text" placeholder="Введите УНП/ИНН/РНН вашей организации" required name="unp" id="unp" class="ui-input">
+                    <input type="text" placeholder="Введите УНП/ИНН/РНН вашей организации" name="unp" id="unp" class="ui-input">
                   </div>
                   <div class="ui-field">
-                    <label for="organization" class="ui-label">
+                    <label for="name" class="ui-label">
+                      ФИО <span class="ui-label-required">*</span>
+                    </label>
+                    <input type="text" placeholder="ФИО" required name="name" id="name" class="ui-input">
+                  </div>
+                  <div class="ui-field">
+                    <label for="email" class="ui-label">
                       Email <span class="ui-label-required">*</span>
                     </label>
-                    <input type="text" placeholder="Email" required name="Email" id="Email" class="ui-input">
+                    <input type="email" placeholder="Email" required name="email" id="email" class="ui-input">
                   </div>
                 </div>
                 <div class="order-item">
@@ -251,10 +257,10 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="ui-field">
-                        <label for="organization" class="ui-label">
+                        <label for="loading" class="ui-label">
                           Место загрузки
                         </label>
-                        <select name="unloading" id="unloading" class="ui-select ui-select__form">
+                        <select name="unloading" id="loading" class="ui-select ui-select__form">
                           <option value="" selected disabled>Страна</option>
                           <option value="by">Беларусь</option>
                           <option value="ru">Россия</option>
@@ -265,12 +271,12 @@
                     </div>
                     <div class="col-md-6">
                       <div class="ui-field">
-                        <input type="text" placeholder="Станция" required name="station" id="station" class="ui-input">
+                        <input type="text" placeholder="Станция" name="station" id="station" class="ui-input">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="ui-field">
-                        <label for="organization" class="ui-label">
+                        <label for="unloading" class="ui-label">
                           Место выгрузки
                         </label>
                         <select name="unloading" id="unloading" class="ui-select ui-select__form">
@@ -284,35 +290,70 @@
                     </div>
                     <div class="col-md-6">
                       <div class="ui-field">
-                        <input type="text" placeholder="Станция" required name="station" id="station" class="ui-input">
+                        <input type="text" placeholder="Станция" name="station" id="station" class="ui-input">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="ui-field">
-                        <label for="organization" class="ui-label">
+                        <label for="shippingName" class="ui-label">
                           Информация о грузе <span class="ui-label-required">*</span>
                         </label>
-                        <input type="text" placeholder="Наименование груза" required name="shipping-name" id="shipping-name" class="ui-input">
+                        <input type="text" placeholder="Наименование груза" required name="shippingName" id="shippingName" class="ui-input">
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="ui-field">
-                        <label for="organization" class="ui-label">
-                          Кол-во груза в тоннах
-                        </label>
-                        <input type="text" placeholder="Наименование груза" required name="cargo-mass" id="cargo-mass" class="ui-input">
+                        <input type="text" placeholder="Кол-во груза в тоннах"  name="cargoMass" id="cargoMass" class="ui-input">
                       </div>
-                    </div>                    
+                    </div>
+                    <div class="col-md-12">
+                      <div class="ui-field">
+                        <label for="comment" class="ui-label">
+                          Комментарий
+                        </label>
+                        <textarea name="comment" id="comment" placeholder="Опишите дополнительно, что нужно учесть" class="ui-textarea"></textarea>
+                      </div>
+                    </div>
                   </div>
+                  <div class="required">
+                    <svg class="required-icon">
+                      <use xlink:href="svg/svg/symbols.svg#required" />
+                    </svg>
+                    - Обязательное поле для ввода
+                  </div>
+                  <button type="submit" class="ui-btn ui-btn-main ui-btn-primary">
+                    Заказать перевозку
+                  </button>
                 </div>
-
-                <button type="submit" class="ui-btn ui-btn-main ui-btn-primary">
-                  Заказать перевозку
-                </button>
               </form>
             </div>
-          </div>          
+          </div>
         </div>
+
+        <script>
+          $(document).ready(function () {
+            $.validator.addMethod("noDigits", function(value, element) {
+              return this.optional(element) || !/\d/.test(value);
+            }, 'В этом поле нельзя вводить цифры');
+
+            $.validator.messages.required = 'Пожалуйста, заполните это поле';
+            $.validator.messages.email = 'невалидный email';
+    
+            $(".order-form").validate({
+              submitHandler: function(form, event) {
+                event.preventDefault();
+                form.reset();
+              },
+              rules: {
+                organization: { required: true },
+                organizationAddress: { required: true },
+                name: { noDigits: true,required: true },
+                email: { required: true, email: true },
+                shippingName: { required: true }
+              },
+            });
+          });
+        </script>
       </div>
     </main>
     <!-- main screen end -->
@@ -578,6 +619,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://yastatic.net/share2/share.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js" defer></script>
 
   <script src="./scripts/scripts.js"></script>
 </body>
