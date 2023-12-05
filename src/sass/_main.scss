@@ -1597,8 +1597,7 @@ body.sticky-wrap {
     padding-bottom: 40px;
     padding-left: 60px;
     padding-right: 60px;
-    border-radius: 20px;
-    margin-top: 60px;
+    border-radius: 20px;   
     margin-bottom: 60px;
   }
 }
@@ -1846,6 +1845,75 @@ body.sticky-wrap {
   &-icon {
     width: 11px;
     height: 12px;
+  }
+}
+
+.declaration-contacts {
+  &-cards {
+    margin-bottom: 200px;
+  }
+  &-card {
+    border: 1px solid $border;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+
+    &-name {
+      @include fz(30);
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    &-position {
+      color: $font-light;
+      margin-bottom: 20px;
+    }
+
+    &-mails {
+      margin-bottom: 8px;
+    }
+
+    &-mail {
+      color: $primary;
+      @include fz(20);
+      display: block;
+      width: max-content;
+      position: relative;
+
+      &:not(:last-child) {
+        &::after {
+          content: '/';
+          color: $font-light;
+        }
+      }
+    }
+
+    &-phones {
+      margin-bottom: 85px;
+    }
+
+    &-phone {
+      @include fz(20);
+      display: block;
+      width: max-content;
+
+      &:not(:last-child) {
+        &::after {
+          content: '/';
+          color: $font-light;
+        }
+      }
+    }
+
+    &-department {      
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-top: auto;
+    }
   }
 }
 
