@@ -512,17 +512,17 @@ img {
 			border-radius: 50%;
 			border: 1px solid $border;
 			transition: 0.3s border-color, 0.3s color, 0.3s background-color;
-			color: $font-light;
+			color: $font-light !important;
 
 			&.active {
 				background-color: $primary;
-				color: $bgc;
+				color: $bgc !important;
 				border-color: $primary;
 			}
 
 			&:hover {
 				background-color: $bgc;
-				color: $font-dark-blue;
+				color: $font-dark-blue !important;
 				border-color: $font-dark-blue;
 			}
 		}
@@ -757,4 +757,10 @@ img {
 	&:hover {
 		color: $primary;
 	}
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
 }

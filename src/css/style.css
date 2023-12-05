@@ -968,16 +968,16 @@ img {
   -webkit-transition: 0.3s border-color, 0.3s color, 0.3s background-color;
   -o-transition: 0.3s border-color, 0.3s color, 0.3s background-color;
   transition: 0.3s border-color, 0.3s color, 0.3s background-color;
-  color: #9EA5B4;
+  color: #9EA5B4 !important;
 }
 .pagination-item-link.active {
   background-color: #2861CF;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   border-color: #2861CF;
 }
 .pagination-item-link:hover {
   background-color: #FFFFFF;
-  color: #15355C;
+  color: #15355C !important;
   border-color: #15355C;
 }
 
@@ -1239,6 +1239,12 @@ img {
 }
 .search-btn:hover {
   color: #2861CF;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .inner,
@@ -3064,6 +3070,9 @@ body.sticky-wrap {
   max-width: 960px;
   padding-top: 20px;
 }
+.post-container__margin {
+  margin-bottom: 60px;
+}
 .post-side {
   position: relative;
   top: 0;
@@ -3466,10 +3475,30 @@ body.sticky-wrap {
   width: 100%;
   table-layout: fixed;
 }
+.article-table-number-1 {
+  min-width: 320px;
+}
+.article-table-number-2 {
+  min-width: 250px;
+}
+.article-table-number-3 {
+  min-width: 270px;
+}
+.article-table-number-4 {
+  min-width: 140px;
+}
+.article-table-number-5 {
+  min-width: 237px;
+}
+.article-table-number-6 {
+  min-width: 240px;
+}
 .article table {
   border-collapse: collapse;
   font-size: 16px;
   font-size: 1rem;
+  letter-spacing: -0.5px;
+  letter-spacing: -0.03125rem;
   font-weight: 500;
   width: 100%;
 }
@@ -3508,6 +3537,21 @@ body.sticky-wrap {
 .article-image {
   border-radius: 20px;
   margin-top: 40px;
+}
+.article time {
+  color: #9EA5B4;
+  font-size: 12px;
+  font-size: 0.75rem;
+  letter-spacing: -0.5px;
+  letter-spacing: -0.03125rem;
+  display: block;
+  margin-top: 2px;
+}
+.article .pagination {
+  margin-bottom: 0;
+}
+.article .pagination-list li::before {
+  display: none !important;
 }
 
 .contacts {
@@ -3997,12 +4041,25 @@ body.sticky-wrap {
 .search-head-title {
   margin-bottom: 24px;
 }
+.search-block {
+  background-color: #2861CF;
+  padding-top: 45px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
 
 .search-request {
   font-size: 20px;
   font-size: 1.25rem;
   letter-spacing: -1px;
   letter-spacing: -0.0625rem;
+}
+.search-request__article {
+  margin-bottom: 60px;
 }
 .search-request span {
   color: #9EA5B4;

@@ -547,6 +547,10 @@ body.sticky-wrap {
   &-container {
     max-width: 960px;
     padding-top: 20px;
+
+    &__margin {
+      margin-bottom: 60px;
+    }
   }
 
   &-side {
@@ -995,11 +999,36 @@ body.sticky-wrap {
       width: 100%;
       table-layout: fixed;
     }
+
+    &-number-1 {
+      min-width: 320px;
+    }
+
+    &-number-2 {
+      min-width: 250px;
+    }
+
+    &-number-3 {
+      min-width: 270px;
+    }
+
+    &-number-4 {
+      min-width: 140px;
+    }
+
+    &-number-5 {
+      min-width: 237px;
+    }
+
+    &-number-6 {
+      min-width: 240px;
+    }
   }
 
   table {
     border-collapse: collapse;
     @include fz(16);
+    @include ls(-0.5);
     font-weight: 500;
     width: 100%;
   }
@@ -1049,6 +1078,26 @@ body.sticky-wrap {
   &-image {
     border-radius: 20px;
     margin-top: 40px;
+  }
+
+  time {
+    color: $font-light;
+    @include fz(12);
+    @include ls(-0.5);
+    display: block;
+    margin-top: 2px;
+  }
+
+  .pagination {
+    margin-bottom: 0;
+  }
+  
+  .pagination-list {
+    li {
+      &::before {
+        display: none !important;
+      }
+    }
   }
 }
 
@@ -1541,11 +1590,26 @@ body.sticky-wrap {
       margin-bottom: 24px;
     }
   }
+
+  &-block {
+    background-color: $primary;
+    padding-top: 45px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 .search-request {
   @include fz(20);
   @include ls(-1);
+  
+  &__article {
+    margin-bottom: 60px;
+  }
   
   span {
     color: $font-light;

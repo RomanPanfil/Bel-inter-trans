@@ -463,19 +463,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // обертка для таблицы
-  (function(){
-    if (!document.querySelector('article table')) return
+  // (function(){
+  //   if (!document.querySelector('article table')) return
 
-    let tables = document.querySelectorAll('article table');
+  //   let tables = document.querySelectorAll('article table');
 
-    tables.forEach((table) => {
-        let wrapper = document.createElement('div');
-        wrapper.classList.add('article-table', 'article-table__full');
+  //   tables.forEach((table) => {
+  //       let wrapper = document.createElement('div');
+  //       wrapper.classList.add('article-table', 'article-table__full');
 
-        table.parentNode.insertBefore(wrapper, table);
-        wrapper.appendChild(table);
-    })
-  })();
+  //       table.parentNode.insertBefore(wrapper, table);
+  //       wrapper.appendChild(table);
+  //   })
+  // })();
 
   // копирование ссылки текущей страницы в буфер обмена в блоке "поделиться"
   // (function() {
