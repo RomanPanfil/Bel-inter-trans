@@ -188,6 +188,10 @@
 			<path d="M10 15a1.25 1.25 0 1 0 0 2.5h10a1.25 1.25 0 1 0 0-2.5H10zM8.75 21.25c0-.69.56-1.25 1.25-1.25h10a1.25 1.25 0 1 1 0 2.5H10c-.69 0-1.25-.56-1.25-1.25zM10 10a1.25 1.25 0 1 0 0 2.5h2.5a1.25 1.25 0 1 0 0-2.5H10z" fill="#2861CF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.848 2.348A3.75 3.75 0 0 1 7.5 1.25h10c.331 0 .65.132.884.366l7.5 7.5c.234.235.366.552.366.884v15a3.75 3.75 0 0 1-3.75 3.75h-15A3.75 3.75 0 0 1 3.75 25V5a3.75 3.75 0 0 1 1.098-2.652zM7.5 3.75A1.25 1.25 0 0 0 6.25 5v20a1.25 1.25 0 0 0 1.25 1.25h15A1.25 1.25 0 0 0 23.75 25V11.25H17.5c-.69 0-1.25-.56-1.25-1.25V3.75H7.5zm11.25 1.768l3.232 3.232H18.75V5.518z" fill="#2861CF"></path>
 		</symbol>
 	
+		<symbol id="icon-home" viewBox="0 0 24 24">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M12.614 1.21a1 1 0 0 0-1.228 0l-9 7A1 1 0 0 0 2 9v11a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V9a1 1 0 0 0-.386-.79l-9-7zM16 21h3a1 1 0 0 0 1-1V9.49l-8-6.223-8 6.222V20a1 1 0 0 0 1 1h3v-9a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v9zm-6 0v-8h4v8h-4z" fill="#2861CF"></path>
+		</symbol>
+	
 		<symbol id="icon-mail" viewBox="0 0 20 20">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M.834 4.986V15c0 1.377 1.123 2.5 2.5 2.5h13.333c1.377 0 2.5-1.123 2.5-2.5V5.01v-.025a2.505 2.505 0 0 0-2.5-2.485H3.334a2.505 2.505 0 0 0-2.5 2.486zm1.756-.358a.838.838 0 0 1 .744-.461h13.333c.324 0 .607.189.745.461L10 9.816 2.59 4.628zM17.5 6.601V15a.838.838 0 0 1-.833.833H3.334A.838.838 0 0 1 2.501 15V6.6l7.022 4.916c.287.2.669.2.956 0L17.5 6.601z" fill="#2861CF"></path>
 		</symbol>
@@ -251,7 +255,7 @@
 </svg>
 
 <header>
-    <h1 id="logo">Gulp SVG Sprites <small>(23 icons in &lt;symbol&gt; mode)</small></h1>
+    <h1 id="logo">Gulp SVG Sprites <small>(24 icons in &lt;symbol&gt; mode)</small></h1>
     <h4>Files Generated:</h4>
     <ol>
         <li><a href="svg/symbols.svg">svg/symbols.svg</a></li>
@@ -402,6 +406,23 @@
             <button onclick="invertBackground('icon-box-icon-file-text')">Invert Background</button>
             <div class="snippet-popover" id="snippet-icon-file-text">
                 <pre><code>&lt;svg class=&quot;icon icon-file-text&quot;&gt;&lt;use xlink:href=&quot;#icon-file-text&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="icon-home">
+            <div class="icon-box" id="icon-box-icon-home">
+                <svg class="icon icon-home">
+                    <use xlink:href="#icon-home" />
+                </svg>
+            </div>
+            <h2>icon-home</h2>
+            <button onclick="showPopover('snippet-icon-home')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-icon-home')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-icon-home">
+                <pre><code>&lt;svg class=&quot;icon icon-home&quot;&gt;&lt;use xlink:href=&quot;#icon-home&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
                 <button onclick="hidePopover()">Close</button>
             </div>
         </li>

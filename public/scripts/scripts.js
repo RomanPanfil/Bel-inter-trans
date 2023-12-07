@@ -242,16 +242,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // версия для слабовидящих
-  (function() {
-    if (!document.querySelector('.poor-vision-btn')) return
+  // (function() {
+  //   if (!document.querySelector('.poor-vision-btn')) return
     
-    const poorVisionBtn = document.querySelector('.poor-vision-btn');
-    const body = document.querySelector('body');
+  //   const poorVisionBtn = document.querySelector('.poor-vision-btn');
+  //   const body = document.querySelector('body');
 
-    poorVisionBtn.addEventListener('click', () => {
-      body.classList.toggle('ui-poor-vision');
-    })
-  })();
+  //   poorVisionBtn.addEventListener('click', () => {
+  //     body.classList.toggle('ui-poor-vision');
+  //   })
+  // })();
 
 
   // фиксирование блока при прокрутке
