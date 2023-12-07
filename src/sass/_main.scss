@@ -2098,6 +2098,25 @@ body.sticky-wrap {
   }
 }
 
+.communities {
+  &-card {
+    border-radius: 10px;
+    border: 1px solid $border;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      color: #1F2839;
+      @include fz(30);
+      font-weight: 500;
+      @include ls(-1);      
+    }
+  }
+}
+
 // footer
 .footer {
   &-top {
@@ -2170,6 +2189,7 @@ body.sticky-wrap {
     align-self: flex-start;
     
     &-item {
+      display: block;
       position: relative;
       width: 48px;
       height: 48px;

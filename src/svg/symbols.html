@@ -252,10 +252,14 @@
 			<path d="M25.264 3.673c-.294-1.13-1.162-2.021-2.263-2.324C21.005.8 12.999.8 12.999.8s-8.005 0-10.002.55C1.896 1.651 1.028 2.541.734 3.672.2 5.723.2 10 .2 10s0 4.277.535 6.327c.294 1.13 1.162 2.021 2.263 2.324C4.994 19.2 13 19.2 13 19.2s8.006 0 10.002-.55c1.101-.302 1.969-1.192 2.263-2.323C25.8 14.277 25.8 10 25.8 10s0-4.277-.535-6.327z" fill="#fff"></path><path d="M10.598 14.4v-8l6.4 4-6.4 4z" fill="#F00"></path>
 		</symbol>
 	
+		<symbol id="youtube-icon" viewBox="0 0 30 21">
+			<path d="M28.516 3.24c-.332-1.275-1.31-2.28-2.552-2.62C23.712 0 14.684 0 14.684 0S5.658 0 3.407.62C2.163.96 1.186 1.964.853 3.24.25 5.552.25 10.375.25 10.375s0 4.823.603 7.135c.332 1.275 1.31 2.28 2.553 2.62 2.251.62 11.279.62 11.279.62s9.027 0 11.279-.62c1.242-.34 2.22-1.345 2.552-2.62.604-2.312.604-7.135.604-7.135s0-4.823-.604-7.135"></path><path d="M11.979 15.337V6.315l7.217 4.511-7.218 4.51z"></path>
+		</symbol>
+	
 </svg>
 
 <header>
-    <h1 id="logo">Gulp SVG Sprites <small>(24 icons in &lt;symbol&gt; mode)</small></h1>
+    <h1 id="logo">Gulp SVG Sprites <small>(25 icons in &lt;symbol&gt; mode)</small></h1>
     <h4>Files Generated:</h4>
     <ol>
         <li><a href="svg/symbols.svg">svg/symbols.svg</a></li>
@@ -678,6 +682,23 @@
             <button onclick="invertBackground('icon-box-youtube')">Invert Background</button>
             <div class="snippet-popover" id="snippet-youtube">
                 <pre><code>&lt;svg class=&quot;icon youtube&quot;&gt;&lt;use xlink:href=&quot;#youtube&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="youtube-icon">
+            <div class="icon-box" id="icon-box-youtube-icon">
+                <svg class="icon youtube-icon">
+                    <use xlink:href="#youtube-icon" />
+                </svg>
+            </div>
+            <h2>youtube-icon</h2>
+            <button onclick="showPopover('snippet-youtube-icon')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-youtube-icon')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-youtube-icon">
+                <pre><code>&lt;svg class=&quot;icon youtube-icon&quot;&gt;&lt;use xlink:href=&quot;#youtube-icon&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
                 <button onclick="hidePopover()">Close</button>
             </div>
         </li>

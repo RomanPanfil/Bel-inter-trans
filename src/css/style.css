@@ -2547,7 +2547,7 @@ img {
   font-size: 0;
   white-space: nowrap;
 }
-.socials-list-item {
+.socials-item {
   position: relative;
   width: 48px;
   height: 48px;
@@ -2560,16 +2560,16 @@ img {
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-.socials-list-item:not(:last-child) {
+.socials-item:not(:last-child) {
   margin-right: 20px;
 }
-.socials-list-item:hover {
+.socials-item:hover {
   background-color: #2861CF;
 }
-.socials-list-item:hover .socials-list-icon {
+.socials-item:hover .socials-icon {
   fill: #FFFFFF;
 }
-.socials-list-icon {
+.socials-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -5881,6 +5881,31 @@ body.sticky-wrap {
   white-space: nowrap;
 }
 
+.communities-card {
+  border-radius: 10px;
+  border: 1px solid #E3E8F2;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.communities-card-title {
+  color: #1F2839;
+  font-size: 30px;
+  font-size: 1.875rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
 .footer-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5953,6 +5978,7 @@ body.sticky-wrap {
       align-self: flex-start;
 }
 .footer-socials-item {
+  display: block;
   position: relative;
   width: 48px;
   height: 48px;
