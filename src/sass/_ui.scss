@@ -117,18 +117,35 @@ img {
 	background: $bgc;
 	color: #FFF;	
 }
-@media (min-width: 992px) {
-	::-webkit-scrollbar {
-		width: 8px;
-		height: 8px;		
-	}
-	::-webkit-scrollbar-thumb {
-		width: 8px;
-		height: 8px;
-		background-color: $primary;
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background: lighten($primary, 8%);
+// @media (min-width: 992px) {
+// 	::-webkit-scrollbar {
+// 		width: 8px;
+// 		height: 8px;		
+// 	}
+// 	::-webkit-scrollbar-thumb {
+// 		width: 8px;
+// 		height: 8px;
+// 		background-color: $primary;
+// 	}
+// 	::-webkit-scrollbar-thumb:hover {
+// 		background: lighten($primary, 8%);
+// 	}
+// }
+
+html:not(.vi) {
+	@media (min-width: 992px) {
+		::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;		
+		}
+		::-webkit-scrollbar-thumb {
+			width: 8px;
+			height: 8px;
+			background-color: $primary;
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: lighten($primary, 8%);
+		}
 	}
 }
 
@@ -597,6 +614,7 @@ img {
 		.jq-selectbox__dropdown {			
 			z-index: 1;
 			left: -8px;
+			top: 100% !important;
 			ul {			
 				background-color: $primary;
 				margin-top: 10px;
@@ -773,7 +791,7 @@ img {
 	// padding: 40px;
 
 	.ui-select {
-		border: 1px solid $border;
+		border: 1px solid $border_grey;
 		border-radius: 20px;
 		// padding: 40px;
 		width: 100%;
@@ -805,7 +823,7 @@ img {
 .socials-list {
     font-size: 0;
     white-space: nowrap;
-    align-self: flex-start;
+    // align-self: flex-start;
     
     &-item {
       position: relative;

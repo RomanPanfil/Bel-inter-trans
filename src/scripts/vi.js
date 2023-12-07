@@ -43,16 +43,21 @@ jQuery(document).ready(function($) {
 			'<a href="#" class="vi-lh" data-lh="2">2</a>'+
 		'</div></div>';
 
+    var viGray = '<div class="vi-panel-group">'+
+		'<div class="vi-group-title">Ч/Б гамма</div>'+
+		'<div class="vi-group-btns">'+
+			'<a href="#" class="vi-gray" data-gray="off">Откл</a>'+
+			'<a href="#" class="vi-gray active" data-gray="on">Вкл</a>'+
+		'</div></div>';     
+
 	var viImg = '<div class="vi-panel-group">'+
 		'<div class="vi-group-title">Изображения</div>'+
-		'<div class="vi-group-btns">'+
-			'<a href="#" class="vi-img active" data-img="nobright">Приглушенные</a>'+
-			'<a href="#" class="vi-img" data-img="colored">Цветные</a>'+
-			'<a href="#" class="vi-img" data-img="gray">Ч/б</a>'+
-			'<a href="#" class="vi-img" data-img="off">Откл</a>'+
+		'<div class="vi-group-btns">'+			
+			'<a href="#" class="vi-img" data-img="on">Вкл</a>'+
+			'<a href="#" class="vi-img active" data-img="off">Откл</a>'+
 		'</div></div>';
 
-	var viBtns = viBg + viFz + viLs + viLh + viImg;
+	var viBtns = viBg + viFz + viLs + viLh + viGray + viImg;
 
 	var viPanel = '<div class="vi-panel"><div class="inner"><div class="flex">'+viBtns+'</div></div></div>';
 
@@ -71,7 +76,8 @@ jQuery(document).ready(function($) {
 		fz: 18,
 		ls: 0,
 		lh: 1,
-		imgs: 'nobright'
+        gray: 'on',
+		imgs: 'off'
 	};
 	//настройки хранимые в LS
 	var viCookie;
@@ -79,12 +85,12 @@ jQuery(document).ready(function($) {
 
 	//проверяем активность версии + настройки
 	setTimeout(function(){
-		if( localStorage.getItem('vi') ) {
+		if( localStorage.getItem('vi') ) {            
 			viCookie = JSON.parse(localStorage.getItem('vi'));
 
-			if ( viCookie.mode === true ) {
+			if ( viCookie.mode === true ) {   
 				$('.vi-start-btn').addClass('active');
-				$('.vi-start-btn span').text('Обычная версия сайта');
+				$('.poor-vision-btn span').text('Обычная версия сайта');
 				
 				viConfig = viCookie;
 				$('.vi-panel').addClass('opened');
@@ -106,6 +112,11 @@ jQuery(document).ready(function($) {
 					$('a.vi-ls').removeClass('active');
 					$('a.vi-ls[data-ls='+viCookie.ls+']').addClass('active');
 				}
+                if ( viCookie.gray !== '' ) {		
+					$('html').addClass('vi-gray-'+viCookie.gray);
+					$('a.vi-gray').removeClass('active');
+					$('a.vi-gray[data-gray='+viCookie.gray+']').addClass('active');
+				}
 				if ( viCookie.lh !== '' ) {
 					$('html').addClass('vi-lh-'+viCookie.lh);
 					$('a.vi-lh').removeClass('active');
@@ -114,6 +125,10 @@ jQuery(document).ready(function($) {
 			}
 		}
 	},0);
+
+
+    // классы по умолчанию
+    var defaultClasses = 'vi vi-gray-on vi-img-off vi-lh-1 vi-ls-0 vi-fz-18 vi-bg-white';
 	
 
 	//активируем
@@ -124,7 +139,7 @@ jQuery(document).ready(function($) {
 		// if (span.text() === 'Версия для слабовидящих') {
 		if (!localStorage.getItem('vi')) {
 			$(this).addClass('active');
-			$('html').addClass('vi vi-fz-18 vi-bg-white');
+			$('html').addClass(defaultClasses);
 			$('.vi-panel').addClass('opened');
 			
 			
@@ -147,7 +162,7 @@ jQuery(document).ready(function($) {
 		
 		if (!localStorage.getItem('vi')) {
 			$(this).addClass('active');
-			$('html').addClass('vi vi-fz-18 vi-bg-white');
+			$('html').addClass(defaultClasses);
 			$('.vi-panel').addClass('opened');
 			
 			viConfig.mode = true;
@@ -171,7 +186,8 @@ jQuery(document).ready(function($) {
 		localStorage.removeItem('vi');
 	});*/
 
-	$(document).on('click','.vi-group-btns a:not(.vi-font-plus, .vi-font-minus)',function(){
+	$(document).on('click','.vi-group-btns a:not(.vi-font-plus, .vi-font-minus)',function(e){
+		e.preventDefault();
 		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
 	});
@@ -218,11 +234,20 @@ jQuery(document).ready(function($) {
 		localStorage.setItem('vi',JSON.stringify(viConfig));
 	});
 
-	$(document).on('click','a.vi-lh',function(){
+	$(document).on('click','a.vi-lh',function(){        
 		var $lh = $(this).data('lh');
 		$('html').removeClassMask('vi-lh-*');
 		$('html').addClass('vi-lh-'+$lh);
 		viConfig.lh = $lh;
+		localStorage.setItem('vi',JSON.stringify(viConfig));
+	});
+
+    $(document).on('click','a.vi-gray',function(){
+        console.log('click')
+		var $gray = $(this).data('gray');
+		$('html').removeClassMask('vi-gray-*');
+		$('html').addClass('vi-gray-'+$gray);
+		viConfig.gray = $gray;
 		localStorage.setItem('vi',JSON.stringify(viConfig));
 	});
 

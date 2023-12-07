@@ -147,6 +147,8 @@
 
     & > ul {
       display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       gap: 40px;
 
       & > li {
@@ -1331,7 +1333,7 @@ body.sticky-wrap {
       transition: border-color 0.3s;
       margin-bottom: 20px;
       height: calc(100% - 20px);    
-      aspect-ratio: 1.16;
+      // aspect-ratio: 1.16;
      
       &-image {
         aspect-ratio: 1.63;
@@ -1348,6 +1350,7 @@ body.sticky-wrap {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        min-height: 73px;
       }
 
       &-text {
@@ -1923,7 +1926,7 @@ body.sticky-wrap {
   display: grid;
   grid-template-columns: 6fr 4fr;  
   grid-template-rows: 1fr 1fr;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 
   @media (max-width: 1140px) {
     grid-template-columns: 1fr;
@@ -1934,7 +1937,7 @@ body.sticky-wrap {
     @include fz(30);
     font-weight: 500;
     @include ls(-1);
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   &-addresses {
@@ -1954,13 +1957,13 @@ body.sticky-wrap {
       margin-bottom: 22px;
 
       &:last-of-type {
-        margin-bottom: 40px;
+        margin-bottom: 46px;
       }
 
       &-title {
         @include fz(14);
-        color: $font-light;
-        margin-bottom: 6px;
+        color: $font-light;       
+        padding-left: 34px;
       }
 
       &-content {
@@ -2000,7 +2003,7 @@ body.sticky-wrap {
   }
 
   &-name {
-    padding: 60px;
+    padding: 44px 60px;
     color: $font-light;
     border-right: 1px solid $border;
 
@@ -2032,13 +2035,16 @@ body.sticky-wrap {
       justify-content: space-between;
       flex-wrap: wrap;
       column-gap: 20px;
-      row-gap: 10px;
-      margin-bottom: 40px;
+      row-gap: 10px;     
+
+      &:not(:last-child) {
+        margin-bottom: 36px;
+      }
 
       &-title {
         @include fz(14);
         color: $font-light;
-        margin-bottom: 6px;
+        margin-bottom: 2px;
       }
 
       &-link {
@@ -2065,7 +2071,7 @@ body.sticky-wrap {
   }
 
   &-socials {
-    padding: 60px;
+    padding: 40px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2084,7 +2090,8 @@ body.sticky-wrap {
 
       &-phone {
         @include fz(22);        
-        font-weight: 500;       
+        font-weight: 500;
+        white-space: nowrap;
       }
     }
    
@@ -2229,6 +2236,7 @@ body.sticky-wrap {
   &-nav {
     ul {
       display: flex;
+      flex-wrap: wrap;
       gap: 40px;
     }
 
