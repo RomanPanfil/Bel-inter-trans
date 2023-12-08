@@ -148,6 +148,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+    // клик на карточку сообщества
+    (function() {
+      const newsCards = document.querySelectorAll('.communities-card');   
+  
+      newsCards.forEach(card => {
+        card.addEventListener('click', e => {
+          if (e.target.tagName === 'A') {
+            return;
+          }
+  
+          const href = card.querySelector('.communities-card-title').getAttribute('href');        
+          if(href) {
+            window.location.href = href;
+          }        
+        });
+      });
+    })();
+
   // Открытие попапа галлереи
   $(document).on("click", ".mfp-link__gallery", function () {     
     var gallery = $(this).closest('.post-gallery');      

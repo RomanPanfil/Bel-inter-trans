@@ -199,7 +199,7 @@ html:not(.vi) {
 }
 
 .ui-tabs {
-	margin-bottom: 90px;
+	margin-bottom: 110px;
 	font-size: 0;
 
 	&__min {
@@ -836,6 +836,7 @@ html:not(.vi) {
 		background-color: $bgc;
 		cursor: pointer;
 		transition: background-color 0.3s;
+		flex-shrink: 0;
   
 		&:not(:last-child) {
 		  margin-right: 20px;
@@ -846,6 +847,14 @@ html:not(.vi) {
   
 		  .socials-icon {
 			fill: $bgc;
+
+			&__youtube-bg {
+				fill: $bgc;
+			}
+
+			&__youtube-btn {
+				fill: $primary;
+			}
 		  }
 		}
 	  }    
@@ -858,6 +867,18 @@ html:not(.vi) {
 		width: 26px;
 		height: 26px;
 		fill: $primary;
-		transition: fill 0.3s;		
-	}
+		transition: fill 0.3s;
+
+		&__youtube {		
+			&-bg {
+				fill: $primary;
+				transition: fill 0.3s;
+			}
+	
+			&-btn {
+				fill: $bgc;
+				transition: fill 0.3s;
+			}
+		}
+	}	
 }
