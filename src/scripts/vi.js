@@ -196,7 +196,7 @@ jQuery(document).ready(function($) {
 	//шрифт +
 	$(document).on('click','a.vi-font-plus',function(){
 		var curFz = viConfig.fz + 1;
-		console.log(curFz);
+		
 		if (curFz > 10 && curFz < 28) {
 			$('html').removeClassMask('vi-fz-*');
 			$('html').addClass('vi-fz-'+curFz);
