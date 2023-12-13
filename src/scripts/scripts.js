@@ -529,6 +529,19 @@ document.addEventListener('DOMContentLoaded', () => {
       tmp.remove();
     });  
   })();
+
+
+  // закрытие плашки "актуальное"
+
+  (function() {    
+    const close = document.querySelector('.actual-close');
+
+    if(!close) return;
+
+    close.addEventListener('click', (ev) => {    
+      ev.target.closest('.actual').classList.add('hidden')
+    })
+  })();
   
 
 });

@@ -291,8 +291,16 @@ html:not(.vi) {
 	text-overflow: ellipsis;
 	overflow: hidden;
 
+	&-icon {
+		width: 17px;
+		height: 17px;
+		fill: $font-white;
+		margin-left: 18px;
+		transition: fill 0.3s;
+	}
+
 	&-transparent {
-		background-color: $bgc;		
+		background-color: transparent;		
 		border-radius: 24px;
 		border: 1px solid $primary;
 		color: $primary;
@@ -312,14 +320,59 @@ html:not(.vi) {
 		}
 	}
 
+	&-transparent-white {
+		background-color: transparent;		
+		border-radius: 41px;
+		border: 1px solid $bgc;
+		color: $font-white;		
+
+		&:hover {
+			background-color: $bgc;
+			color: $primary;
+
+			.ui-btn-icon {
+				fill: $primary;
+			}
+		}
+	}
+
 	&-main {
 		padding-left: 40px;
 		padding-right: 40px;
+		padding-top: 17px;
+		padding-bottom: 17px;
 		@include fz(20);
-		height: 64px;
-		line-height: 64px;		
+		// height: 64px;
+		// line-height: 64px;		
 		border-radius: 40px;
 		flex-shrink: 0;		
+	}
+
+	&-small {
+		padding-left: 34px;
+		padding-right: 34px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		@include fz(16);
+
+		.ui-btn-icon {
+			margin-left: 6px;
+			width: 12px;
+			height: 12px;
+		}
+	}
+
+	&-big {
+		padding-left: 60px;
+		padding-right: 60px;
+		padding-top: 26px;
+		padding-bottom: 26px;
+		@include fz(20);
+
+		.ui-btn-icon {
+			width: 17px;
+			height: 17px;
+		}
 	}
 
 	&-white {
@@ -337,7 +390,11 @@ html:not(.vi) {
 
 		&:hover {
 			color: $primary;
-			background-color: $bgc;		
+			background-color: $bgc;
+
+			.ui-btn-icon {
+				fill: $primary;
+			}
 		}
 	}
 
@@ -509,7 +566,8 @@ html:not(.vi) {
 			transform: translate(-50%, -50%);
 			width: 24px;
 			height: 24px;
-			filter: brightness(0.2) saturate(21.5);			
+			// filter: brightness(0.2) saturate(21.5);
+			fill: $font;	
 
 			&__prev {				
 				transform: translate(-50%, -50%) rotate(-180deg);
@@ -892,4 +950,40 @@ html:not(.vi) {
 			}
 		}
 	}	
+}
+
+.ui-nav {
+	white-space: nowrap;
+	&-item {
+		display: block;
+		position: relative;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		border: 1px solid $border;
+		display: inline-block;
+		font-size: 0;
+
+		&:hover {
+			border-color: $font;
+		}
+
+		&:first-child {
+			margin-right: 20px;
+		}
+	}
+
+	&-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 32px;
+		height: 32px;
+		fill: $font;
+
+		&__prev {
+			transform: translate(-50%, -50%) rotate(180deg);
+		}
+	}
 }

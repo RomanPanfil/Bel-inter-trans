@@ -13,7 +13,7 @@
 
 // -----header-----
 .header {
-  margin-bottom: 36px;
+  // margin-bottom: 36px;
 
   &-top {    
     border-bottom: 1px solid $border;
@@ -283,7 +283,58 @@
 .main {
   flex-grow: 1;
   // padding-bottom: 30px;
+  padding-top: 36px;
   padding-bottom: 100px;
+
+  &-block {
+    margin-top: 92px;
+    border-bottom: 1px solid $border;
+    margin-bottom: 200px;
+  }
+
+  &-title {    
+    @include fz(64);
+    font-weight: 600;
+    @include ls(-1);
+    text-transform: uppercase;
+    max-width: 964px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+  }
+
+  &-order {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    &-image {
+      aspect-ratio: 1.47;
+      max-width: 32%;
+      flex: 0 0 32%;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: block;
+      margin-bottom: 34px;
+    }
+
+    &-content {
+      text-align: center;
+      max-width: 36%;
+      flex: 0 0 36%;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 34px;
+    }
+
+    &-title {
+      @include fz(32);     
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+  }
 }
 
 .subscribe {
@@ -1223,6 +1274,128 @@ body.sticky-wrap {
   }
 }
 
+.important {
+  margin-bottom: 176px;
+  &-item {
+    border-radius: 20px;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+
+    img {
+      aspect-ratio: 4.325;
+      display: block;
+      border-radius: 20px;
+    }
+  
+    &__colored {
+      background-color: $primary;
+      color: $font-white;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      a {
+        color: $font-white;
+      }
+    }
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .ui-btn {
+        flex-shrink: 0;       
+      }
+    }
+
+    &-text {
+      @include fz(20);
+      text-transform: uppercase;
+      margin-right: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &-warning {
+      display: inline-block;
+      width: max-content;
+      border-radius: 55px;
+      background: $bgc;
+      color: $primary;
+      @include fz(14);
+      font-weight: 500;
+      text-transform: uppercase;
+      padding-left: 38px;
+      padding-right: 38px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.actual {
+  background-color: $primary;
+  color: $font-white;
+  padding-top: 40px;
+  padding-bottom: 40px;  
+
+  .row {
+    position: relative;
+    row-gap: 20px;
+  }
+
+  &-warning {
+    display: inline-block;
+    width: max-content;
+    border-radius: 55px;
+    background: $bgc;
+    color: $primary;
+    @include fz(16);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;    
+  }
+
+  &-text {
+    @include fz(20);
+    text-transform: uppercase;
+    max-width: 660px;
+  }
+
+  &-read {
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 60px;
+    padding-right: 60px;
+    @include fz(18);
+  }
+
+  &-close {
+    width: 18px;
+    height: 18px;
+    fill: $font-white;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+
+    @media(max-width: 1259px) {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
 
 
 // services
@@ -1230,6 +1403,10 @@ body.sticky-wrap {
 .services {
   &-list {
     margin-bottom: 60px;
+
+    &__main {
+      margin-bottom: 170px;
+    }
   }
   &-order {
     display: flex;
@@ -1348,8 +1525,8 @@ body.sticky-wrap {
       border-radius: 20px;
       border: 1px solid #E3E8F2;
       transition: border-color 0.3s;
-      margin-bottom: 20px;
-      height: calc(100% - 20px);    
+      margin-bottom: 30px;
+      height: calc(100% - 30px);    
       // aspect-ratio: 1.16;
      
       &-image {
