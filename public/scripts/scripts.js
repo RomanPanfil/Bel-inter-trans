@@ -53,6 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const lis = nav.querySelectorAll('li');
 
     function toggleMenu(li) {
+      lis.forEach(otherLi => {
+        if (otherLi !== li) {
+          const otherUl = otherLi.querySelector('ul');
+          if (otherUl) {
+            otherUl.classList.remove('open');
+            otherLi.classList.remove('open');
+          }
+        }
+      });
+      
       const ul = li.querySelector('ul');
       if (ul) {
         ul.classList.toggle('open');
@@ -71,8 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     lis.forEach(li => {
-      li.addEventListener('click', () => {
-        toggleMenu(li); 
+      li.addEventListener('click', (ev) => {
+        const a = li.querySelector('a');
+        const ul = li.querySelector('ul');
+        if (ul && a && ev.target === a) {
+          ev.preventDefault();
+        }
+        toggleMenu(li);
       });
     });
 
