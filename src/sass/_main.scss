@@ -307,7 +307,7 @@
   }
 
   .ui-btn {
-    margin-right: 8px;
+    margin-right: 10px;
   }
 }
 
@@ -887,8 +887,9 @@ body.sticky-wrap {
 
     &-img {
       position: absolute;
-      top: 0;     
-      width: 25%;
+      top: 0;
+      right: -4%; 
+      width: 33%;
       max-height: 320px;
       aspect-ratio: 1.6;      
     }
@@ -1593,6 +1594,7 @@ body.sticky-wrap {
         top: 2px;
         width: 24px;
         height: 24px;
+        fill: $primary;
       }     
      
       &:not(:last-child) {

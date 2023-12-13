@@ -663,6 +663,10 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	.ui-btn:not(.ui-btn-transparent) {
 		color: $font-white;
 	}
+
+	.railway-web-link a {
+		color: $font-white;
+	}
 }
 
 .vi-bg-black {
@@ -720,9 +724,27 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
         background-color: $font-black;
     }
 
+	.header-nav > ul > li {
+		color: $font-white !important;
+ 
+		&:hover {
+			color: $border_grey !important;	
+
+			&>a {
+				color: $border_grey !important;		
+			}
+		}
+	}
+
     .header-nav > ul > li .icon {
         filter: brightness(10);
     }
+
+	.header-nav > ul > li > ul > li a {		
+		&:hover {
+			background-color: $border_grey;
+		}
+	}
 
     .jq-selectbox__trigger-arrow,
     .services-list-item-image {
@@ -740,6 +762,10 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 			.news-card-title {
 				color: $font-black !important;
 			}
+		}
+
+		&__colored {
+			background-color: $border_grey;
 		}
 	}
 
@@ -790,6 +816,16 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	.ui-input {
 		color: $font-white;
 	}
+
+	.pagination-nav {
+		&:hover {
+			border-color: $bgc;
+		}
+	}
+
+	.pagination-nav-icon {
+		filter: unset;
+	}
 }
 
 
@@ -828,9 +864,24 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
         color: #efdf4d;
     }
 
+	.header-nav > ul > li {
+       color: $font-yellow !important;
+
+	   &:hover {
+			color: $font-green !important;
+	   }
+    }
+
     .header-nav > ul > li .icon {
         filter: brightness(10);
     }
+
+	.header-nav > ul > li > ul > li a {
+		background-color: $primary_brown_bg;
+		&:hover {
+			background-color: $primary_brown_light;
+		}
+	}
 
     .jq-selectbox__trigger-arrow,
     .services-list-item-image {
@@ -842,12 +893,21 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
     }
 
 	.news-card {
+		background-color: $primary_brown_light;
 		&:hover {
 			border-color: $primary_green !important;
 
 			a {
 				color: $font-green;
 			}
+
+			.news-card-date {
+				color: $font-green;
+			}
+		}
+
+		&__colored {
+			background-color: $primary_brown_dark;
 		}
 	}
 
@@ -866,7 +926,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	}
 
 	.pagination-item-link.active {
-		background-color: $primary_yellow;
+		background-color: $primary_brown_light;
 		border-color: $font-green;			
 	}
 
@@ -878,6 +938,33 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 
 	.pagination-nav-icon {
 		filter: unset;
+	}
+
+	.post-other-link {
+		background-color: $primary_brown_light;
+
+		&:hover {
+			background-color: $primary_brown_bg;
+		}
+	}
+
+	.post-side-share-item {
+		&:hover {
+			background-color: $primary_brown_bg;	
+			border-color: $font-white;
+			
+			.post-side-share-icon__link {
+				fill: $primary_brown_bg;
+			}
+		}
+	}
+
+	.ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__badge, .ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__mobile-popup-badge {
+		transition: background-color 0.3s, border-color 0.3s !important;
+		&:hover {
+			background-color: $primary_brown_bg !important;
+			border-color: $font-white !important;	
+		}
 	}
 
 	.article-link-icon,
@@ -910,5 +997,61 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 
 	.ui-input {
 		color: $font-yellow;
+	}
+
+	.footer-socials-item {
+		&:hover {
+			background-color: $primary_brown_light;
+		}
+	}
+
+	.ui-tab {
+		background-color: $primary_brown_light;
+		border-color: $primary_brown_light;
+
+		&.active {
+			color: $font-green;
+			background-color: unset;
+			border-color: $font-green;
+		}
+		
+		&:hover {
+			background-color: $primary_brown_light;
+			border-color: $primary_brown_light;
+		}
+	}
+
+	.contacts-card {
+
+		&-icon {
+			fill: $font-green;
+		}
+		
+		&:hover {
+			background-color: $primary_brown_bg;
+			border-color: $primary_brown_bg;
+		}
+	}
+
+	.railway {
+		&-web {
+			background-color: $primary_brown_light;
+
+			&-title {
+				color: $font-yellow;
+			}
+
+			&-link {
+				color: $font-yellow;
+
+				a {
+					border-color: $font-yellow;
+				}
+			}
+		}
+		
+		&-contacts-item-icon {
+			fill: $font-yellow;
+		}
 	}
 }
