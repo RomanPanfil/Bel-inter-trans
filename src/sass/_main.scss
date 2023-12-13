@@ -1013,12 +1013,22 @@ body.sticky-wrap {
       list-style: unset;
     }
   }
+  h1, h2, h3, h4, h5, h6 {
+    &.regular {
+      font-weight: 400;
+    }
+
+    // .color-primary {
+    //   color: $primary;
+    // }
+  }
 
   h3 {    
     font-weight: 500;
     @include ls(-1);
-    margin-bottom: 44px;    
+    margin-bottom: 44px;   
   }
+
   h5 {
     font-weight: 600;
   }  
@@ -1166,6 +1176,38 @@ body.sticky-wrap {
     li {
       &::before {
         display: none !important;
+      }
+    }
+  }
+
+  &-video {
+    display: block;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 40px;
+
+    &-image {    
+
+      img {
+        display: block;
+        border-radius: 10px;
+        width: 100%;
+        aspect-ratio: 1.8;
+        object-fit: cover; 
+        object-position: center;    
+      }     
+    }
+
+    &-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);      
+    }
+
+    &:hover {
+      .icon {
+        fill: $youtube;
       }
     }
   }
@@ -2469,6 +2511,69 @@ body.sticky-wrap {
       text-transform: uppercase;
       margin-bottom: 10px;
     }    
+  }
+}
+
+.statistics {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  margin-bottom: 20px;
+
+  &-num {
+    margin-right: 157px;
+    margin-bottom: 40px;
+  }
+
+  &-year {
+    margin-bottom: 40px;
+  }
+
+  &-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 40px;
+  }
+
+  &-title {
+    @include fz(18);
+  }
+
+  &-text {
+    @include fz(80);
+    font-weight: 500;
+    @include ls(-1);
+    white-space: nowrap;
+  }
+}
+
+.benefits {
+  margin-top: 60px;
+  margin-bottom: 120px;
+
+  &-item {
+    position: relative;
+    margin-bottom: 58px;
+  }
+
+  &-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 54px;
+    height: 54px;
+  }
+
+  h3 {
+    padding-left: 94px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+
+  p {
+    padding-left: 94px;
+    @include ls(-1.1);
+    line-height: 1.3;
   }
 }
 

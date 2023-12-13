@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=1024"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>БелИнтерТранс</title>
+  <meta name="keywords" content="БелИнтерТранс" />
+  <meta name="description" content="БелИнтерТранс" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no" />
+
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+  integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+
+  <!-- <link rel=" shortcut icon" href="./images/favicon.png" type="image/x-icon"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- header start -->
+    <header class="header">
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <div class="header-feedback">
+              <a href="tel:+375296253030" class="header-top-item">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-phone" />
+                </svg>
+                <span class="header-top-item-text">
+                  +375 29 625 30 30
+                </span>
+              </a>
+              <a href="#" class="header-top-item">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-mail" />
+                </svg>
+                <span class="header-top-item-text">
+                  Эл. обращение
+                </span>
+              </a>
+            </div>
+            <div class="header-options">
+              <button class="header-top-item poor-vision-btn">
+                <svg class="header-top-item-icon">
+                  <use xlink:href="svg/svg/symbols.svg#icon-eye" />
+                </svg>
+                <span class="header-top-item-text">
+                  Версия для слабовидящих
+                </span>
+              </button>
+              <div class="header-top-item">
+                <select class="ui-select ui-select__lang">
+                  <option value="ru">
+                    Рус
+                  </option>
+                  <option value="by">
+                    Бел
+                  </option>
+                  <option value="en">
+                    En
+                  </option>
+                </select>
+              </div>             
+              
+              <div class="header-top-item">
+                <svg class="header-search">
+                  <use xlink:href="svg/svg/symbols.svg#icon-search" />
+                </svg>
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="container">
+          <div class="header-bottom-wrapper">
+            <button class="header-burger">
+              <span></span>
+            </button>
+            <div class="header-nav">
+              <ul>
+                <li>
+                  <a href="#">
+                    О нас
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Услуги
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Структура
+                  </a>
+                </li>
+                <li>                    
+                  Информация                    
+                  <ul>
+                    <li>
+                      <a href="#">
+                        Внутриорганизационная информация
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#">
+                            о личном приёме граждан
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Административные процедуры
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Противодействие коррупции
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Порядок обработки персональных данных
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">
+                        Справочная информация
+                      </a>
+                      <ul>
+                        <li>
+                          <a href="#">
+                            правила перевозки грузов
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            Нумерация вагонов
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">
+                    Новости
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="header-logo">
+              <img src="./images/logo.svg" alt="logo" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>           
+    </header>
+    <!-- header end -->
+
+    <!-- main screen start -->
+    <main class="main">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              О компании
+            </a>
+          </li>
+          <li>
+            ISO
+          </li>
+        </ul>        
+        <article class="article">
+          <header class="post-head article-head">
+            <div class="row">
+              <div class="col-xl-9 col-lg-12">
+                <h1 class="h1 post-title">
+                  О нас
+                </h1>
+              </div>
+            </div>
+          </header>
+          <div class="ui-tabs">
+            <a href="#" class="ui-tab active">
+              О нас
+            </a>
+            <a href="#" class="ui-tab">
+              Руководство
+            </a>
+            <a href="#" class="ui-tab">
+              Официальные сообщества
+            </a>            
+            <a href="#" class="ui-tab">
+              Видео галерея
+            </a>
+            <a href="#" class="ui-tab">
+              ISO
+            </a>
+          </div>
+          <div class="post-wrapper post-wrapper__article">
+            <div class="row">
+              <div class="col-md-2 col-sm-3 post-side-spase">
+                <div class="post-side">
+                  <div class="post-side-navigation">
+                    <div class="post-side-navigation-title">
+                      Навигация:
+                    </div>
+                    <ul class="post-side-navigation-list">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-10 col-sm-9">                  
+                <div class="post-container">
+                  <div class="article-content">
+                    <h3 class="item-menu regular" data-title="В мае 1992 года">
+                      В мае 1992 года руководством <span class="color-primary">Белорусской железной дороги</span> было принято решение 
+                    </h3>
+                    <p>
+                      создании «Белинтертранс» - транспортно-экспедиционного предприятия. До этого на железной дороге экспедиционного предприятия как такового не существовало. Основной задачей созданного предприятия 
+                      было обеспечение доставки грузов по Белорусской железной дороге, а также организация платежей за перевозку по территориям других государств.              
+                    </p>
+
+                    <div class="statistics">
+                      <div class="statistics-num">
+                        <svg class="statistics-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-truck" />
+                        </svg>
+                        <div class="statistics-title">
+                          Было проведено перевозок
+                        </div>
+                        <div class="statistics-text">
+                          >23 001 954
+                        </div>                        
+                      </div>
+                      <div class="statistics-year">
+                        <svg class="statistics-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-flag" />
+                        </svg>
+                        <div class="statistics-title">
+                          Основано в
+                        </div>
+                        <div class="statistics-text">
+                          1992 г.
+                        </div>                        
+                      </div>
+                    </div>
+
+                    <h3 class="item-menu regular" data-title="Весной 2009 года">
+                      <span class="color-primary">Весной 2009 года</span> было принято решение объединить две организации Белорусской железной дороги: 
+                    </h3>
+                    <p>
+                      Белинтертранс и Минскжелдортранс в единую структуру - Республиканское транспортно-экспедиционное унитарное предприятие
+                      БЕЛИНТЕРТРАНС - транспортно-логистический центр Белорусской железной дороги (государственное предприятие «БТЛЦ»). Объединяя многолетний 
+                      опыт в области экспедиторских услуг, терминальной и складской инфраструктуры, а главное - профессионализм персонала,
+                      государственное предприятие «БТЛЦ» продолжило уверенный курс на создание и развитие логистического предприятия международного уровня.             
+                    </p>
+
+                    <div class="benefits">
+                      <div class="benefits-item">
+                        <svg class="benefits-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-user-check" />
+                        </svg>
+                        <h3 class="uppercase">
+                          Официальный экспедитор белорусской железной дороги
+                        </h3>
+                        <p>
+                          Важнейшим преимуществом создания единой структуры является возможность предоставлять полный спектр логистических услуг,
+                          включая экспедирование грузов различными видами транспорта, контейнерные перевозки,
+                          таможенное оформление, страхование грузов и т. д.
+                        </p>
+                      </div>
+                      <div class="benefits-item">
+                        <svg class="benefits-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-check-square" />
+                        </svg>
+                        <h3 class="uppercase">
+                          Полный комплекс транспортно-логистических услуг
+                        </h3>
+                        <p>
+                          Также государственное предприятие «БТЛЦ», занимая ведущие позиции на рынке транспортно-экспедиционных
+                          услуг Республики Беларусь, предлагает услуги по организации железнодорожных перевозок c использованием
+                          собственного подвижного состава.
+                        </p>
+                      </div>
+                      <div class="benefits-item">
+                        <svg class="benefits-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-truck" />
+                        </svg>
+                        <h3 class="uppercase">
+                          Собственный подвижный состав
+                        </h3>
+                        <p>
+                          В настоящее время в состав государственного предприятия «БТЛЦ» входят филиалы во всех областных
+                          центрах республики (Минск, Брест, Витебск, Гомель, Гродно, Могилев). БТЛЦ имеет крупнейшие терминалы
+                          в Минске - Степянка и Колядичи, а также региональные производственные участки, расположенные в Молодечно, Орше,
+                          Борисове, Минске-Северном и грузовые пункты в Смолевичах, Койданово, а также сеть Обществ, учрежденных
+                          за рубежом и их представителя.
+                        </p>
+                      </div>
+                    </div>                    
+
+                    <h3 class="item-menu regular" data-title="Высокий уровень сервиса и надежность">
+                      <span class="color-primary">Высокий уровень сервиса и надежность государственного предприятия</span> «БТЛЦ» ежегодно подтверждаются
+                      членством в региональных и международных профессиональных ассоциациях и союзах: БелТПП, FIATA, БАМЭ, КСТП, АНЭК. 
+                    </h3>
+                    <br>
+                    <p>
+                      Стратегия развития предприятия направлена на увеличение объемов и повышение качества предоставления
+                      грузовых перевозок по территории Республики Беларусь и других стран. Основные задачи предприятия:
+                      развитие транспортных коридоров, оказание транспортно-экспедиторских услуг на высоком уровне, отвечающем международным требованиям.            
+                    </p>
+
+                    <a href="#" class="article-link">
+                      <svg class="article-link-icon">
+                        <use xlink:href="svg/svg/symbols.svg#link" />
+                      </svg>
+                      Оценить качество услуг государственного предприятия «БТЛЦ» на Портале рейтинговой оценки качества оказания услуг
+                      и административных процедур организациями Республики Беларусь
+                    </a>
+
+                    <a href="#" class="item-menu article-video video-link mfp-link" data-href="./popups/popup-video.html" data-video-id="vEZ4iEn1nqQ" data-title="Видео">
+                      <div class="article-video-image">
+                        <img src="./images/examples/thumb-3.jpeg" alt="card" loading="lazy">
+                      </div>
+                      <div class="article-video-play ui-btn ui-btn-play">
+                        <svg class="icon">
+                          <use xlink:href="svg/svg/symbols.svg#play" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>                  
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <!-- main screen end -->
+
+
+    <!-- footer start   -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a href="#" class="footer-logo">
+            <img src="./images/logo.svg" alt="logo" loading="lazy">
+          </a>
+          <div class="footer-contacts">
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                по общим вопросам
+              </div>
+              <a href="mailto:btlc@belint.by" class="footer-contacts-link">
+                btlc@belint.by
+              </a>
+              <a href="tel:+375172558425" class="footer-contacts-tel">
+                +375 17 255-84-25
+              </a>
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                перевозки в вагонах
+              </div>
+              <a href="mailto:info@belint.by" class="footer-contacts-link">
+                info@belint.by
+              </a>
+              <a href="tel:+375172553030" class="footer-contacts-tel">
+                +375 17 255-30-30
+              </a>
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                перевозки в контейнерах
+              </div>
+              <a href="mailto:container@belint.by" class="footer-contacts-link">
+                container@belint.by
+              </a>
+              <a href="tel:+375172553504" class="footer-contacts-tel">
+                +375 17 255-35-04
+              </a>
+            </div>
+            <div class="footer-contacts-item">
+              <div class="footer-contacts-title">
+                головной офис
+              </div>
+              <a href="tel:+375296253030" class="footer-contacts-link">
+                +375 29 625 30 30
+              </a>  
+            </div>
+          </div>
+          <div class="footer-socials">
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#telegram" />
+              </svg>
+            </div>
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#whatsapp" />
+              </svg>
+            </div>
+            <div class="footer-socials-item">
+              <svg class="footer-socials-icon">
+                <use xlink:href="svg/svg/symbols.svg#viber" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <nav class="footer-nav">
+            <ul>
+              <li>
+                <a href="#">
+                  О нас
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Структура
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Инфоцентр
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Справочник
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer-middle-links">
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/october-district.png" alt="october-district">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/RB.png" alt="Belarus">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/MT.png" alt="MT">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/Circle.png" alt="circle">
+            </a>
+            <a href="#" class="footer-middle-links-item">
+              <img src="./images/BC.png" alt="БЧ">
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-copy">
+            © 2009-2023 Государственное предприятие "БТЛЦ"
+          </div>
+          <div class="footer-bottom-links">
+            <a href="#" class="footer-bottom-link">
+              Политика обработки персональных данных
+            </a>
+            <a href="#" class="footer-bottom-link">
+              Файлы cookie
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- search-popup srart -->
+    <div class="search-popup">
+      <div class="search-popup-head">
+        <div class="container">
+          <div class="search-field">
+            <svg class="search-popup-icon">
+              <use xlink:href="svg/svg/symbols.svg#icon-search_white" />
+            </svg>
+            <input type="search" class="search-input" placeholder="Введите ваш запрос">
+            <svg class="search-popup-close">
+              <use xlink:href="svg/svg/symbols.svg#cross" />
+            </svg>
+            <a href="#" class="ui-btn search-btn">
+              Найти
+            </a>
+          </div>            
+        </div>
+      </div>
+      <div class="results results__popup">
+        <div class="results-title">
+          <div class="container">
+            Результаты поиска:
+          </div>
+        </div>
+        <div class="results-item">
+          <div class="container">
+            <div class="results-item-section">
+              Услуга
+            </div>
+            <div class="results-item-text">
+              <a href="#" class="results-item-title">
+                Мультимодальные перевозки
+              </a>                
+            </div>
+          </div>
+        </div>
+        <div class="results-item">
+          <div class="container">
+            <div class="results-item-section">
+              Новость
+            </div>
+            <div class="results-item-text">
+              <a href="#" class="results-item-title">
+                Государственное предприятие «БТЛЦ» приняло участие в конференции «РЫНОК ЩЕБНЯ РОССИИ 2023»
+              </a>
+              <div class="results-item-date">
+                3 октября 2023 г.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="results-item">
+          <div class="container">
+            <div class="results-item-section">
+              Новость
+            </div>
+            <div class="results-item-text">
+              <a href="#" class="results-item-title">
+                Фестиваль песни и спорта среди молодежи предприятий и организаций Октябрьского района г. Минска
+              </a>
+              <div class="results-item-date">
+                3 октября 2023 г.
+              </div>
+            </div>
+          </div>
+        </div>          
+        <div class="results-item">
+          <div class="container">
+            <div class="results-item-section">
+              Новость
+            </div>
+            <div class="results-item-text">
+              <a href="#" class="results-item-title">
+                Государственное предприятие «БТЛЦ» приняло участие в конференции «РЫНОК ЩЕБНЯ РОССИИ 2023»
+              </a>
+              <div class="results-item-date">
+                3 октября 2023 г.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="results-item">
+          <div class="container">
+            <div class="results-item-section">
+              Новость
+            </div>
+            <div class="results-item-text">
+              <a href="#" class="results-item-title">
+                Фестиваль песни и спорта среди молодежи предприятий и организаций Октябрьского района г. Минска
+              </a>
+              <div class="results-item-date">
+                3 октября 2023 г.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="results-item">
+          <div class="container">
+            <div class="results-item-section">
+              Новость
+            </div>
+            <div class="results-item-text">
+              <a href="#" class="results-item-title">
+                Государственное предприятие «БТЛЦ» приняло участие в конференции «РЫНОК ЩЕБНЯ РОССИИ 2023»
+              </a>
+              <div class="results-item-date">
+                3 октября 2023 г.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- search-popup end -->
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://yastatic.net/share2/share.js" defer></script>
+  <script src="./scripts/vi.js"></script>
+  <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>

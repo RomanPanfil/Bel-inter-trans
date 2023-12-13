@@ -987,3 +987,15 @@ html:not(.vi) {
 		}
 	}
 }
+
+.regular {
+	font-weight: 400;
+}
+
+.color-primary {
+	color: $primary;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
