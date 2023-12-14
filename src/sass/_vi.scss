@@ -580,14 +580,14 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
         color: #000;
     }	
 
-    // .ui-btn:not(.search-btn) {
-    //     border: 2px solid #000;
+    .ui-btn:not(.search-btn, .ui-btn-play) {
+        border: 2px solid #000;
         
-    //     &:hover {
-    //         color: $font-white;
-    //         background-color: #000;
-    //     }
-    // }
+        &:hover {
+            color: $font-white;
+            background-color: #000;
+        }
+    }
 
 	.news-card {
 		aspect-ratio: unset;
@@ -613,18 +613,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 
 	.video-gallery {
 		&-card {
-			border: 1px solid $border_grey;
-
-			&:hover {
-				.ui-btn-play {
-					background-color: #000;
-					border-color: $bgc;
-				}
-				
-				.ui-btn-play .icon {
-					fill: $bgc !important;
-				}
-			}
+			border: 1px solid $border_grey;	
 		}
 	}
 
@@ -637,21 +626,8 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 		color: $font-white;
 	}
 
-	.ui-btn-play {
-		background-color: $primary;
-		border-color: $bgc;
-
-		.icon {
-			fill: $bgc;
-		}
-
-		&:hover {
-			background-color: #000;
-			border-color: $bgc !important;
-			.icon {
-				fill: $bgc !important;
-			}
-		}
+	.ui-btn-play {		
+		border: 1px solid $border_grey;		
 	}
 
 	.img-off-hidden {
@@ -747,6 +723,25 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 		&:hover {
 			color: $font-black !important;
 		}
+	}
+
+	.video-gallery-card {
+
+		&:hover {
+			.video-gallery-card-play {
+				background-color: $font-black;
+
+				.icon {
+					fill: $font-white;
+				}
+			}			
+		}
+
+		&-play {
+			.icon {
+				fill: $font-black;
+			}
+		}		
 	}
 
     .header-top-item-text {
@@ -922,21 +917,20 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 
 	.article-video {	
 		&-play {
-			background-color: $font-black;
-			border-color: $font-black !important;
+			background-color: $font-white;
+			border-color: $font-white !important;
 
 			.icon {
-				fill: $font-white;
+				fill: $font-black;
 			}
 		}	
 		
 		&:hover {
 			.article-video-play {
-				background-color: $font-white;
 				border-color: $font-white !important;
 
 				.icon {
-					fill: $font-black;
+					fill: $font-white;
 				}
 			}
 		}
@@ -1032,9 +1026,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 		.news-card-icon-wrapper {
 			background-color: $primary_yellow;
 		}
-	}
-
-	
+	}	
 
 	.news-card__colored {
 		border-color: $primary_yellow;
@@ -1235,7 +1227,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 			border-color: $primary_yellow;
 
 			.icon {
-				fill: $primary_brown;
+				fill: $primary_brown_light;
 			}
 		}	
 		
@@ -1253,5 +1245,25 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 
 	.color-primary {
 		color: $font-yellow;
+	}
+
+	.video-gallery-card {
+
+		&:hover {
+			.video-gallery-card-play {
+				background-color: $primary_green !important;
+				border-color: $primary_green !important;
+
+				.icon {
+					fill: $primary_brown;
+				}
+			}			
+		}
+
+		&-play {
+			.icon {
+				fill: $primary_brown_light;
+			}
+		}		
 	}
 }

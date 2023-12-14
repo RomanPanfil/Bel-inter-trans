@@ -243,7 +243,6 @@ jQuery(document).ready(function($) {
 	});
 
     $(document).on('click','a.vi-gray',function(){
-        console.log('click')
 		var $gray = $(this).data('gray');
 		$('html').removeClassMask('vi-gray-*');
 		$('html').addClass('vi-gray-'+$gray);
