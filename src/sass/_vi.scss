@@ -349,6 +349,10 @@ html.vi-bg-brown .ui-btn {
 	background: #efdf4d !important;
 	border-color: #efdf4d !important;
 	color: #3a2716 !important;
+
+	&-icon {
+		fill: #3a2716 !important;
+	}
 }
 html.vi-bg-brown .ui-btn:hover {
 	background: #a9e44d !important;
@@ -649,6 +653,35 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 			}
 		}
 	}
+
+	.img-off-hidden {
+		visibility: hidden;
+        opacity: 0;
+        display: none;
+	}
+
+	.img-off-wide {
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
+
+	.article-video {
+
+		&-image {
+			border: 1px solid $border_grey;
+			border-radius: 10px;
+		}
+		
+		&:hover {
+			.article-video-play {
+				background-color: $font-black;
+
+				.icon {
+					fill: $bgc;
+				}
+			}
+		}
+	}
 }
 
 .vi-gray-on {
@@ -656,7 +689,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
         color:#000;
     }
 
-    a:not(.reception-contacts-tel, .reception-contacts-mail, .ui-tab) {
+    a:not(.reception-contacts-tel, .reception-contacts-mail, .ui-tab, .news-card-title) {
         color:#000;
     }
 
@@ -765,7 +798,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 		}
 
 		&__colored {
-			background-color: $border_grey;
+			background-color: $warning;
 		}
 	}
 
@@ -825,6 +858,88 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 
 	.pagination-nav-icon {
 		filter: unset;
+	}
+
+	.important-item {
+		&__colored {
+			background-color: $font-black;
+			border: 1px solid $font-white;
+		}
+
+		&-warning {
+			color: $font-black;
+		}
+
+		&-content {
+			.ui-btn {
+				color: $font-white;
+
+				&:hover {
+					.ui-btn-icon {
+						fill: $font-black;
+					}
+				}
+			}
+		}		
+	}
+
+	.ui-nav {
+		&-icon {
+			fill: $font-white;
+		}
+
+		&-item {
+			&:hover {
+				background-color: $font-white;
+				border-color: $font-white;
+
+				.ui-nav-icon {
+					fill: $font-black;
+				}
+			}
+		}		
+	}
+
+	.actual {
+		background-color: $warning;
+
+		&-warning {
+			color: $font-black;
+		}
+
+		&-read {
+			color: $font-white !important;
+
+			&:hover {
+				color: $font-black !important;
+
+				.ui-btn-icon {
+					fill: $font-black;
+				}
+			}
+		}
+	}
+
+	.article-video {	
+		&-play {
+			background-color: $font-black;
+			border-color: $font-black !important;
+
+			.icon {
+				fill: $font-white;
+			}
+		}	
+		
+		&:hover {
+			.article-video-play {
+				background-color: $font-white;
+				border-color: $font-white !important;
+
+				.icon {
+					fill: $font-black;
+				}
+			}
+		}
 	}
 }
 
@@ -1053,5 +1168,90 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 		&-contacts-item-icon {
 			fill: $font-yellow;
 		}
+	}
+
+	.important-item {
+		&__colored {
+			background-color: $primary_brown_light;
+			border: 1px solid $font-white;
+		}
+
+		&-warning {
+			color: $primary_brown_dark;
+		}
+
+		&-content {
+			.ui-btn {				
+				&-icon {
+					fill: $primary_brown_dark;
+				}
+
+				&:hover {
+					.ui-btn-icon {
+						fill: $primary_brown_dark;
+					}
+				}
+			}
+		}		
+	}
+
+	.ui-nav {
+		&-icon {
+			fill: $font-white;
+		}
+
+		&-item {
+			&:hover {
+				background-color: $primary_brown_light;
+				border-color: $primary_brown_light;
+			}
+		}		
+	}
+
+	.ui-more-link {
+		span {
+			color: $primary_yellow;
+			transition: color 0.3s;
+		}
+
+		a {	
+			border-bottom-color: $primary_yellow;
+		}
+
+		&:hover {
+			span {				
+				color: $primary_green;
+			}
+
+			a {	
+				border-bottom-color: $primary_green;
+			}
+		}
+	}
+
+	.article-video {	
+		&-play {
+			background-color: $primary_yellow;
+			border-color: $primary_yellow;
+
+			.icon {
+				fill: $primary_brown;
+			}
+		}	
+		
+		&:hover {
+			.article-video-play {
+				background-color: $primary_green !important;
+				border-color: $primary_green !important;
+
+				.icon {
+					fill: $primary_brown;
+				}
+			}
+		}
+	}
+
+	.color-primary {
+		color: $font-yellow;
 	}
 }

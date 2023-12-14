@@ -729,6 +729,9 @@ html.vi-bg-brown .ui-btn {
   border-color: #efdf4d !important;
   color: #3a2716 !important;
 }
+html.vi-bg-brown .ui-btn-icon {
+  fill: #3a2716 !important;
+}
 
 html.vi-bg-brown .ui-btn:hover {
   background: #a9e44d !important;
@@ -1041,11 +1044,32 @@ html.vi .contained-cl-item .circle {
 .vi-img-off .ui-btn-play:hover .icon {
   fill: #FFFFFF !important;
 }
+.vi-img-off .img-off-hidden {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+.vi-img-off .img-off-wide {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+.vi-img-off .article-video-image {
+  border: 1px solid #9EA5B4;
+  border-radius: 10px;
+}
+.vi-img-off .article-video:hover .article-video-play {
+  background-color: #000;
+}
+.vi-img-off .article-video:hover .article-video-play .icon {
+  fill: #FFFFFF;
+}
 
 .vi-gray-on body {
   color: #000;
 }
-.vi-gray-on a:not(.reception-contacts-tel, .reception-contacts-mail, .ui-tab) {
+.vi-gray-on a:not(.reception-contacts-tel, .reception-contacts-mail, .ui-tab, .news-card-title) {
   color: #000;
 }
 .vi-gray-on .ui-btn:not(.ui-btn-transparent) {
@@ -1123,7 +1147,7 @@ html.vi .contained-cl-item .circle {
   color: #000 !important;
 }
 .vi-bg-black .news-card__colored {
-  background-color: #9EA5B4;
+  background-color: #2A2D33;
 }
 .vi-bg-black .post-other-link {
   color: #000 !important;
@@ -1171,6 +1195,58 @@ html.vi .contained-cl-item .circle {
 .vi-bg-black .pagination-nav-icon {
   -webkit-filter: unset;
           filter: unset;
+}
+.vi-bg-black .important-item__colored {
+  background-color: #000;
+  border: 1px solid #FFFFFF;
+}
+.vi-bg-black .important-item-warning {
+  color: #000;
+}
+.vi-bg-black .important-item-content .ui-btn {
+  color: #FFFFFF;
+}
+.vi-bg-black .important-item-content .ui-btn:hover .ui-btn-icon {
+  fill: #000;
+}
+.vi-bg-black .ui-nav-icon {
+  fill: #FFFFFF;
+}
+.vi-bg-black .ui-nav-item:hover {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+.vi-bg-black .ui-nav-item:hover .ui-nav-icon {
+  fill: #000;
+}
+.vi-bg-black .actual {
+  background-color: #2A2D33;
+}
+.vi-bg-black .actual-warning {
+  color: #000;
+}
+.vi-bg-black .actual-read {
+  color: #FFFFFF !important;
+}
+.vi-bg-black .actual-read:hover {
+  color: #000 !important;
+}
+.vi-bg-black .actual-read:hover .ui-btn-icon {
+  fill: #000;
+}
+.vi-bg-black .article-video-play {
+  background-color: #000;
+  border-color: #000 !important;
+}
+.vi-bg-black .article-video-play .icon {
+  fill: #FFFFFF;
+}
+.vi-bg-black .article-video:hover .article-video-play {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF !important;
+}
+.vi-bg-black .article-video:hover .article-video-play .icon {
+  fill: #000;
 }
 
 .vi-bg-brown .services-order-content,
@@ -1342,6 +1418,58 @@ html.vi .contained-cl-item .circle {
 }
 .vi-bg-brown .railway-contacts-item-icon {
   fill: #efdf4d;
+}
+.vi-bg-brown .important-item__colored {
+  background-color: #79593c;
+  border: 1px solid #FFFFFF;
+}
+.vi-bg-brown .important-item-warning {
+  color: #464545;
+}
+.vi-bg-brown .important-item-content .ui-btn-icon {
+  fill: #464545;
+}
+.vi-bg-brown .important-item-content .ui-btn:hover .ui-btn-icon {
+  fill: #464545;
+}
+.vi-bg-brown .ui-nav-icon {
+  fill: #FFFFFF;
+}
+.vi-bg-brown .ui-nav-item:hover {
+  background-color: #79593c;
+  border-color: #79593c;
+}
+.vi-bg-brown .ui-more-link span {
+  color: #efdf4d;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.vi-bg-brown .ui-more-link a {
+  border-bottom-color: #efdf4d;
+}
+.vi-bg-brown .ui-more-link:hover span {
+  color: #a9e44d;
+}
+.vi-bg-brown .ui-more-link:hover a {
+  border-bottom-color: #a9e44d;
+}
+.vi-bg-brown .article-video-play {
+  background-color: #efdf4d;
+  border-color: #efdf4d;
+}
+.vi-bg-brown .article-video-play .icon {
+  fill: #3b2716;
+}
+.vi-bg-brown .article-video:hover .article-video-play {
+  background-color: #a9e44d !important;
+  border-color: #a9e44d !important;
+}
+.vi-bg-brown .article-video:hover .article-video-play .icon {
+  fill: #3b2716;
+}
+.vi-bg-brown .color-primary {
+  color: #efdf4d;
 }
 
 *,
@@ -4966,6 +5094,7 @@ body.sticky-wrap {
   aspect-ratio: 4.325;
   display: block;
   border-radius: 20px;
+  width: 100%;
 }
 .important-item__colored {
   background-color: #2861CF;
