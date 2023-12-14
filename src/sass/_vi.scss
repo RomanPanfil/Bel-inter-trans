@@ -580,14 +580,14 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
         color: #000;
     }	
 
-    .ui-btn:not(.search-btn, .ui-btn-play) {
-        border: 2px solid #000;
+    // .ui-btn:not(.search-btn, .ui-btn-play) {
+    //     border: 2px solid #000;
         
-        &:hover {
-            color: $font-white;
-            background-color: #000;
-        }
-    }
+    //     &:hover {
+    //         color: $font-white;
+    //         background-color: #000;
+    //     }
+    // }
 
 	.news-card {
 		aspect-ratio: unset;
@@ -709,6 +709,14 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
             background-color: $bgc;
         }
     }
+
+	.ui-btn-transparent {
+		color: $font-white !important;
+
+		&:hover {
+			color: $font-black !important;
+		}
+	}
 
 	.ui-btn-youtube {
 		&:hover {
@@ -838,7 +846,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	}
 
 	.reception-card {
-		background-color: $border_grey;
+		background-color: $warning;
 	}
 
 	.ui-input {
@@ -852,7 +860,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	}
 
 	.pagination-nav-icon {
-		filter: unset;
+		fill: $font-white;
 	}
 
 	.important-item {
@@ -934,6 +942,18 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 				}
 			}
 		}
+	}
+
+	.search-block {
+		background-color: $warning;
+	}
+
+	.railway-web {
+		background-color: $warning;
+	}
+
+	.main-order-image {
+		filter: brightness(10);
 	}
 }
 
@@ -1044,7 +1064,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	}
 
 	.pagination-nav-icon {
-		filter: unset;
+		fill: $font-white;
 	}
 
 	.post-other-link {
@@ -1265,5 +1285,13 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 				fill: $primary_brown_light;
 			}
 		}		
+	}
+
+	.search-block {
+		background-color: $primary_brown_light;
+	}
+
+	.main-order-image {
+		filter: brightness(10);
 	}
 }

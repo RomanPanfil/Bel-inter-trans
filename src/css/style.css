@@ -995,13 +995,6 @@ html.vi .contained-cl-item .circle {
 .vi-img-off .services-order-text {
   color: #000;
 }
-.vi-img-off .ui-btn:not(.search-btn, .ui-btn-play) {
-  border: 2px solid #000;
-}
-.vi-img-off .ui-btn:not(.search-btn, .ui-btn-play):hover {
-  color: #FFFFFF;
-  background-color: #000;
-}
 .vi-img-off .news-card {
   aspect-ratio: unset;
   height: calc(100% - 30px);
@@ -1091,6 +1084,12 @@ html.vi .contained-cl-item .circle {
 .vi-bg-black .ui-btn:not(.ui-btn-youtube):hover {
   color: #000;
   background-color: #FFFFFF;
+}
+.vi-bg-black .ui-btn-transparent {
+  color: #FFFFFF !important;
+}
+.vi-bg-black .ui-btn-transparent:hover {
+  color: #000 !important;
 }
 .vi-bg-black .ui-btn-youtube:hover {
   border: 2px solid #FFFFFF;
@@ -1182,7 +1181,7 @@ html.vi .contained-cl-item .circle {
   color: #FFFFFF;
 }
 .vi-bg-black .reception-card {
-  background-color: #9EA5B4;
+  background-color: #2A2D33;
 }
 .vi-bg-black .ui-input {
   color: #FFFFFF;
@@ -1191,8 +1190,7 @@ html.vi .contained-cl-item .circle {
   border-color: #FFFFFF;
 }
 .vi-bg-black .pagination-nav-icon {
-  -webkit-filter: unset;
-          filter: unset;
+  fill: #FFFFFF;
 }
 .vi-bg-black .important-item__colored {
   background-color: #000;
@@ -1244,6 +1242,16 @@ html.vi .contained-cl-item .circle {
 }
 .vi-bg-black .article-video:hover .article-video-play .icon {
   fill: #FFFFFF;
+}
+.vi-bg-black .search-block {
+  background-color: #2A2D33;
+}
+.vi-bg-black .railway-web {
+  background-color: #2A2D33;
+}
+.vi-bg-black .main-order-image {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
 }
 
 .vi-bg-brown .services-order-content,
@@ -1328,8 +1336,7 @@ html.vi .contained-cl-item .circle {
   border-color: #a9e44d;
 }
 .vi-bg-brown .pagination-nav-icon {
-  -webkit-filter: unset;
-          filter: unset;
+  fill: #FFFFFF;
 }
 .vi-bg-brown .post-other-link {
   background-color: #79593c;
@@ -1477,6 +1484,13 @@ html.vi .contained-cl-item .circle {
 }
 .vi-bg-brown .video-gallery-card-play .icon {
   fill: #79593c;
+}
+.vi-bg-brown .search-block {
+  background-color: #79593c;
+}
+.vi-bg-brown .main-order-image {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
 }
 
 *,
