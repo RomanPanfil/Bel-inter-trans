@@ -80,17 +80,39 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    lis.forEach(li => {
-      li.addEventListener('click', (ev) => {
-        const a = li.querySelector('a');
-        const ul = li.querySelector('ul');
-        if (ul && a && ev.target === a) {
-          ev.preventDefault();
-        }
-        toggleMenu(li);
-      });
-    });
+    // lis.forEach(li => {
+    //   li.addEventListener('click', (ev) => {
+    //     const a = li.querySelector('a');
+    //     const ul = li.querySelector('ul');
+    //     if (ul && a && ev.target === a) {
+    //       ev.preventDefault();
+    //     }
+    //     toggleMenu(li);
+    //   });
+    // });
 
+    lis.forEach(li => {
+      const a = li.querySelector('a');     
+      const icon = li.querySelector('.icon');
+    
+      if (a) {
+        a.addEventListener('click', (ev) => {          
+          const href = a.getAttribute('href');
+          if (href === '#' || href === 'javascript:void(0)') {
+            ev.preventDefault();
+            toggleMenu(li);
+          }
+        });
+      }
+    
+      if (icon) {        
+        icon.addEventListener('click', (ev) => {         
+          ev.stopPropagation();
+          toggleMenu(li);
+        });
+      }
+    });
+ 
     document.addEventListener('click', e => {
       if (!nav.contains(e.target)) {
         closeAllMenus();

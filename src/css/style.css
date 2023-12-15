@@ -2351,7 +2351,7 @@ img {
       -ms-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
   content: "";
-  background-image: url(../images/svg/icon-chevron-right.svg);
+  background-image: url(../images/svg/icon-chevron-right_grey.svg);
   width: 18px;
   height: 18px;
   background-repeat: no-repeat;
