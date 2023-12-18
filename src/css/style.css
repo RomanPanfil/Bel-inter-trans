@@ -2272,6 +2272,10 @@ img {
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
   transition: color 0.3s;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  min-width: 40px;
 }
 
 .jq-selectbox__trigger {

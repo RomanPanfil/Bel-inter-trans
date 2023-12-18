@@ -713,6 +713,8 @@ html:not(.vi) {
 	vertical-align: middle;
 	padding-right: 10px;
 	transition: color 0.3s;
+	width: max-content !important;
+	min-width: 40px;
 }
 
 .jq-selectbox__trigger {
