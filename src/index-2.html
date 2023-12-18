@@ -403,7 +403,7 @@
               </a>
             </div>
           </div>          
-          <div class="ui-nav">
+          <div class="ui-nav ui-nav__news">
             <a href="#" class="ui-nav-item ui-nav-item__left">
               <svg class="ui-nav-icon ui-nav-icon__prev">
                 <use xlink:href="svg/svg/symbols.svg#icon-chevron-right" />
@@ -416,9 +416,9 @@
             </a>
           </div>         
         </div>        
-        <div class="news news__short">
-          <div class="row-max">
-            <div class="col-md-6">
+        <div class="swiper news-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide news-slide">
               <div class="news-card news-card__colored">
                 <div class="news-card-head">
                   <div class="news-card-date">
@@ -433,7 +433,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="swiper-slide article-slider-slide">
               <div class="news-card news-card__simple">
                 <div class="news-card-head">
                   <div class="news-card-date">
@@ -449,7 +449,22 @@
                 </a>
               </div>
             </div>
-          </div>
+            <div class="swiper-slide news-slide">
+              <div class="news-card news-card__colored">
+                <div class="news-card-head">
+                  <div class="news-card-date">
+                    28 июля 2023 г.
+                  </div>
+                  <svg class="news-card-icon">
+                    <use xlink:href="svg/svg/symbols.svg#shape" />
+                  </svg>
+                </div>
+                <a href="#" class="news-card-title">
+                  Государственное предприятие «БТЛЦ» приняло участие в международной выставке «Весна в Гомеле»
+                </a>
+              </div>
+            </div>
+          </div>          
         </div>
       </div>
     </main>

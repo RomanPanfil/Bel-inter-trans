@@ -24,6 +24,10 @@
       align-items: center;
       padding-top: 28px;
       padding-bottom: 28px;
+
+      @media(max-width: 1366px) {
+        @include fz(14);
+      }
     }
 
     &-item {
@@ -64,6 +68,11 @@
         display: inline-block;
         vertical-align: middle;
         margin-right: 6px;
+
+        @media(max-width: 1366px) {
+          width: 18px;
+          height: 18px;
+        }
       }
     }    
   }
@@ -85,6 +94,11 @@
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
+
+    @media(max-width: 1366px) {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &-bottom {
@@ -92,8 +106,15 @@
     &-wrapper {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+      row-gap: 30px;
+      column-gap: 40px;
       padding-top: 30px;
       padding-bottom: 30px;
+
+      @media(max-width: 1280px) {
+        column-gap: 20px;
+      }
     }
   }
 
@@ -107,7 +128,16 @@
     height: 60px;
     border: none;
     cursor: pointer;
-    margin-right: 40px;
+    // margin-right: 40px;
+
+    @media(max-width: 1366px) {
+      flex-basis: 50px;    
+      max-width: 50px;
+      min-width: 50px;
+      height: 50px;
+      margin-right: 30px;
+      border-radius: 8px;
+    }
 
     span {
       display: block;
@@ -119,6 +149,10 @@
       width: 28px;
       height: 2px;
       background-color: $bgc;
+
+      @media(max-width: 1366px) {
+        width: 24px;
+      }
 
       &:before,
       &:after {
@@ -134,22 +168,38 @@
       }
       &:before {
         top: -8px;
+
+        @media(max-width: 1366px) {
+          top: -6px;
+        }
       }
       &:after {
         top: 8px;
+
+        @media(max-width: 1366px) {
+          top: 6px;
+        }
       }
     }
   }
 
   &-nav {
     flex-grow: 1;
-    margin-right: 40px;
+    // margin-right: 40px;
+
+    @media(max-width: 1280px) {
+      order: 1;
+    }
 
     & > ul {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 40px;
+
+      @media(max-width: 1366px) {
+        gap: 30px;
+      }
 
       & > li {
         position: relative;
@@ -162,6 +212,10 @@
         cursor: pointer;
         // padding-top: 15px;
         // padding-bottom: 15px;
+
+        @media(max-width: 1366px) {
+          @include fz(16);
+        }
 
         &.open {
           color: $link;
@@ -203,6 +257,12 @@
           background-size: 24px 24px;
           background-position: center;
           transition: transform 0.3s, filter 0.3s, background-image 0.3s;
+
+          @media(max-width: 1366px) {
+            width: 20px;
+            height: 20px;
+            background-size: 20px 20px;
+          }
         }
 
         & > ul {
@@ -251,6 +311,10 @@
                   @include fz(16);     
                   font-weight: 400;
                   padding: 15px 40px;
+
+                  @media(max-width: 1366px) {
+                    @include fz(14);
+                  }
                 }
               }
             }
@@ -364,6 +428,10 @@
 
 .news {
   margin-bottom: 30px;
+
+  &-slider {
+    margin-bottom: 40px;
+  }
 
   &__short {
     margin-bottom: 40px;
@@ -1319,6 +1387,7 @@ body.sticky-wrap {
 .important {
   margin-bottom: 176px;
   &-item {
+    display: block;
     border-radius: 20px;
     height: calc(100% - 30px);
     margin-bottom: 30px;
@@ -2583,9 +2652,15 @@ body.sticky-wrap {
   &-top {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
     border-bottom: 1px solid $border;
     padding-top: 20px;
     padding-bottom: 30px;
+
+    @media(max-width: 1280px) {
+      column-gap: 30px;
+    }
   }
 
   &-logo {
@@ -2593,6 +2668,13 @@ body.sticky-wrap {
     transition: opacity 0.3s;
     min-width: 23%;
     max-width: 23%;
+
+    align-self: baseline;
+    margin-top: 14px;
+
+    @media(max-width: 1280px) {
+      margin-right: 0;
+    }
 
     &:hover {
       opacity: 0.9;
@@ -2604,6 +2686,11 @@ body.sticky-wrap {
     margin-right: 20px;
     font-size: 0;
 
+    @media(max-width: 1280px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
     &-item {
       display: inline-block;
       vertical-align: top;
@@ -2611,14 +2698,26 @@ body.sticky-wrap {
       // padding-top: 10px;
       padding-bottom: 10px;
 
+      @media(max-width: 1366px) {
+        margin-right: 30px;
+      }
+
       &:nth-last-child(2) {
        margin-right: 60px;
+
+       @media(max-width: 1366px) {
+        margin-right: 50px;
+      }
       }
     }
 
     &-title {
       color: $font-light;
       @include fz(14);
+
+      @media(max-width: 1366px) {
+        @include fz(13);
+      }
     }
 
     &-link {
@@ -2626,6 +2725,10 @@ body.sticky-wrap {
       font-weight: 500;
       transition: color 0.3s;
       white-space: nowrap;
+
+      @media(max-width: 1366px) {
+        @include fz(20);
+      }
 
       &:hover {
         color: $link;
@@ -2638,6 +2741,10 @@ body.sticky-wrap {
       font-weight: 500;
       transition: color 0.3s;
 
+      @media(max-width: 1366px) {
+        @include fz(14);
+      }
+
       &:hover {
         color: $link;
       }
@@ -2648,6 +2755,10 @@ body.sticky-wrap {
     font-size: 0;
     white-space: nowrap;
     align-self: flex-start;
+
+    @media(max-width: 1680px) {
+      margin: 0 auto;
+    }
     
     &-item {
       display: block;
@@ -2661,8 +2772,17 @@ body.sticky-wrap {
       cursor: pointer;
       transition: background-color 0.3s;
 
+      @media(max-width: 1366px) {
+        width: 42px;
+        height: 42px;
+      }
+
       &:not(:last-child) {
         margin-right: 20px;
+
+        @media(max-width: 1366px) {
+          margin-right: 16px;
+        }
       }
 
       &:hover {
@@ -2683,6 +2803,11 @@ body.sticky-wrap {
       height: 26px;
       fill: $primary;
       transition: fill 0.3s;
+
+      @media(max-width: 1366px) {
+        width: 22px;
+        height: 22px;
+      }
     }
   }
 
@@ -2690,17 +2815,25 @@ body.sticky-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
 
     &-links {
       font-size: 0;
+      white-space: nowrap;
       &-item {
         display: inline-block;
         height: 48px;
         filter: grayscale(100%);        
         opacity: 0.8;
         transition: filter 0.3s, opacity 0.3s;
+
+        @media(max-width: 1366px) {
+          height: 40px;
+        }
 
         &:not(:last-child) {
           margin-right: 20px;
@@ -2709,6 +2842,11 @@ body.sticky-wrap {
         &:hover {
           filter: grayscale(0%);
           opacity: 1;
+        }
+
+        img {
+          object-fit: contain;
+          height: 100%;
         }
       }
     }
@@ -2729,6 +2867,10 @@ body.sticky-wrap {
         text-transform: uppercase;
         transition: color 0.3s;
 
+        @media(max-width: 1366px) {
+          @include fz(16);
+        }
+
         &:hover {
           color: $link;
         }
@@ -2743,6 +2885,10 @@ body.sticky-wrap {
     color: $font-light;
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 1366px) {
+      @include fz(13);
+    }
 
     &-copy {      
       text-transform: uppercase;

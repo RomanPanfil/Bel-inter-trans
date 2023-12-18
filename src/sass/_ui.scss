@@ -729,6 +729,12 @@ html:not(.vi) {
 	height: 20px;
 	background-size: 20px 20px;
 	transition: transform 0.3s, background-image 0.3s;
+
+	@media(max-width: 1366px) {
+		width: 18px;
+		height: 18px;
+		background-size: 18px 18px;
+	}
 }
 
 .jq-selectbox__dropdown {
@@ -964,7 +970,14 @@ html:not(.vi) {
 		display: inline-block;
 		font-size: 0;
 
-		&:hover {
+		&.swiper-button-disabled {
+			cursor: not-allowed;
+			.ui-nav-icon {
+				fill: $border;				
+			}
+		}
+
+		&:not(.swiper-button-disabled):hover {
 			border-color: $font;
 		}
 
@@ -998,4 +1011,14 @@ html:not(.vi) {
 
 .uppercase {
 	text-transform: uppercase;
+}
+
+.black-banner {
+	filter: grayscale(100%);
+	cursor: pointer;
+	transition: filter 0.3s;
+
+	&:hover {
+		filter: grayscale(0%);
+	}
 }

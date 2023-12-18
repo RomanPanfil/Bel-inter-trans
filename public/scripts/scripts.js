@@ -463,57 +463,65 @@ document.addEventListener('DOMContentLoaded', () => {
   (function() {
     const items = document.querySelectorAll('.post-wrapper .item-menu');
     const menu = document.querySelector('.post-side-navigation-list');
+    const navigation = document.querySelector('.post-side-navigation');  
 
-    if(!menu) return    
-    
-    items.forEach(item => {
-      const li = document.createElement('li');
-      li.classList.add('post-side-navigation-item');
-      li.dataset.title = item.dataset.title || item.textContent;
-      li.textContent = item.dataset.title || item.textContent;      
-    
-      li.addEventListener('click', () => {
-        item.scrollIntoView({block: 'start', behavior: 'smooth'});
-      });
-    
-      menu.appendChild(li);
-    });
-    
-    let activeItem = menu.querySelector('li');    
-    activeItem.classList.add('active');
+    if(!menu) return
 
-    const hash = location.hash;
-
-    if(hash && hash.includes('item')) {
-
-      const index = hash.replace('#item', '') - 1;
+    if(items.length) {
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.classList.add('post-side-navigation-item');
+        li.dataset.title = item.dataset.title || item.textContent;
+        li.textContent = item.dataset.title || item.textContent;      
       
-      setTimeout(() => {
-        document.querySelectorAll('.post-side-navigation-item')[index].click();
-      }, 1000)
-    }
-
-    
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach((entry) => {
-       
-        if(entry.isIntersecting) {
-          const index = entry.target.index;
+        li.addEventListener('click', () => {
+          item.scrollIntoView({block: 'start', behavior: 'smooth'});
+        });
+      
+        menu.appendChild(li);
+      });
+      
+      let activeItem = menu.querySelector('li');    
+      activeItem.classList.add('active');
+  
+      const hash = location.hash;
+      const params = new URLSearchParams(location.search);
+      const query = params.toString();
+  
+      if(hash && hash.includes('item')) {
+  
+        const index = hash.replace('#item', '') - 1;
+        
+        setTimeout(() => {
+          document.querySelectorAll('.post-side-navigation-item')[index].click();
+        }, 1000)
+      }
+  
+      
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry) => {
          
-          activeItem.classList.remove('active');          
-          activeItem = document.querySelectorAll('.post-side-navigation-item')[index];
-          activeItem.classList.add('active');          
+          if(entry.isIntersecting) {
+            const index = entry.target.index;
+           
+            activeItem.classList.remove('active');          
+            activeItem = document.querySelectorAll('.post-side-navigation-item')[index];
+            activeItem.classList.add('active');
 
-          history.pushState(null, '', `${location.pathname}#item${index+1}`);
-        }
-      }); 
-    });
-    
-    items.forEach((item, index) => {     
-      item.index = index;  
-      observer.observe(item);
-    });
+            const url = `${location.pathname}` + (query ? `?${query}` : '') +  `#item${index+1}`;
 
+            history.pushState(null, '', url);
+          }
+        }); 
+      });
+      
+      items.forEach((item, index) => {     
+        item.index = index;  
+        observer.observe(item);
+      });
+    } else {
+      navigation.classList.add('hidden');
+    }
   })();
 
 
@@ -576,8 +584,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!close) return;
 
     close.addEventListener('click', (ev) => {    
-      ev.target.closest('.actual').classList.add('hidden')
+      ev.target.closest('.actual').classList.add('hidden');
+      document.cookie = "hide_actual=Y;path=/";
     })
+  })();
+
+  // слайдер новостей
+  (function() {
+    if (!document.querySelector('.news-slider')) return
+  
+    var swiper = new Swiper('.news-slider', {   
+      grabCursor: true,    
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+      autoHeight: true,
+      autoplay: false,
+      // loop: true,      
+      navigation: {
+        nextEl: ".ui-nav__news .ui-nav-item__right",
+        prevEl: ".ui-nav__news .ui-nav-item__left",
+      },
+      breakpoints: {   
+        961: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+      }
+    });  
   })();
   
 
