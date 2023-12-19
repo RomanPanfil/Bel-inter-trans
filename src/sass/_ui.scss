@@ -31,6 +31,10 @@ h1, .h1 {
 	margin-top: 0;
 	line-height: 1.15;
 
+	@media(max-width: 1366px) {
+		@include fz(72);
+	  }
+
 	@media (max-width: 960px) {
 		@include fz(42);
 	}
@@ -314,6 +318,14 @@ html:not(.vi) {
 		padding-right: 12px;
 		@include fz(17);
 
+		@media(max-width: 1366px) {
+			@include fz(16);
+			padding-top: 2px;
+			padding-bottom: 2px;	
+			padding-left: 10px;
+			padding-right: 10px;
+		  }
+
 		&:hover {
 			background-color: $primary;
 			color: $bgc;
@@ -360,6 +372,15 @@ html:not(.vi) {
 			width: 12px;
 			height: 12px;
 		}
+	}
+
+	&-little {
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		line-height: 1;
+		@include fz(17);
 	}
 
 	&-big {
@@ -546,6 +567,11 @@ html:not(.vi) {
 	column-gap: 40px;
 	margin-bottom: 66px;
 
+	@media(max-width: 1366px) {
+		column-gap: 32px;
+		margin-bottom: 42px;
+	}
+
 	&-nav {
 		position: relative;
 		display: block;
@@ -554,6 +580,11 @@ html:not(.vi) {
 		border-radius: 50%;
 		border: 1px solid $border;
 		transition: 0.3s border-color;
+
+		@media(max-width: 1366px) {
+			width: 42px;
+			height: 42px;			
+		}
 		
 		&:hover {			
 			border-color: $font-dark-blue;
@@ -567,7 +598,12 @@ html:not(.vi) {
 			width: 24px;
 			height: 24px;
 			// filter: brightness(0.2) saturate(21.5);
-			fill: $font;	
+			fill: $font;
+
+			@media(max-width: 1366px) {
+				width: 20px;
+				height: 20px;			
+			}
 
 			&__prev {				
 				transform: translate(-50%, -50%) rotate(-180deg);
@@ -581,21 +617,34 @@ html:not(.vi) {
 		display: flex;
 		align-items: center;
 		column-gap: 20px;
+
+		@media(max-width: 1366px) {
+			column-gap: 16px;
+		}
 	}
 
 	&-item {
 
 		&-link {
-			text-align: center;
+			// text-align: center;
 			@include fz(20);
-			display: inline-block;
+			// display: inline-block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			width: 48px;
 			height: 48px;
-			line-height: 46px;
+			// line-height: 46px;
 			border-radius: 50%;
 			border: 1px solid $border;
 			transition: 0.3s border-color, 0.3s color, 0.3s background-color;
 			color: $font-light !important;
+
+			@media(max-width: 1366px) {
+				width: 42px;
+				height: 42px;
+				@include fz(18);
+			}
 
 			&.active {
 				background-color: $primary;

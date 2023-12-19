@@ -605,6 +605,18 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	.news-card__picture .news-card-title {
 		@include fz(30);
 		-webkit-line-clamp: 3;
+
+		@media(max-width: 1366px) {
+			@include fz(26);
+		}
+
+		@media(max-width: 1280px) {
+			@include fz(22);
+		}
+
+		@media(max-width: 1140px) {
+			@include fz(20);
+		}
 	}
 
 	.news-card-date {
