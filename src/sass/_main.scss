@@ -1459,6 +1459,10 @@ body.sticky-wrap {
     aspect-ratio: 1.61;
     max-width: 100%;
 
+    @media(max-width: 1366px) {
+      padding: 30px 30px 10px 30px;
+    }
+
     a {
       transition: color 0.3s;
       margin-bottom: 20px;
@@ -1488,12 +1492,20 @@ body.sticky-wrap {
       position: relative;
       margin-bottom: 20px;
       padding-right: 48px;
+
+      @media(max-width: 1366px) {
+        padding-right: 42px;
+      }
     }
 
     &-title {
       @include fz(24);
       font-weight: 500;
       text-transform: uppercase;
+
+      @media(max-width: 1366px) {
+        @include fz(22);
+      }
     }
 
     &-icon {
@@ -1504,10 +1516,19 @@ body.sticky-wrap {
       height: 24px;
       flex-shrink: 0;
       transition: fill 0.3s, transform 0.3s;
+
+      @media(max-width: 1366px) {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &-content {
       @include fz(20);
+
+      @media(max-width: 1366px) {
+        @include fz(18);
+      }
     }
 
     &-address {
@@ -1866,7 +1887,7 @@ body.sticky-wrap {
 
       @media(max-width: 1366px) {
         margin-bottom: 20px;
-        height: calc(100% - 20px);  
+        height: calc(100% - 20px);
       }
      
       &-image {
@@ -1919,12 +1940,17 @@ body.sticky-wrap {
     padding-bottom: 100px;
     border-bottom: 1px solid $border;
 
+    @media(max-width: 1366px) {
+      margin-bottom: 40px;
+      padding-bottom: 80px;
+    }
+
     &-image {
       border-radius: 20px;
       background-color: $primary;
       overflow: hidden;
-      height: 290px;
-      // aspect-ratio: 6;
+      // height: 290px;
+      aspect-ratio: 6;
 
       img {
         display: block;
@@ -1956,13 +1982,24 @@ body.sticky-wrap {
       margin-right: 40px;
       margin-bottom: 20px;
 
+      @media(max-width: 1680px) {
+        width: 152px;
+        height: 152px;
+      }
+
+      @media(max-width: 1366px) {
+        width: 142px;
+        height: 142px;
+      }
+
       .icon {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 141px;
-        height: 18px;            
+        // width: 141px;
+        // height: 18px;
+        width: 90%;        
       }
     }
 
@@ -1978,10 +2015,18 @@ body.sticky-wrap {
       font-weight: 500;    
       text-transform: uppercase;
       margin-bottom: 0;
+
+      @media(max-width: 1680px) {
+        @include fz(28);
+      }
     }
 
     &-desc {
-      color: $font-light;     
+      color: $font-light;
+
+      @media(max-width: 1680px) {
+        @include fz(14);
+      }
     }
 
     &-btn {
@@ -1992,6 +2037,10 @@ body.sticky-wrap {
 
   &-cards {
     margin-bottom: 40px;
+
+    @media(max-width: 1366px) {
+      margin-bottom: 20px;
+    }
   }
 
   &-card {
@@ -2042,20 +2091,35 @@ body.sticky-wrap {
     // aspect-ratio: 2.1;
     min-height: 406px;
     margin-bottom: 30px;
-    height: calc(100% - 30px);    
+    height: calc(100% - 30px);
+    
+    @media(max-width: 1366px) {
+      padding: 30px;
+      min-height: 330px;
+    }
 
     &-title {
       @include fz(36);     
       font-weight: 500;     
       letter-spacing: -1px;
       text-transform: uppercase;
-      margin-bottom: 20px;   
+      margin-bottom: 20px;
+
+      @media(max-width: 1366px) {
+        @include fz(32);
+        margin-bottom: 16px;
+      }
     }
 
     &-link {
       margin-top: auto;
       @include fz(20);
       text-transform: uppercase;
+
+      @media(max-width: 1366px) {
+        @include fz(18);
+      }
+
       a {
         color: $font-white;
         border-bottom: 1px solid $font-white;
@@ -2078,6 +2142,11 @@ body.sticky-wrap {
     margin-bottom: 30px;
     height: calc(100% - 30px);
 
+    @media(max-width: 1366px) {
+      padding: 30px;
+      min-height: 330px;
+    }
+
     &-description {
       color: $font-light;
       @include fz(20);
@@ -2085,6 +2154,11 @@ body.sticky-wrap {
       margin-bottom: auto;
       max-width: 740px;
       padding-bottom: 20px;
+
+      @media(max-width: 1366px) {
+        @include fz(18);
+        padding-bottom: 14px;
+      }
     }
 
     &-title {
@@ -2093,11 +2167,20 @@ body.sticky-wrap {
       @include ls(-1);
       margin-bottom: 20px;
       max-width: 600px;
+
+      @media(max-width: 1366px) {
+        @include fz(18);
+        margin-bottom: 18px;
+      }
     }
 
     &-item {
       position: relative;
       @include fz(18);
+
+      @media(max-width: 1366px) {
+        @include fz(16);
+      }
 
       &-text {
         display: inline-block;
@@ -2112,6 +2195,11 @@ body.sticky-wrap {
         width: 24px;
         height: 24px;
         fill: $primary;
+
+        @media(max-width: 1366px) {
+          width: 20px;
+          height: 20px;
+        }
       }     
      
       &:not(:last-child) {

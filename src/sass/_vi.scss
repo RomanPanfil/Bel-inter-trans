@@ -533,6 +533,10 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 		height: auto;
 		line-height: unset;
 	}
+
+	.ui-btn-white {
+		border: 1px solid $font-black;
+	}
 }
 
 
@@ -681,7 +685,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
         color:#000;
     }
 
-	.ui-btn:not(.ui-btn-transparent) {
+	.ui-btn:not(.ui-btn-transparent, .search-btn, .ui-btn-primary, .ui-btn-white) {
 		color: $font-white;
 	}
 
@@ -712,7 +716,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
         color: $font-white;
     }
 
-    .ui-btn:not(.ui-btn-youtube) {
+    .ui-btn:not(.ui-btn-youtube, .ui-btn-transparent-white) {
         border: 2px solid $bgc;
         color: $font-black;
         
@@ -967,6 +971,11 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	.main-order-image {
 		filter: brightness(10);
 	}
+
+	.electronic-appeal {
+		background-color: $warning;
+	}
+
 }
 
 

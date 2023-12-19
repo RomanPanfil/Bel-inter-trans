@@ -965,6 +965,9 @@ html.vi .contained-cl-item .circle {
   height: auto;
   line-height: unset;
 }
+.vi .ui-btn-white {
+  border: 1px solid #000;
+}
 
 .vi-img-off .services-order-qr,
 .vi-img-off .services-order-dash,
@@ -1072,7 +1075,7 @@ html.vi .contained-cl-item .circle {
 .vi-gray-on a:not(.reception-contacts-tel, .reception-contacts-mail, .ui-tab, .news-card-title) {
   color: #000;
 }
-.vi-gray-on .ui-btn:not(.ui-btn-transparent) {
+.vi-gray-on .ui-btn:not(.ui-btn-transparent, .search-btn, .ui-btn-primary, .ui-btn-white) {
   color: #FFFFFF;
 }
 .vi-gray-on .railway-web-link a {
@@ -1095,11 +1098,11 @@ html.vi .contained-cl-item .circle {
 .vi-bg-black .services-order-text {
   color: #FFFFFF;
 }
-.vi-bg-black .ui-btn:not(.ui-btn-youtube) {
+.vi-bg-black .ui-btn:not(.ui-btn-youtube, .ui-btn-transparent-white) {
   border: 2px solid #FFFFFF;
   color: #000;
 }
-.vi-bg-black .ui-btn:not(.ui-btn-youtube):hover {
+.vi-bg-black .ui-btn:not(.ui-btn-youtube, .ui-btn-transparent-white):hover {
   color: #000;
   background-color: #FFFFFF;
 }
@@ -1270,6 +1273,9 @@ html.vi .contained-cl-item .circle {
 .vi-bg-black .main-order-image {
   -webkit-filter: brightness(10);
           filter: brightness(10);
+}
+.vi-bg-black .electronic-appeal {
+  background-color: #2A2D33;
 }
 
 .vi-bg-brown .services-order-content,
@@ -1744,6 +1750,7 @@ img {
   html:not(.vi) ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
+    background-color: #E3E8F2;
   }
   html:not(.vi) ::-webkit-scrollbar-thumb {
     width: 8px;
@@ -1818,6 +1825,11 @@ img {
   margin-bottom: 110px;
   font-size: 0;
 }
+@media (max-width: 1280px) {
+  .ui-tabs {
+    margin-bottom: 80px;
+  }
+}
 .ui-tabs__min {
   margin-bottom: 54px;
 }
@@ -1843,6 +1855,14 @@ img {
   -o-transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   margin-bottom: 10px;
+}
+@media (max-width: 1280px) {
+  .ui-tab {
+    font-size: 18px;
+    font-size: 1.125rem;
+    height: 30px;
+    line-height: 30px;
+  }
 }
 .ui-tab.active {
   background-color: #2861CF;
@@ -2055,6 +2075,16 @@ img {
   padding-bottom: 20px;
   text-transform: uppercase;
 }
+@media (max-width: 1680px) {
+  .ui-btn-youtube {
+    font-size: 18px;
+    font-size: 1.125rem;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 .ui-btn-youtube .icon {
   width: 26px;
   height: 20px;
@@ -2066,6 +2096,13 @@ img {
   -webkit-transition: fill 0.3s;
   -o-transition: fill 0.3s;
   transition: fill 0.3s;
+}
+@media (max-width: 1680px) {
+  .ui-btn-youtube .icon {
+    width: 24px;
+    height: 18px;
+    margin-right: 14px;
+  }
 }
 .ui-btn-youtube span {
   vertical-align: middle;
@@ -2449,9 +2486,6 @@ img {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.ui-select__form .jq-selectbox__dropdown ul::-webkit-scrollbar {
-  background-color: #E3E8F2;
-}
 .ui-select__form .jq-selectbox__dropdown li {
   white-space: normal;
 }
@@ -2529,9 +2563,6 @@ img {
   margin-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
-}
-.ui-select__big .jq-selectbox__dropdown ul::-webkit-scrollbar {
-  background-color: #E3E8F2;
 }
 .ui-select__big .jq-selectbox__dropdown li {
   white-space: normal;
@@ -5565,6 +5596,11 @@ body.sticky-wrap {
   aspect-ratio: 1.61;
   max-width: 100%;
 }
+@media (max-width: 1366px) {
+  .contacts-card {
+    padding: 30px 30px 10px 30px;
+  }
+}
 .contacts-card a {
   -webkit-transition: color 0.3s;
   -o-transition: color 0.3s;
@@ -5596,11 +5632,22 @@ body.sticky-wrap {
   margin-bottom: 20px;
   padding-right: 48px;
 }
+@media (max-width: 1366px) {
+  .contacts-card-head {
+    padding-right: 42px;
+  }
+}
 .contacts-card-title {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
+}
+@media (max-width: 1366px) {
+  .contacts-card-title {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
 }
 .contacts-card-icon {
   position: absolute;
@@ -5616,9 +5663,21 @@ body.sticky-wrap {
   transition: fill 0.3s, transform 0.3s;
   transition: fill 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
+@media (max-width: 1366px) {
+  .contacts-card-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
 .contacts-card-content {
   font-size: 20px;
   font-size: 1.25rem;
+}
+@media (max-width: 1366px) {
+  .contacts-card-content {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 .contacts-card-address {
   margin-bottom: 20px;
@@ -6060,11 +6119,17 @@ body.sticky-wrap {
   padding-bottom: 100px;
   border-bottom: 1px solid #E3E8F2;
 }
+@media (max-width: 1366px) {
+  .video-gallery-banner {
+    margin-bottom: 40px;
+    padding-bottom: 80px;
+  }
+}
 .video-gallery-banner-image {
   border-radius: 20px;
   background-color: #2861CF;
   overflow: hidden;
-  height: 290px;
+  aspect-ratio: 6;
 }
 .video-gallery-banner-image img {
   display: block;
@@ -6089,6 +6154,18 @@ body.sticky-wrap {
   margin-right: 40px;
   margin-bottom: 20px;
 }
+@media (max-width: 1680px) {
+  .video-gallery-banner-logo {
+    width: 152px;
+    height: 152px;
+  }
+}
+@media (max-width: 1366px) {
+  .video-gallery-banner-logo {
+    width: 142px;
+    height: 142px;
+  }
+}
 .video-gallery-banner-logo .icon {
   position: absolute;
   top: 50%;
@@ -6096,8 +6173,7 @@ body.sticky-wrap {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 141px;
-  height: 18px;
+  width: 90%;
 }
 .video-gallery-banner-text {
   padding-right: 40px;
@@ -6112,8 +6188,20 @@ body.sticky-wrap {
   text-transform: uppercase;
   margin-bottom: 0;
 }
+@media (max-width: 1680px) {
+  .video-gallery-banner-title {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
 .video-gallery-banner-desc {
   color: #9EA5B4;
+}
+@media (max-width: 1680px) {
+  .video-gallery-banner-desc {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
 }
 .video-gallery-banner-btn {
   -ms-flex-item-align: center;
@@ -6122,6 +6210,11 @@ body.sticky-wrap {
 }
 .video-gallery-cards {
   margin-bottom: 40px;
+}
+@media (max-width: 1366px) {
+  .video-gallery-cards {
+    margin-bottom: 20px;
+  }
 }
 .video-gallery-card {
   display: block;
@@ -6172,6 +6265,12 @@ body.sticky-wrap {
   margin-bottom: 30px;
   height: calc(100% - 30px);
 }
+@media (max-width: 1366px) {
+  .railway-web {
+    padding: 30px;
+    min-height: 330px;
+  }
+}
 .railway-web-title {
   font-size: 36px;
   font-size: 2.25rem;
@@ -6180,11 +6279,24 @@ body.sticky-wrap {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+@media (max-width: 1366px) {
+  .railway-web-title {
+    font-size: 32px;
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+}
 .railway-web-link {
   margin-top: auto;
   font-size: 20px;
   font-size: 1.25rem;
   text-transform: uppercase;
+}
+@media (max-width: 1366px) {
+  .railway-web-link {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 .railway-web-link a {
   color: #FFFFFF;
@@ -6211,6 +6323,12 @@ body.sticky-wrap {
   margin-bottom: 30px;
   height: calc(100% - 30px);
 }
+@media (max-width: 1366px) {
+  .railway-contacts {
+    padding: 30px;
+    min-height: 330px;
+  }
+}
 .railway-contacts-description {
   color: #9EA5B4;
   font-size: 20px;
@@ -6221,6 +6339,13 @@ body.sticky-wrap {
   max-width: 740px;
   padding-bottom: 20px;
 }
+@media (max-width: 1366px) {
+  .railway-contacts-description {
+    font-size: 18px;
+    font-size: 1.125rem;
+    padding-bottom: 14px;
+  }
+}
 .railway-contacts-title {
   font-size: 20px;
   font-size: 1.25rem;
@@ -6230,10 +6355,23 @@ body.sticky-wrap {
   margin-bottom: 20px;
   max-width: 600px;
 }
+@media (max-width: 1366px) {
+  .railway-contacts-title {
+    font-size: 18px;
+    font-size: 1.125rem;
+    margin-bottom: 18px;
+  }
+}
 .railway-contacts-item {
   position: relative;
   font-size: 18px;
   font-size: 1.125rem;
+}
+@media (max-width: 1366px) {
+  .railway-contacts-item {
+    font-size: 16px;
+    font-size: 1rem;
+  }
 }
 .railway-contacts-item-text {
   display: inline-block;
@@ -6247,6 +6385,12 @@ body.sticky-wrap {
   width: 24px;
   height: 24px;
   fill: #2861CF;
+}
+@media (max-width: 1366px) {
+  .railway-contacts-item-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 .railway-contacts-item:not(:last-child) {
   margin-bottom: 20px;
