@@ -1599,6 +1599,12 @@ h1, .h1 {
     font-size: 4.5rem;
   }
 }
+@media (max-width: 1140px) {
+  h1, .h1 {
+    font-size: 64px;
+    font-size: 4rem;
+  }
+}
 @media (max-width: 960px) {
   h1, .h1 {
     font-size: 42px;
@@ -1961,6 +1967,26 @@ img {
   border-radius: 40px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+@media (max-width: 1366px) {
+  .ui-btn-main {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 1140px) {
+  .ui-btn-main {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
 }
 .ui-btn-small {
   padding-left: 34px;
@@ -5772,6 +5798,11 @@ body.sticky-wrap {
   min-height: 340px;
   margin-bottom: 60px;
 }
+@media (max-width: 1680px) {
+  .services-order {
+    min-height: unset;
+  }
+}
 .services-order__margin {
   margin-bottom: 200px;
 }
@@ -5786,19 +5817,64 @@ body.sticky-wrap {
   text-transform: uppercase;
   margin-bottom: 40px;
 }
+@media (max-width: 1366px) {
+  .services-order-title {
+    margin-bottom: 30px;
+    font-size: 54px;
+    font-size: 3.375rem;
+  }
+}
+@media (max-width: 1140px) {
+  .services-order-title {
+    margin-bottom: 24px;
+    font-size: 48px;
+    font-size: 3rem;
+  }
+}
 .services-order-text {
   color: #FFFFFF;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6;
 }
+@media (max-width: 1366px) {
+  .services-order-text {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1140px) {
+  .services-order-text {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
 .services-order-content {
   background-color: #2861CF;
   border-radius: 20px;
-  border-top-right-radius: 17px;
-  border-bottom-right-radius: 17px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   padding: 80px;
+  width: calc(100% - 22px - 330px);
   min-height: 340px;
+}
+@media (max-width: 1680px) {
+  .services-order-content {
+    width: calc(100% - 22px - 300px);
+    min-height: unset;
+  }
+}
+@media (max-width: 1366px) {
+  .services-order-content {
+    width: calc(100% - 22px - 280px);
+    padding: 60px;
+  }
+}
+@media (max-width: 1140px) {
+  .services-order-content {
+    width: calc(100% - 22px - 220px);
+    padding: 40px;
+  }
 }
 .services-order-content-wrapper {
   display: -webkit-box;
@@ -5827,9 +5903,10 @@ body.sticky-wrap {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   content: "";
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
   background-color: #FFFFFF;
 }
 .services-order-dash::after {
@@ -5840,9 +5917,10 @@ body.sticky-wrap {
       -ms-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
   content: "";
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
   background-color: #FFFFFF;
 }
 .services-order-dash-line {
@@ -5860,9 +5938,12 @@ body.sticky-wrap {
 .services-order-qr {
   background-color: #2861CF;
   border-radius: 20px;
-  border-top-left-radius: 17px;
-  border-bottom-left-radius: 17px;
-  padding: 40px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 30px;
   width: 330px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -5872,6 +5953,25 @@ body.sticky-wrap {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 1680px) {
+  .services-order-qr {
+    width: 300px;
+  }
+}
+@media (max-width: 1366px) {
+  .services-order-qr {
+    width: 280px;
+  }
+}
+@media (max-width: 1140px) {
+  .services-order-qr {
+    width: 220px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 20px;
+  }
 }
 .services-order-qr-image {
   aspect-ratio: 1;
@@ -5899,6 +5999,12 @@ body.sticky-wrap {
   transition: border-color 0.3s;
   margin-bottom: 30px;
   height: calc(100% - 30px);
+}
+@media (max-width: 1366px) {
+  .services-list-item {
+    margin-bottom: 20px;
+    height: calc(100% - 20px);
+  }
 }
 .services-list-item-image {
   aspect-ratio: 1.63;
