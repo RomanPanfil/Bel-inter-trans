@@ -373,17 +373,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const searchButton = document.querySelector('.header-search');
     const searchPopup = document.querySelector('.search-popup');
-    const closePopup = document.querySelector('.search-popup-close');
+    const closePopup = document.querySelectorAll('.search-popup-close');
 
     searchButton.addEventListener('click', () => {
       searchPopup.classList.add('active');
       document.querySelector('body').classList.add('non-scroll');
     });
 
-    closePopup.addEventListener('click', () => {
-      searchPopup.classList.remove('active');
-      document.querySelector('body').classList.remove('non-scroll');
-    });
+    closePopup.forEach(close => {
+      close.addEventListener('click', () => {
+        searchPopup.classList.remove('active');
+        document.querySelector('body').classList.remove('non-scroll');
+      });
+    })
+
+    // closePopup.addEventListener('click', () => {
+    //   searchPopup.classList.remove('active');
+    //   document.querySelector('body').classList.remove('non-scroll');
+    // });
 
   })();
 

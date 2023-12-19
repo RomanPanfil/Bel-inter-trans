@@ -2013,9 +2013,19 @@ img {
   vertical-align: middle;
   font-size: 0;
   margin-right: 18px;
+  fill: #FF0000;
+  -webkit-transition: fill 0.3s;
+  -o-transition: fill 0.3s;
+  transition: fill 0.3s;
 }
 .ui-btn-youtube span {
   vertical-align: middle;
+}
+.ui-btn-youtube:hover {
+  background-color: #2861CF;
+}
+.ui-btn-youtube:hover .icon {
+  fill: #2861CF;
 }
 .ui-btn-play {
   position: relative;
@@ -2295,6 +2305,60 @@ img {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+.ui-select .jq-selectbox__trigger {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  -o-transition: filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+.ui-select .jq-selectbox__trigger-arrow {
+  background-image: url(../images/svg/icon-chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  -webkit-transition: background-image 0.3s, -webkit-transform 0.3s;
+  transition: background-image 0.3s, -webkit-transform 0.3s;
+  -o-transition: transform 0.3s, background-image 0.3s;
+  transition: transform 0.3s, background-image 0.3s;
+  transition: transform 0.3s, background-image 0.3s, -webkit-transform 0.3s;
+}
+@media (max-width: 1366px) {
+  .ui-select .jq-selectbox__trigger-arrow {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+  }
+}
+.ui-select .jq-selectbox__dropdown {
+  background-color: #FFFFFF;
+  left: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: -4px 2px 8.7px 0px rgba(36, 64, 130, 0.06);
+          box-shadow: -4px 2px 8.7px 0px rgba(36, 64, 130, 0.06);
+  overflow-y: auto;
+}
+.ui-select .jq-selectbox li {
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  padding: 10px 20px;
+  white-space: inherit;
+}
+.ui-select .jq-selectbox li:not(:last-child) {
+  border-bottom: 1px solid #E3E8F2;
+}
+.ui-select .jq-selectbox li:hover {
+  color: #2861CF;
+}
+.ui-select .jq-selectbox li.disabled {
+  color: #9EA5B4;
+  cursor: not-allowed;
+}
 .ui-select__form {
   position: relative;
   border-bottom: 1px solid #9EA5B4;
@@ -2323,10 +2387,51 @@ img {
 .ui-select__form.changed .jq-selectbox__select-text {
   color: #1F2839;
 }
+.ui-select__form .jq-selectbox__dropdown {
+  border: 1px solid #E3E8F2;
+  width: 100% !important;
+  border-radius: 10px !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.ui-select__form .jq-selectbox__dropdown ul {
+  overflow-y: auto;
+  max-height: 365px !important;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.ui-select__form .jq-selectbox__dropdown ul::-webkit-scrollbar {
+  background-color: #E3E8F2;
+}
+.ui-select__form .jq-selectbox__dropdown li {
+  white-space: normal;
+}
+.ui-select__form .jq-selectbox__dropdown li:not(:last-child) {
+  margin-bottom: 28px;
+}
+.ui-select__form .jq-selectbox__dropdown li:first-child {
+  padding-top: 0;
+}
+.ui-select__form .jq-selectbox__dropdown li:last-child {
+  padding-bottom: 0;
+}
+.ui-select__form .jq-selectbox__dropdown li:hover {
+  color: #2861CF;
+}
+.ui-select__form .jq-selectbox__dropdown li.disabled {
+  color: #9EA5B4;
+  cursor: not-allowed;
+}
+.ui-select__form .jq-selectbox__select-text {
+  padding-right: 10px;
+}
 .ui-select__lang .jq-selectbox__dropdown {
   z-index: 1;
   left: -8px;
   top: 100% !important;
+  border: none !important;
+  border-radius: unset !important;
+  padding: unset !important;
 }
 .ui-select__lang .jq-selectbox__dropdown ul {
   background-color: #2861CF;
@@ -2348,8 +2453,7 @@ img {
 .ui-select__lang .jq-selectbox__dropdown ul li.selected {
   color: #FFFFFF;
 }
-
-.jq-selectbox__select-text {
+.ui-select__lang .jq-selectbox__select-text {
   display: inline-block;
   vertical-align: middle;
   padding-right: 10px;
@@ -2361,63 +2465,39 @@ img {
   width: max-content !important;
   min-width: 40px;
 }
-
-.jq-selectbox__trigger {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transition: -webkit-filter 0.3s;
-  transition: -webkit-filter 0.3s;
-  -o-transition: filter 0.3s;
-  transition: filter 0.3s;
-  transition: filter 0.3s, -webkit-filter 0.3s;
+.ui-select__big .jq-selectbox__dropdown {
+  border: 1px solid #E3E8F2;
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  top: calc(100% + 12px) !important;
 }
-
-.jq-selectbox__trigger-arrow {
-  background-image: url(../images/svg/icon-chevron-down.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-  -webkit-transition: background-image 0.3s, -webkit-transform 0.3s;
-  transition: background-image 0.3s, -webkit-transform 0.3s;
-  -o-transition: transform 0.3s, background-image 0.3s;
-  transition: transform 0.3s, background-image 0.3s;
-  transition: transform 0.3s, background-image 0.3s, -webkit-transform 0.3s;
-}
-@media (max-width: 1366px) {
-  .jq-selectbox__trigger-arrow {
-    width: 18px;
-    height: 18px;
-    background-size: 18px 18px;
-  }
-}
-
-.jq-selectbox__dropdown {
-  background-color: #FFFFFF;
-  left: 0;
-  border-radius: 5px;
-  -webkit-box-shadow: -4px 2px 8.7px 0px rgba(36, 64, 130, 0.06);
-          box-shadow: -4px 2px 8.7px 0px rgba(36, 64, 130, 0.06);
+.ui-select__big .jq-selectbox__dropdown ul {
   overflow-y: auto;
+  max-height: 400px !important;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
-.jq-selectbox li {
-  -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
-  padding: 10px 20px;
-  white-space: inherit;
+.ui-select__big .jq-selectbox__dropdown ul::-webkit-scrollbar {
+  background-color: #E3E8F2;
 }
-.jq-selectbox li:not(:last-child) {
-  border-bottom: 1px solid #E3E8F2;
+.ui-select__big .jq-selectbox__dropdown li {
+  white-space: normal;
 }
-.jq-selectbox li:hover {
+.ui-select__big .jq-selectbox__dropdown li:not(:last-child) {
+  margin-bottom: 28px;
+}
+.ui-select__big .jq-selectbox__dropdown li:first-child {
+  padding-top: 0;
+}
+.ui-select__big .jq-selectbox__dropdown li:last-child {
+  padding-bottom: 0;
+}
+.ui-select__big .jq-selectbox__dropdown li:hover {
   color: #2861CF;
-}
-.jq-selectbox li.disabled {
-  color: #9EA5B4;
-  cursor: not-allowed;
 }
 
 .breadcrumbs {
@@ -2531,13 +2611,15 @@ img {
   padding-bottom: 6px;
   line-height: 1;
   background-color: #FFFFFF;
+  border: 1px solid #FFFFFF;
   border-radius: 24px;
-  -webkit-transition: color 0.3s;
-  -o-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  -o-transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s;
 }
 .search-btn:hover {
-  color: #2861CF;
+  color: #FFFFFF !important;
+  background-color: transparent;
 }
 
 .hidden {
@@ -4775,9 +4857,15 @@ body.sticky-wrap {
 }
 .post-wrapper a {
   color: #2861CF;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .post-wrapper a[href*=tel] {
   white-space: nowrap;
+}
+.post-wrapper a:hover {
+  color: #1F4CA1;
 }
 .post-head {
   border-bottom: 1px solid #E3E8F2;
@@ -4937,6 +5025,9 @@ body.sticky-wrap {
   letter-spacing: 0.016875rem;
   margin-bottom: 10px;
   cursor: pointer;
+  -webkit-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
 }
 .post-side-navigation-item.active {
   padding-left: 16px;
@@ -4951,6 +5042,9 @@ body.sticky-wrap {
   width: 6px;
   height: 6px;
   border-radius: 50%;
+}
+.post-side-navigation-item:hover {
+  padding-left: 16px;
 }
 .post-gallery {
   display: -webkit-box;
@@ -5206,6 +5300,9 @@ body.sticky-wrap {
   position: relative;
   margin-bottom: 20px;
   padding-left: 34px;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .article-link-icon {
   position: absolute;
@@ -5230,6 +5327,12 @@ body.sticky-wrap {
 .article-link .text {
   display: inline-block;
   padding-left: 34px;
+}
+.article-link:hover {
+  color: #1F4CA1;
+}
+.article-link:hover .article-link-icon {
+  stroke: #1F4CA1;
 }
 .article-table {
   overflow-x: auto;

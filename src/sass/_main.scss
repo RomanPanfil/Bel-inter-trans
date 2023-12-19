@@ -732,9 +732,14 @@ body.sticky-wrap {
 
     a {   
       color: $link;
+      transition: color 0.3s;
   
       &[href*="tel"] {
         white-space: nowrap;
+      }
+
+      &:hover {
+        color: $link_hover
       }
     }
   }
@@ -903,7 +908,8 @@ body.sticky-wrap {
         @include fz(18);
         @include ls(0.27);
         margin-bottom: 10px;
-        cursor: pointer;        
+        cursor: pointer;
+        transition: padding 0.3s;     
 
         &.active {
           padding-left: 16px;
@@ -920,7 +926,9 @@ body.sticky-wrap {
           }
         }
 
-        
+        &:hover {
+          padding-left: 16px;
+        }        
       }
     }
   }
@@ -1214,6 +1222,7 @@ body.sticky-wrap {
     position: relative;
     margin-bottom: 20px;
     padding-left: 34px;
+    transition: color 0.3s;
 
     &-icon {
       position: absolute;
@@ -1240,6 +1249,14 @@ body.sticky-wrap {
     .text {
       display: inline-block;
       padding-left: 34px;
+    }
+
+    &:hover {
+      color: $link_hover;
+
+      .article-link-icon {
+        stroke: $link_hover;
+      }
     }
   }
 
