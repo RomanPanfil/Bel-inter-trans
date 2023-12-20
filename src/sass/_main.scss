@@ -739,6 +739,14 @@ body.sticky-wrap {
 
       &-margin {
         margin-bottom: 174px;
+
+        @media(max-width: 1366px) {
+          margin-bottom: 140px;
+        }
+
+        @media(max-width: 1140px) {
+          margin-bottom: 110px;
+        }
       }
     }
 
@@ -919,10 +927,30 @@ body.sticky-wrap {
       padding-bottom: 40px;
       margin-bottom: 40px;
 
+      @media(max-width: 1366px) {
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+      }
+
+      @media(max-width: 1140px) {
+        padding-bottom: 26px;
+        margin-bottom: 26px;
+      }
+
       &-title {
         @include fz(16);
         color: $font-light;
-        margin-bottom: 20px;    
+        margin-bottom: 20px;
+
+        @media(max-width: 1366px) {
+          @include fz(14);
+          margin-bottom: 16px;
+        }
+
+        @media(max-width: 1140px) {
+          @include fz(13);
+          margin-bottom: 14px;
+        }
       }
 
       &-item {
@@ -931,7 +959,17 @@ body.sticky-wrap {
         @include ls(0.27);
         margin-bottom: 10px;
         cursor: pointer;
-        transition: padding 0.3s;     
+        transition: padding 0.3s;
+
+        @media(max-width: 1366px) {
+          @include fz(16);
+          margin-bottom: 8px;
+        }
+
+        @media(max-width: 1140px) {
+          @include fz(14);
+          margin-bottom: 6px;
+        }
 
         &.active {
           padding-left: 16px;
@@ -945,6 +983,14 @@ body.sticky-wrap {
             width: 6px;
             height: 6px;
             border-radius: 50%;
+
+            @media(max-width: 1366px) {
+              top: 8px;
+            }
+
+            @media(max-width: 1140px) {
+              top: 7px;
+            }
           }
         }
 
@@ -1148,6 +1194,14 @@ body.sticky-wrap {
 
     &-wrapper {
       margin-bottom: 120px;
+
+      @media(max-width: 1366px) {
+        margin-bottom: 100px;
+      }
+
+      @media(max-width: 1140px) {
+        margin-bottom: 80px;
+      }
     }
 
     .ui-tabs {
@@ -1182,11 +1236,27 @@ body.sticky-wrap {
   ul:not(.post-side-navigation-list) {
     margin-bottom: 40px;
 
+    @media(max-width: 1366px) {
+      margin-bottom: 36px;
+    }
+
+    @media(max-width: 1140px) {
+      margin-bottom: 30px;
+    }
+
     li {
       position: relative; 
       padding-left: 15px;
       margin-bottom: 22px;
       line-height: 1.2;
+
+      @media(max-width: 1366px) {
+        margin-bottom: 20px;
+      }
+
+      @media(max-width: 1140px) {
+        margin-bottom: 16px;
+      }
 
       &::before {
         content: '';
@@ -1198,6 +1268,14 @@ body.sticky-wrap {
         width: 6px;
         height: 6px;
         border-radius: 50%;
+
+        @media(max-width: 1366px) {
+          top: 8px;
+        }
+
+        @media(max-width: 1140px) {
+          top: 7px;
+        }
       }
     }
   }
@@ -1248,7 +1326,15 @@ body.sticky-wrap {
   h3 {    
     font-weight: 500;
     @include ls(-1);
-    margin-bottom: 44px;   
+    margin-bottom: 44px;
+
+    @media(max-width: 1366px) {
+      margin-bottom: 36px;
+    }
+
+    @media(max-width: 1140px) {
+      margin-bottom: 30px;
+    }
   }
 
   h5 {
@@ -1305,6 +1391,11 @@ body.sticky-wrap {
     border-radius: 10px;
     margin-bottom: 60px;
     margin-top: 60px;
+
+    @media(max-width: 1366px) {
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
     
     &__full {
       width: 100%;
@@ -1342,6 +1433,10 @@ body.sticky-wrap {
     @include ls(-0.5);
     font-weight: 500;
     width: 100%;
+
+    @media(max-width: 1366px) {
+      @include fz(14);
+    }
   }
 
   thead {
@@ -1355,6 +1450,10 @@ body.sticky-wrap {
     th {
       padding: 20px;
       text-align: left;
+
+      @media(max-width: 1366px) {
+        padding: 16px;
+      }
 
       &:not(:last-child) {
         border-right: 1px solid $border;
@@ -1375,6 +1474,10 @@ body.sticky-wrap {
     min-width: 140px;
     line-height: 1.2;
     vertical-align: top;
+
+    @media(max-width: 1366px) {
+      padding: 16px;
+    }
 
     &:not(:last-child) {
       border-right: 1px solid $border;
@@ -1716,6 +1819,14 @@ body.sticky-wrap {
 
     &__margin {
       margin-bottom: 200px;
+
+      @media(max-width: 1366px) {
+        margin-bottom: 160px;
+      }
+
+      @media(max-width: 1140px) {
+        margin-bottom: 130px;
+      }
     }
     
     &-title {
@@ -2212,6 +2323,15 @@ body.sticky-wrap {
 .search {
   &-head {
     margin-bottom: 120px;
+
+    @media(max-width: 1366px) {
+      margin-bottom: 100px;
+    }
+
+    @media(max-width: 1140px) {
+      margin-bottom: 80px;
+    }
+
     &-title {
       margin-bottom: 24px;
     }
@@ -2231,6 +2351,14 @@ body.sticky-wrap {
 .search-request {
   @include fz(20);
   @include ls(-1);
+
+  @media(max-width: 1366px) {
+    @include fz(18);
+  }
+
+  @media(max-width: 1140px) {
+    @include fz(16);
+  }
   
   &__article {
     margin-bottom: 60px;
@@ -2244,6 +2372,14 @@ body.sticky-wrap {
 .results {
   margin-bottom: 60px;
 
+  @media(max-width: 1366px) {
+    margin-bottom: 50px;
+  }
+
+  @media(max-width: 1140px) {
+    margin-bottom: 40px;
+  }
+
   &__popup {
     margin-bottom: 0;
   }
@@ -2256,6 +2392,16 @@ body.sticky-wrap {
     position: relative;
     padding-top: 40px;
     padding-bottom: 40px;    
+
+    @media(max-width: 1366px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    @media(max-width: 1140px) {
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
 
     &::before {
       position: absolute;
@@ -2285,6 +2431,14 @@ body.sticky-wrap {
       font-weight: 300;
       @include ls(-1);
       margin-bottom: 20px;
+
+      @media(max-width: 1366px) {
+        @include fz(18);
+      }
+
+      @media(max-width: 1140px) {
+        @include fz(16);
+      }
     }
 
     &-text {
@@ -2302,6 +2456,14 @@ body.sticky-wrap {
       padding-right: 30px;
       transition: color 0.3s;
 
+      @media(max-width: 1366px) {
+        @include fz(22);
+      }
+
+      @media(max-width: 1140px) {
+        @include fz(20);
+      }
+
       &:hover {
         color: $primary;
       }
@@ -2310,6 +2472,10 @@ body.sticky-wrap {
     &-date {
       color: $font-light;
       white-space: nowrap;
+
+      @media(max-width: 1366px) {
+        @include fz(14);
+      }
     }
   }
 }

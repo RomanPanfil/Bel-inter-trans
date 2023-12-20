@@ -65,7 +65,15 @@ h2, .h2, .ui-h2 {
 }
 h3, .h3, .ui-h3 {
 	@include fz($h3);
-	line-height: 1.2;	
+	line-height: 1.2;
+
+	@media(max-width: 1366px) {
+		@include fz(32);
+	}
+
+	@media(max-width: 1140px) {
+		@include fz(28);
+	}
 }
 h4, .h4, .ui-h4 {
 	@include fz($h4);
@@ -76,6 +84,14 @@ h4, .h4, .ui-h4 {
 }
 h5, .h5 {
 	@include fz($h5);
+
+	@media(max-width: 1366px) {
+		@include fz(18);
+	}
+
+	@media(max-width: 1140px) {
+		@include fz(16);
+	}
 }
 h6, .h6, .ui-h5 {
 	@include fz($h6);
@@ -302,6 +318,14 @@ html:not(.vi) {
 		border-color: $bg-blue-light;
 		padding-left: 24px;
 		padding-right: 24px;
+
+		@media(max-width: 1140px) {
+			@include fz(14);
+			height: 34px;
+			line-height: 32px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 }
 
