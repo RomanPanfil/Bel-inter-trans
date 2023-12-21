@@ -4640,7 +4640,7 @@ img {
 }
 
 .swiper-slide {
-  height: 100% !important;
+  height: auto !important;
 }
 .swiper-slide .news-card {
   margin-bottom: 0 !important;
@@ -4652,13 +4652,6 @@ img {
 }
 .news-slider {
   margin-bottom: 40px;
-}
-.news-slide {
-  height: 100% !important;
-}
-.news-slide .news-card {
-  margin-bottom: 0 !important;
-  height: 100% !important;
 }
 .news__short {
   margin-bottom: 40px;

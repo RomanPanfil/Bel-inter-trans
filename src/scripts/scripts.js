@@ -605,7 +605,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 20,
-      autoHeight: true,
+      // autoHeight: true,
       autoplay: false,
       // loop: true,      
       navigation: {

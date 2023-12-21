@@ -441,7 +441,7 @@
 }
 
 .swiper-slide {
-  height: 100% !important;
+  height: auto !important;
 
   .news-card {
     margin-bottom: 0 !important;
@@ -454,15 +454,6 @@
 
   &-slider {
     margin-bottom: 40px;
-  }
-
-  &-slide {
-    height: 100% !important;
-
-    .news-card {
-      margin-bottom: 0 !important;
-      height: 100% !important;
-    }
   }
 
   &__short {
