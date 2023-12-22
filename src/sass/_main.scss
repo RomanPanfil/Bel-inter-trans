@@ -2368,6 +2368,24 @@ body.sticky-wrap {
     padding-right: 60px;
     border-radius: 20px;   
     margin-bottom: 60px;
+
+    @media(max-width: 1366px) {
+      padding-top: 35px;
+      padding-bottom: 30px;
+      padding-left: 50px;
+      padding-right: 50px;
+      border-radius: 18px;   
+      margin-bottom: 50px;
+    }
+
+    @media(max-width: 1140px) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 40px;
+      padding-right: 40px;
+      border-radius: 16px;   
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -2385,6 +2403,14 @@ body.sticky-wrap {
   
   &__article {
     margin-bottom: 60px;
+
+    @media(max-width: 1366px) {
+      margin-bottom: 40px;
+    }
+
+    @media(max-width: 1140px) {
+      margin-bottom: 20px;
+    }
   }
   
   span {
@@ -2522,6 +2548,16 @@ body.sticky-wrap {
     width: 20px;
     height: 20px;
     fill: none;
+
+    @media(max-width: 1366px) {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media(max-width: 1140px) {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &-close {
@@ -2531,6 +2567,16 @@ body.sticky-wrap {
     cursor: pointer;
     fill: none;
     margin-right: 20px;
+
+    @media(max-width: 1366px) {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media(max-width: 1140px) {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &-head {
@@ -2704,6 +2750,14 @@ body.sticky-wrap {
 .declaration-contacts {
   &-cards {
     margin-bottom: 200px;
+
+    @media(max-width: 1366px) {
+      margin-bottom: 170px;
+    }
+
+    @media(max-width: 1140px) {
+      margin-bottom: 140px;
+    }
   }
   &-card {
     border: 1px solid $border;
@@ -2714,16 +2768,35 @@ body.sticky-wrap {
     display: flex;
     flex-direction: column;
 
+    @media(max-width: 1366px) {
+      padding: 30px;
+    }
+
     &-name {
       @include fz(30);
       font-weight: 500;
       text-transform: uppercase;
       margin-bottom: 10px;
+
+      @media(max-width: 1366px) {
+        @include fz(28);
+        margin-bottom: 8px;
+      }
+
+      @media(max-width: 1140px) {
+        @include fz(26);
+        margin-bottom: 6px;
+      }
     }
 
     &-position {
       color: $font-light;
       margin-bottom: 20px;
+
+      @media(max-width: 1366px) {
+        @include fz(14);
+        margin-bottom: 18px;
+      }
     }
 
     &-mails {
@@ -2737,6 +2810,10 @@ body.sticky-wrap {
       width: max-content;
       position: relative;
 
+      @media(max-width: 1366px) {
+        @include fz(18);
+      }
+
       &:not(:last-child) {
         &::after {
           content: '/';
@@ -2747,12 +2824,20 @@ body.sticky-wrap {
 
     &-phones {
       margin-bottom: 85px;
+
+      @media(max-width: 1366px) {
+        margin-bottom: 70px;
+      }
     }
 
     &-phone {
       @include fz(20);
       display: block;
       width: max-content;
+
+      @media(max-width: 1366px) {
+        @include fz(18);
+      }
 
       &:not(:last-child) {
         &::after {
@@ -2766,6 +2851,10 @@ body.sticky-wrap {
       font-weight: 500;
       text-transform: uppercase;
       margin-top: auto;
+
+      @media(max-width: 1366px) {
+        @include fz(14);
+      }
     }
   }
 }
@@ -2778,9 +2867,14 @@ body.sticky-wrap {
   grid-template-rows: 1fr 1fr;
   margin-bottom: 80px;
 
+  @media(max-width: 1366px) {
+    margin-bottom: 60px;
+  }
+
   @media (max-width: 1140px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
+    margin-bottom: 40px;
   }  
 
   &-title {
@@ -2788,6 +2882,11 @@ body.sticky-wrap {
     font-weight: 500;
     @include ls(-1);
     margin-bottom: 36px;
+
+    @media(max-width: 1366px) {
+      @include fz(28);
+      margin-bottom: 30px;
+    }
   }
 
   &-addresses {
@@ -2814,6 +2913,10 @@ body.sticky-wrap {
         @include fz(14);
         color: $font-light;       
         padding-left: 34px;
+
+        @media(max-width: 1366px) {
+          @include fz(13);
+        }
       }
 
       &-content {
@@ -2827,6 +2930,11 @@ body.sticky-wrap {
         width: 24px;
         height: 24px;
         fill: $primary;
+
+        @media(max-width: 1366px) {
+          width: 22px;
+          height: 22px;
+        }
       }
 
       &-text {        
@@ -2857,6 +2965,10 @@ body.sticky-wrap {
     padding: 44px 60px;
     color: $font-light;
     border-right: 1px solid $border;
+
+    @media(max-width: 1366px) {
+      @include fz(14);
+    }
 
     @media (max-width: 1140px) {
       grid-column: 1;
@@ -2890,6 +3002,10 @@ body.sticky-wrap {
 
       &:not(:last-child) {
         margin-bottom: 36px;
+
+        @media(max-width: 1366px) {
+          margin-bottom: 32px;
+        }
       }
 
       &-title {
@@ -2903,6 +3019,10 @@ body.sticky-wrap {
         font-weight: 500;
         transition: color 0.3s;
 
+        @media(max-width: 1366px) {
+          @include fz(20);
+        }
+
         &:hover {
           color: $primary;
         }
@@ -2913,6 +3033,10 @@ body.sticky-wrap {
         font-weight: 500;
         white-space: nowrap;
         transition: color 0.3s;
+
+        @media(max-width: 1366px) {
+          @include fz(20);
+        }
 
         &:hover {
           color: $primary;
@@ -2936,13 +3060,21 @@ body.sticky-wrap {
     &-title {
       &-text {
         color: $font-light;
-        margin-bottom: 4px;     
+        margin-bottom: 4px;
+
+        @media(max-width: 1366px) {
+          @include fz(14);
+        }
       }
 
       &-phone {
         @include fz(22);        
         font-weight: 500;
         white-space: nowrap;
+
+        @media(max-width: 1366px) {
+          @include fz(20);
+        }
       }
     }
    
@@ -3013,10 +3145,13 @@ body.sticky-wrap {
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 40px;
     height: calc(100% - 20px);
     margin-bottom: 20px;
+
+    @media(max-width: 1366px) {
+      flex-direction: column;
+    }
   }
 
   &-address {
@@ -3026,11 +3161,20 @@ body.sticky-wrap {
       @include fz(18);
       opacity: 0.6;
       margin-bottom: 10px;
+
+      @media(max-width: 1366px) {
+        @include fz(16);
+        margin-bottom: 8px;
+      }
     }
 
     &-text {
       @include fz(24);
       font-weight: 500;
+
+      @media(max-width: 1366px) {
+        @include fz(22);
+      }
     }
   }
 
@@ -3043,12 +3187,22 @@ body.sticky-wrap {
       margin-bottom: 8px;
       display: block;
       white-space: nowrap;
+
+      @media(max-width: 1366px) {
+        @include fz(18);
+        margin-bottom: 6px;
+      }
+
     }
 
     &-mail {
       color: $font-white;
       @include fz(20);
       border-bottom: 1px solid $font-white;
+
+      @media(max-width: 1366px) {
+        @include fz(18);
+      }
     }
   }
 }
@@ -3079,6 +3233,10 @@ body.sticky-wrap {
     &-bottom {
       border-top: 1px solid $border;
       padding: 40px;
+
+      @media(max-width: 1366px) {
+        padding: 30px;
+      }
       
       &-address {
         position: relative;
@@ -3091,6 +3249,11 @@ body.sticky-wrap {
         left: 0;
         top: 2px;
         fill: $primary;
+
+        @media(max-width: 1366px) {
+          width: 22px;
+          height: 22px;
+        }
       }
 
       &-text {
@@ -3099,6 +3262,16 @@ body.sticky-wrap {
         padding-left: 34px;
         display: inline-block;
         min-height: 50px;
+
+        @media(max-width: 1680px) {
+          @include fz(17);
+          padding-left: 32px;
+        }
+
+        @media(max-width: 1366px) {
+          @include fz(16);
+          padding-left: 30px;
+        }
       }
     }
 
@@ -3118,6 +3291,13 @@ body.sticky-wrap {
       padding-left: 40px;
       padding-right: 40px;
       padding-bottom: 50px;
+
+      @media(max-width: 1366px) {
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 40px;
+      }
     }
 
     &-title {
@@ -3126,7 +3306,20 @@ body.sticky-wrap {
       @include ls(-1);     
       text-transform: uppercase;
       margin-bottom: 10px;
-    }    
+
+      @media(max-width: 1680px) {
+        @include fz(28);
+      }
+
+      @media(max-width: 1366px) {
+        @include fz(26);
+        margin-bottom: 8px;
+      }
+    }
+    
+    &-position {
+      @include fz(15);
+    }
   }
 }
 

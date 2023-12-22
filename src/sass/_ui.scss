@@ -1055,6 +1055,10 @@ html:not(.vi) {
 	justify-content: space-between;
 	align-items: center;
 	padding-bottom: 14px;
+
+	@media(max-width: 1366px) {
+		padding-bottom: 10px;
+	}
 }
 
 .search-input {
@@ -1066,6 +1070,18 @@ html:not(.vi) {
 	padding-right: 20px;
 	color: $font-white;
 	@include fz(18);
+
+	@media(max-width: 1366px) {
+        @include fz(16);
+		padding-left: 18px;
+		padding-right: 18px;
+    }
+
+	@media(max-width: 1140px) {
+        @include fz(14);
+		padding-left: 14px;
+		padding-right: 14px;
+    }
 
 	&::placeholder {
 		color: $font-white;
@@ -1089,6 +1105,14 @@ html:not(.vi) {
 	border: 1px solid $font-white;
 	border-radius: 24px;
 	transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+
+	@media(max-width: 1366px) {
+		@include fz(15);
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
 
 	&:hover {
 		color: $font-white !important;		
@@ -1114,7 +1138,7 @@ html:not(.vi) {
 		border-radius: 20px;
 		// padding: 40px;
 		width: 100%;
-		min-height: 125px;
+		// min-height: 125px;
 	}
 
 	.jq-selectbox {
@@ -1129,6 +1153,10 @@ html:not(.vi) {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media(max-width: 1140px) {
+			padding: 30px;
+		}
 	}	
 }
 
@@ -1136,6 +1164,11 @@ html:not(.vi) {
 	.select-block {
 		height: calc(100% - 60px);
 		margin-bottom: 60px;
+
+		@media(max-width: 1140px) {
+			height: calc(100% - 40px);
+			margin-bottom: 40px;
+		}
 	}
 }
 
@@ -1156,6 +1189,11 @@ html:not(.vi) {
 		cursor: pointer;
 		transition: background-color 0.3s;
 		flex-shrink: 0;
+
+		@media(max-width: 1366px) {
+			width: 42px;
+			height: 42px;
+		}
   
 		&:not(:last-child) {
 		  margin-right: 20px;
@@ -1187,6 +1225,11 @@ html:not(.vi) {
 		height: 26px;
 		fill: $primary;
 		transition: fill 0.3s;
+
+		@media(max-width: 1366px) {
+			width: 22px;
+			height: 22px;
+		}
 
 		&__youtube {		
 			&-bg {
