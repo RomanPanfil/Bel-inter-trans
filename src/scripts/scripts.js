@@ -620,6 +620,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });  
   })();
+
+  // открытие спойлера
+  (function() {
+    const buttons = document.querySelectorAll('.station-more-head .ui-btn');
+
+    buttons.forEach(button => {
+      const initialText = button.querySelector('span').textContent;      
+
+      button.addEventListener("click", function() { 
+        const content = this.closest('.station-more').querySelector('.station-more-text');
+        const icon = this.querySelector('.ui-btn-icon');
+      
+        content.classList.toggle("open");
+        icon.classList.toggle("open");        
+
+        if (content.classList.contains('open')) {
+          const textHeight = content.scrollHeight;
+          content.style.maxHeight = textHeight + 'px';
+          button.querySelector('span').textContent = 'Свернуть описание';         
+        } else {
+          content.style.maxHeight = 0;
+          button.querySelector('span').textContent = initialText;          
+        }
+      });
+    })  
+
+  })();
   
 
 });

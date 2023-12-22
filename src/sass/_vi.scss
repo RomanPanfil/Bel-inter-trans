@@ -976,6 +976,13 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 		background-color: $warning;
 	}
 
+	.contacts-item-text {
+		color: $font-white;
+	}
+
+	.error-image {
+		filter: brightness(10);
+	}
 }
 
 
@@ -1313,6 +1320,14 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	}
 
 	.main-order-image {
+		filter: brightness(10);
+	}
+
+	.contacts-item-text {
+		color: $font-yellow;
+	}
+
+	.error-image {
 		filter: brightness(10);
 	}
 }

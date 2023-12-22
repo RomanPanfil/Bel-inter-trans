@@ -243,6 +243,10 @@ html:not(.vi) {
 	margin-bottom: 110px;
 	font-size: 0;
 
+	&__margin {
+		margin-bottom: 34px;
+	}
+
 	@media(max-width: 1280px) {
 		margin-bottom: 80px;
 	}
@@ -355,7 +359,18 @@ html:not(.vi) {
 		height: 17px;
 		fill: $font-white;
 		margin-left: 18px;
-		transition: fill 0.3s;
+		transition: fill 0.3s, transform 0.3s;		
+
+		&.open {
+			transform: rotate(180deg);
+		}
+
+		&__big {
+			width: 24px;
+			height: 24px;		
+			display: inline-block;
+			vertical-align: middle;
+		}
 	}
 
 	&-transparent {

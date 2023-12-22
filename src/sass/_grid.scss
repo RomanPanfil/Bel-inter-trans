@@ -20,6 +20,10 @@
 	margin-left: auto;
 	margin-right: auto;
 
+  &__no-ralative {
+    position: unset;
+  }
+
 	&-fluid {
 		max-width: 100%;
 		padding-left: $gutter + px;
@@ -337,4 +341,8 @@ $reverseBreakpoints: reverse($breakpoints);
   @media (max-width: 960px) {
     display: none;
   }
+}
+
+.relative {
+  position: relative;
 }
