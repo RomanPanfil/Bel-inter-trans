@@ -7934,9 +7934,13 @@ body.sticky-wrap {
   -o-transition: max-height 0.3s ease-out;
   transition: max-height 0.3s ease-out;
   margin-bottom: 0px;
+  padding-bottom: 0;
+}
+.station-more-text.open {
+  padding-bottom: 70px;
 }
 .station-more-text p:last-child {
-  margin-bottom: 70px;
+  margin-bottom: 0px;
 }
 
 a.contacts-item:hover .contacts-item-text {

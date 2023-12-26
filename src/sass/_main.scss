@@ -3492,10 +3492,15 @@ body.sticky-wrap {
       overflow: hidden;
       transition: max-height 0.3s ease-out;
       margin-bottom: 0px;
+      padding-bottom: 0;
+
+      &.open {
+        padding-bottom: 70px;
+      }
       
       p {
         &:last-child {
-          margin-bottom: 70px;
+          margin-bottom: 0px;
         }
       }
     }
