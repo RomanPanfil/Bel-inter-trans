@@ -205,12 +205,21 @@ html:not(.vi) {
 		margin-bottom: 40px;
 	}
 
+	@media(max-width: 480px) {
+		margin-bottom: 32px;
+	}
+
 	&-title {
 		display: inline-block;
 		font-weight: 500;
 		text-transform: uppercase;
 		margin-right: 16px;
 		margin-bottom: 0;
+
+		@media(max-width: 480px) {
+			margin-right: 4px;
+			vertical-align: sub;
+		}
 	}
 
 	&-link {
@@ -220,6 +229,10 @@ html:not(.vi) {
 
 		  @media(max-width: 1366px) {
 			@include fz(14);
+		  }
+
+		  @media(max-width: 480px) {
+			@include fz(13);
 		  }
      
       	a {
@@ -476,9 +489,22 @@ html:not(.vi) {
 		padding-bottom: 26px;
 		@include fz(20);
 
+		@media(max-width: 480px) {
+			@include fz(14);
+			padding-left: 42px;
+			padding-right: 42px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
 		.ui-btn-icon {
 			width: 17px;
 			height: 17px;
+
+			@media(max-width: 480px) {
+				width: 12px;
+				height: 12px;
+			}
 		}
 	}
 
@@ -1307,5 +1333,76 @@ html:not(.vi) {
 
 	&:hover {
 		filter: grayscale(0%);
+	}
+}
+
+.hidden-desktop {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+
+	@media(max-width: 960px) {
+		display: unset;
+		visibility: unset;
+		opacity: unset;
+	}
+}
+
+.hidden-mobile {
+	@media(max-width: 960px) {
+		display: none;
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.hidden-lg {
+	@media(min-width: 1281px) {
+		display: none;
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.nav-mobile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	margin-top: 22px;
+
+	&-icon {
+		width: 32px;
+		height: 32px;
+		display: block;
+
+		&__prev {
+			transform: rotate(-180deg);
+		}
+	}
+
+	&-pagination {
+		width: max-content !important;		
+		display: flex;			
+		align-items: center;
+
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			background-color: $border;
+			opacity: 1;
+			margin-left: 6px !important;
+			margin-right: 6px !important;
+
+			&-active {
+				background-color: $primary;
+			}
+		}
+	}
+
+	&-choose {
+		color: $primary;
+		@include ls(-1);
+		border-bottom: 2px dotted $primary;
 	}
 }
