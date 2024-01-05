@@ -1942,8 +1942,8 @@ img {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 500;
-  height: 35px;
-  line-height: 35px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   text-transform: uppercase;
   border-radius: 24px;
   border: 1px solid #9EA5B4;
@@ -1958,16 +1958,16 @@ img {
   .ui-tab {
     font-size: 18px;
     font-size: 1.125rem;
-    height: 30px;
-    line-height: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 }
 @media (max-width: 960px) {
   .ui-tab {
     font-size: 14px;
     font-size: 0.875rem;
-    height: 35px;
-    line-height: 35px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 }
 .ui-tab.active {
@@ -2002,35 +2002,35 @@ img {
   letter-spacing: -0.00625rem;
   font-weight: 400;
   text-transform: unset;
-  height: 40px;
-  line-height: 38px;
   background-color: #F4F8FF;
   border-color: #F4F8FF;
   padding-left: 24px;
   padding-right: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 @media (max-width: 1140px) {
   .ui-tab__min {
     font-size: 14px;
     font-size: 0.875rem;
-    height: 34px;
-    line-height: 32px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 }
 @media (max-width: 960px) {
   .ui-tab__min {
     font-size: 16px;
     font-size: 1rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 @media (max-width: 480px) {
   .ui-tab__min {
     padding-left: 16px;
     padding-right: 16px;
-    height: 40px;
-    line-height: 40px;
   }
 }
 

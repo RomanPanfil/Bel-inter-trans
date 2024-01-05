@@ -290,9 +290,10 @@ html:not(.vi) {
 	color: #1F2839;
 	@include fz(20);
 	font-weight: 500;	
-	height: 35px;
-	line-height: 35px;
-	// min-height: 35px;	
+	// height: 35px;
+	// line-height: 35px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	text-transform: uppercase;
 	border-radius: 24px;
 	border: 1px solid $font-light;	
@@ -303,14 +304,18 @@ html:not(.vi) {
 
 	@media(max-width: 1280px) {
 		@include fz(18);
-		height: 30px;
-		line-height: 30px;
+		// height: 30px;
+		// line-height: 30px;
+		padding-top: 2px;
+		padding-bottom: 2px;
 	}
 
 	@media(max-width: 960px) {
 		@include fz(14);
-		height: 35px;
-		line-height: 35px;
+		// height: 35px;
+		// line-height: 35px;
+		padding-top: 4px;
+		padding-bottom: 4px;
 	}
 
 	&.active {
@@ -347,30 +352,36 @@ html:not(.vi) {
 		@include ls(-0.1);	
 		font-weight: 400;
 		text-transform: unset;
-		height: 40px;
-		line-height: 38px;
+		// height: 40px;
+		// line-height: 38px;
 		background-color: $bg-blue-light;
 		border-color: $bg-blue-light;
 		padding-left: 24px;
 		padding-right: 24px;
+		padding-top: 8px;
+		padding-bottom: 8px;
 
 		@media(max-width: 1140px) {
 			@include fz(14);
-			height: 34px;
-			line-height: 32px;
+			// height: 34px;
+			// line-height: 32px;
 			padding-left: 20px;
 			padding-right: 20px;
+			padding-top: 6px;
+			padding-bottom: 6px;
 		}
 
 		@media(max-width: 960px) {
 			@include fz(16);
+			padding-top: 8px;
+			padding-bottom: 8px;
 		}
 
 		@media(max-width: 480px) {
 			padding-left: 16px;
 			padding-right: 16px;
-			height: 40px;
-			line-height: 40px;
+			// height: 40px;
+			// line-height: 40px;
 		}
 	}
 }
