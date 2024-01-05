@@ -527,6 +527,26 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	.inner, .container {
 		padding-left: 100px;
 		padding-right: 100px;
+
+		@media (max-width: 1440px) {
+			padding-left: 60px;
+			padding-right: 60px;
+		  }
+		
+		  @media (max-width: 992px) {
+			padding-left: 35px;
+			padding-right: 35px;
+		  }
+		
+		  @media (max-width: 599px) {			
+			padding-left: 30px;
+			padding-right: 30px;
+		  }
+		
+		  @media (max-width: 420px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		  }
 	}
 
 	.ui-tab {

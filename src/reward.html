@@ -173,6 +173,18 @@
                 </li>
               </ul>
             </div>
+            <div class="header-search-field search-field hidden hidden-mobile">
+              <svg class="search-popup-icon">
+                <use xlink:href="svg/svg/symbols.svg#icon-search" />
+              </svg>
+              <input type="search" class="search-input" placeholder="Введите ваш запрос">
+              <svg class="search-popup-close">
+                <use xlink:href="svg/svg/symbols.svg#cross" />
+              </svg>
+              <a href="#" class="ui-btn search-btn">
+                Найти
+              </a>
+            </div>    
             <a href="#" class="header-logo">
               <img src="./images/logo.svg" alt="logo" loading="lazy">
             </a>
@@ -206,7 +218,7 @@
           </li>
         </ul>     
         <article class="article">
-          <div class="ui-tabs ui-tabs__min">
+          <div class="ui-tabs ui-tabs__min nowrap-mobile">
             <div class="row">
               <div class="col-md-9">
                 <a href="#" class="ui-tab ui-tab__min">
@@ -241,7 +253,7 @@
                   <h1 class="h1 article-title">
                     Размер вознаграждения<br> за таможенные<br> операции
                   </h1>
-                  <div class="ui-tabs">
+                  <div class="ui-tabs nowrap-mobile">
                     <a href="#" class="ui-tab">
                       Информация о размещении транспорта в ЗТК
                     </a>
@@ -254,7 +266,7 @@
                   </div>
                 </div>                
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-us-12">
                 <img src="./images/service-6.svg" alt="container" class="article-header-img">
               </div>
             </div>
@@ -262,7 +274,7 @@
 
           <div class="post-wrapper post-wrapper__article post-wrapper__article-margin">
             <div class="row">
-              <div class="col-xl-2 col-sm-3 post-side-spase">
+              <div class="col-xl-2 col-sm-3 post-side-spase hidden-mobile">
                 <div class="post-side">
                   <div class="post-side-navigation">
                     <div class="post-side-navigation-title">
@@ -286,7 +298,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-10 col-sm-9">                  
+              <div class="col-xl-10 col-nm-9 col-sm-12">                  
                 <div class="post-container post-container__margin">
                   <h3 class="item-menu" data-title="Уважаемые субъекты хозяйствования!">
                     Уважаемые субъекты хозяйствования!
@@ -315,9 +327,9 @@
         </article>
         <div class="services-order services-order__margin">
           <div class="services-order-content">
-            <h1 class="services-order-title">
+            <h2 class="services-order-title">
               Тарифы на перевозки
-            </h1>
+            </h2>
             <div class="services-order-content-wrapper">
               <a href="#" class="ui-btn ui-btn-main ui-btn-white">
                 Заказать перевозку
@@ -338,7 +350,7 @@
             </div>
           </div>
         </div>
-        <div class="ui-more">
+        <div class="ui-more hidden-mobile">
           <h2 class="h1 ui-more-title">
             Возможно, Вас заинтересует
           </h2>
@@ -351,7 +363,7 @@
             </a>
           </div>          
         </div>
-        <div class="services-list">
+        <div class="services-list hidden-mobile">
           <div class="row">
             <div class="col-lg-4 col-sm-6">
               <a href="#" class="services-list-item">
@@ -399,6 +411,22 @@
               </a>
             </div>
           </div>
+        </div>
+
+        <div class="swiper services-slider">
+          <div class="swiper-wrapper">            
+          </div>
+          <div class="nav-mobile">
+            <svg class="nav-mobile-icon nav-mobile-icon__prev">
+              <use xlink:href="svg/svg/symbols.svg#icon-chevron-right" />
+            </svg>
+            <a href="#" class="nav-mobile-choose mfp-link" data-href="./popups/popup-services.html">
+              Выбрать услугу
+            </a>
+            <svg class="nav-mobile-icon nav-mobile-icon__next">
+              <use xlink:href="svg/svg/symbols.svg#icon-chevron-right" />
+            </svg>
+          </div> 
         </div> 
       </div>
     </main>
@@ -447,9 +475,10 @@
               </a>
             </div>
             <div class="footer-contacts-item">
-              <div class="footer-contacts-title">
-                головной офис
-              </div>
+              <div class="footer-contacts-title">               
+                <span class="hidden-mobile">головной офис</span>
+                <span class="hidden-desktop"> напишите нам в мессенджерах:</span>
+              </div>              
               <a href="tel:+375296253030" class="footer-contacts-link">
                 +375 29 625 30 30
               </a>  
@@ -472,6 +501,9 @@
               </svg>
             </div>
           </div>
+          <a href="#" class="footer-contacts-all hidden-desktop">
+            Все контакты
+          </a>
         </div>
         <div class="footer-middle">
           <nav class="footer-nav">
@@ -662,6 +694,574 @@
       </div>
     </div>
     <!-- search-popup end -->
+
+    <!-- burger menu start -->
+    <div class="burger-menu hidden-mobile">
+      <div class="burger-menu-wrapper">
+        <div class="burger-menu-nav">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-2 col-sm-3">
+                <div class="burger-menu-left">
+                  <ul>
+                    <li data-menu="menu-1" data-news="true">
+                      <a href="#">
+                        О нас
+                        <svg class="burger-menu-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-chevron-down-btn" />
+                        </svg>
+                      </a>   
+                    </li>
+                    <li data-menu="menu-2" data-image="true">
+                      <a href="#">
+                        Услуги
+                        <svg class="burger-menu-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-chevron-down-btn" />
+                        </svg> 
+                      </a>               
+                    </li>
+                    <li data-menu="menu-3" data-news="true">
+                      <a href="#">
+                        Структура
+                        <svg class="burger-menu-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-chevron-down-btn" />
+                        </svg>
+                      </a>                      
+                    </li>
+                    <li data-menu="menu-4" data-news="true">
+                      <a href="#">
+                        Информация
+                        <svg class="burger-menu-icon">
+                          <use xlink:href="svg/svg/symbols.svg#icon-chevron-down-btn" />
+                        </svg>
+                      </a>                      
+                    </li>
+                    <li data-news="true">
+                      <a href="#">
+                        Новости
+                      </a>
+                    </li>
+                    <li data-news="true">
+                      <a href="#">
+                        Контакты
+                      </a>
+                    </li>
+                  </ul>
+                </div>              
+              </div>
+              <div class="col-lg-6 col-sm-9">
+                <div class="burger-menu-middle">
+                  <div id="menu-1" class="burger-menu-middle-item">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          О нас
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          УСТОЙЧИВОЕ РАЗВИТИЕ
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          руководство
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          официальные сообщества
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Видео галерея
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          ISO
+                        </a>
+                      </li>
+                    </ul>
+                    <div></div>
+                  </div>                
+                  <div id="menu-2" class="burger-menu-middle-item">
+                    <ul >
+                      <li data-image="service-1">
+                        <a href="#">
+                          Экспедирование грузов
+                        </a>
+                      </li>
+                      <li data-image="service-2">
+                        <a href="#">
+                          Контейнерные перевозки
+                        </a>
+                      </li>
+                      <li data-image="service-3">
+                        <a href="#">
+                          Мультимодальные перевозки
+                        </a>
+                      </li>
+                      <li data-image="service-4">
+                        <a href="#">
+                          Перевозки с предоставлением подвижного состава
+                        </a>
+                      </li>
+                      <li data-image="service-5">
+                        <a href="#">
+                          Таможенное оформление
+                        </a>
+                      </li>
+                      <li data-image="service-6">
+                        <a href="#">
+                          Терминальные услуги
+                        </a>
+                      </li>
+                      <li data-image="service-7">
+                        <a href="#">
+                          Оформление электронных перевозочных документов
+                        </a>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li data-image="service-8">
+                        <a href="#">
+                          Экспедирование грузов
+                        </a>
+                      </li>
+                      <li data-image="service-9">
+                        <a href="#">
+                          Контейнерные перевозки
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div id="menu-3" class="burger-menu-middle-item">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          Структура
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Структура Структура
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Структура 1
+                        </a>
+                      </li>                  
+                    </ul>
+                  </div>
+                  
+                  <div id="menu-4" class="burger-menu-middle-item">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          Внутриорганизационная информация
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          о личном приёме граждан
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Административные процедуры
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Противодействие коррупции
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Порядок обработки персональных данных
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          Справочная информация
+                        </a>
+                      </li>                      
+                      <li>
+                        <a href="#">
+                          правила перевозки грузов
+                        </a>
+                      </li>                    
+                    </ul>
+                    <ul>
+                      <li>
+                        <a href="#">
+                          Нумерация вагонов
+                        </a>
+                      </li>
+                    </ul>
+                  </div>          
+                </div>              
+              </div>
+              <div class="col-lg-4 hidden-lg-max">
+                <div class="burger-menu-right">
+                  <div class="burger-menu-images">
+                    <div class="burger-menu-image" id="service-1">
+                      <img src="./images/service-5.svg" alt="service" loading="lazy">
+                    </div>
+                    <div class="burger-menu-image" id="service-2">
+                      <img src="./images/service-6.svg" alt="service" loading="lazy">
+                    </div>
+                    <div class="burger-menu-image" id="service-3">
+                      <img src="./images/service-7.svg" alt="service" loading="lazy">
+                    </div>
+                    <div class="burger-menu-image" id="service-4">
+                      <img src="./images/service-8.svg" alt="service" loading="lazy">
+                    </div>
+                    <div class="burger-menu-image" id="service-5">
+                      <img src="./images/service-7.svg" alt="service" loading="lazy">
+                    </div>
+                    <div class="burger-menu-image" id="service-6">
+                      <img src="./images/service-5.svg" alt="service" loading="lazy">
+                    </div>
+                    <div class="burger-menu-image" id="service-7">
+                      <img src="./images/service-6.svg" alt="service" loading="lazy">
+                    </div>
+                    <div class="burger-menu-image" id="service-8">
+                      <img src="./images/service-8.svg" alt="service" loading="lazy">
+                    </div>
+                    <div class="burger-menu-image" id="service-9">
+                      <img src="./images/service-6.svg" alt="service" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="burger-menu-news">
+                    <div class="news-card news-card__colored">
+                      <div class="news-card-head">
+                        <div class="news-card-date">
+                          12 июня 2023 г.
+                        </div>
+                        <svg class="news-card-icon">
+                          <use xlink:href="svg/svg/symbols.svg#shape" />
+                        </svg>
+                      </div>
+                      <a href="#" class="news-card-title">
+                        Государственное предприятие «БТЛЦ» приняло участие в международной выставке «Весна в Гомеле»
+                      </a>
+                    </div>
+                    <div class="news-card news-card__simple">
+                      <div class="news-card-head">
+                        <div class="news-card-date">
+                          3 октября 2023 г.
+                        </div>
+                        <svg class="news-card-icon">
+                          <use xlink:href="svg/svg/symbols.svg#shape" />
+                        </svg>
+                      </div>
+                      <a href="#" class="news-card-title">
+                        Круглый стол по продвижению транспортно-логистического потенциала железнодорожного транспорта
+                        при перевозке грузов в сообщении между Республикой Беларусь и Республикой Казахстан
+                      </a>
+                    </div>
+                    <a href="#" class="burger-menu-news-all">
+                      Читать все новости
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="footer-top">
+            <a href="#" class="ui-btn ui-btn-main ui-btn-big ui-btn-primary">
+              Заказать перевозку
+              <svg class="ui-btn-icon">
+                <use xlink:href="svg/svg/symbols.svg#shape-short" />
+              </svg>
+            </a>
+            <div class="footer-contacts">
+              <div class="footer-contacts-item">
+                <div class="footer-contacts-title">
+                  по общим вопросам
+                </div>
+                <a href="mailto:btlc@belint.by" class="footer-contacts-link">
+                  btlc@belint.by
+                </a>
+                <a href="tel:+375172558425" class="footer-contacts-tel">
+                  +375 17 255-84-25
+                </a>
+              </div>
+              <div class="footer-contacts-item">
+                <div class="footer-contacts-title">
+                  перевозки в вагонах
+                </div>
+                <a href="mailto:info@belint.by" class="footer-contacts-link">
+                  info@belint.by
+                </a>
+                <a href="tel:+375172553030" class="footer-contacts-tel">
+                  +375 17 255-30-30
+                </a>
+              </div>
+              <div class="footer-contacts-item">
+                <div class="footer-contacts-title">
+                  перевозки в контейнерах
+                </div>
+                <a href="mailto:container@belint.by" class="footer-contacts-link">
+                  container@belint.by
+                </a>
+                <a href="tel:+375172553504" class="footer-contacts-tel">
+                  +375 17 255-35-04
+                </a>
+              </div>
+              <div class="footer-contacts-item">
+                <div class="footer-contacts-title">               
+                  <span class="hidden-mobile">головной офис</span>
+                  <span class="hidden-desktop"> напишите нам в мессенджерах:</span>
+                </div>              
+                <a href="tel:+375296253030" class="footer-contacts-link">
+                  +375 29 625 30 30
+                </a>  
+              </div>
+            </div>
+            <div class="footer-socials">
+              <div class="footer-socials-item">
+                <svg class="footer-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#telegram" />
+                </svg>
+              </div>
+              <div class="footer-socials-item">
+                <svg class="footer-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#whatsapp" />
+                </svg>
+              </div>
+              <div class="footer-socials-item">
+                <svg class="footer-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#viber" />
+                </svg>
+              </div>
+            </div>
+            <a href="#" class="footer-contacts-all hidden-desktop">
+              Все контакты
+            </a>
+          </div>
+        </div>        
+      </div>
+    </div>  
+    <!-- burger menu end -->
+
+    <!-- burger menu mobile start -->
+    <div class="burger-menu-mobile hidden-desktop">
+      <div class="menu-mobile-header">
+        <div class="container">
+          <div class="menu-mobile-header-wrapper">
+            <a href="tel:+375296253030" class="menu-mobile-header-item">
+              <svg class="menu-mobile-header-icon">
+                <use xlink:href="svg/svg/symbols.svg#icon-phone" />
+              </svg>          
+            </a>
+            <a href="#" class="menu-mobile-header-item">
+              <svg class="menu-mobile-header-icon">
+                <use xlink:href="svg/svg/symbols.svg#icon-mail" />
+              </svg>          
+            </a>
+            <button class="menu-mobile-header-item poor-vision-btn">
+              <svg class="menu-mobile-header-icon">
+                <use xlink:href="svg/svg/symbols.svg#icon-eye" />
+              </svg>         
+            </button>
+            <div class="menu-mobile-header-item">
+              <select class="ui-select ui-select__lang">
+                <option value="ru">
+                  Рус
+                </option>
+                <option value="by">
+                  Бел
+                </option>
+                <option value="en">
+                  En
+                </option>
+              </select>
+            </div>
+            <div class="menu-mobile-header-item">
+              <svg class="header-search">
+                <use xlink:href="svg/svg/symbols.svg#icon-search" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-mobile-main">
+        <div class="container">
+          <nav class="menu-mobile-nav">
+            <ul>
+              <li>
+                <a href="#">
+                  о нас
+                </a>
+                <ul>
+                  <li>
+                    <a href="#">
+                      О нас
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      УСТОЙЧИВОЕ РАЗВИТИЕ
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      руководство
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      официальные сообщества
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Видео галерея
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      ISO
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
+                </a>
+                <ul >
+                  <li>
+                    <a href="#">
+                      Экспедирование грузов
+                    </a>
+                  </li>
+                  <li data-image="service-2">
+                    <a href="#">
+                      Контейнерные перевозки
+                    </a>
+                  </li>
+                  <li data-image="service-3">
+                    <a href="#">
+                      Мультимодальные перевозки
+                    </a>
+                  </li>
+                  <li data-image="service-4">
+                    <a href="#">
+                      Перевозки с предоставлением подвижного состава
+                    </a>
+                  </li>
+                  <li data-image="service-5">
+                    <a href="#">
+                      Таможенное оформление
+                    </a>
+                  </li>
+                  <li data-image="service-6">
+                    <a href="#">
+                      Терминальные услуги
+                    </a>
+                  </li>
+                  <li data-image="service-7">
+                    <a href="#">
+                      Оформление электронных перевозочных документов
+                    </a>
+                  </li>
+                  <li data-image="service-8">
+                    <a href="#">
+                      Экспедирование грузов
+                    </a>
+                  </li>
+                  <li data-image="service-9">
+                    <a href="#">
+                      Контейнерные перевозки
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  Структура
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Информация
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="menu-mobile-footer">
+        <div class="container">
+          <div class="menu-mobile-order">
+            <a href="#" class="ui-btn ui-btn-main ui-btn-big ui-btn-primary">
+              Заказать перевозку
+              <svg class="ui-btn-icon">
+                <use xlink:href="svg/svg/symbols.svg#shape-short" />
+              </svg>
+            </a>
+            <div class="menu-mobile-messengers">
+              <svg class="icon">
+                <use xlink:href="svg/svg/symbols.svg#messengers" />
+              </svg>
+            </div>
+          </div>
+          <div class="menu-mobile-socials hidden">
+            <div class="menu-mobile-socials-text">
+              <div class="menu-mobile-socials-title">
+                <span> напишите нам в мессенджерах:</span>
+              </div> 
+              <a href="tel:+375296253030" class="menu-mobile-socials-link">
+                +375 29 625 30 30
+              </a>
+            </div>
+            <div class="menu-mobile-socials-list">
+              <div class="menu-mobile-socials-item">
+                <svg class="menu-mobile-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#telegram" />
+                </svg>
+              </div>
+              <div class="menu-mobile-socials-item">
+                <svg class="menu-mobile-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#whatsapp" />
+                </svg>
+              </div>
+              <div class="menu-mobile-socials-item">
+                <svg class="menu-mobile-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#viber" />
+                </svg>
+              </div>
+            </div>
+            <button class="menu-mobile-socials-close">
+              <svg class="icon">
+                <use xlink:href="svg/svg/symbols.svg#cross" />
+              </svg>
+            </button>
+          </div>
+        </div>        
+      </div>
+    </div>
+    <!-- burger menu mobile end -->
   </div>
 
 
@@ -674,7 +1274,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://yastatic.net/share2/share.js" defer></script>
-
+  <script src="./scripts/vi.js"></script>
   <script src="./scripts/scripts.js"></script>
 </body>
 

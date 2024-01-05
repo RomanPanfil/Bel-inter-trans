@@ -261,12 +261,12 @@
     <!-- search-popup end -->
 
     <!-- burger menu start -->
-    <div class="burger-menu">
+    <div class="burger-menu hidden-mobile">
       <div class="burger-menu-wrapper">
         <div class="burger-menu-nav">
           <div class="container">
             <div class="row">
-              <div class="col-lg-2">
+              <div class="col-lg-2 col-sm-3">
                 <div class="burger-menu-left">
                   <ul>
                     <li data-menu="menu-1" data-news="true">
@@ -314,7 +314,7 @@
                   </ul>
                 </div>              
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 col-sm-9">
                 <div class="burger-menu-middle">
                   <div id="menu-1" class="burger-menu-middle-item">
                     <ul>
@@ -471,7 +471,7 @@
                   </div>          
                 </div>              
               </div>
-              <div class="col-lg-4">
+              <div class="col-lg-4 hidden-lg-max">
                 <div class="burger-menu-right">
                   <div class="burger-menu-images">
                     <div class="burger-menu-image" id="service-1">
@@ -617,6 +617,216 @@
       </div>
     </div>  
     <!-- burger menu end -->
+
+    <!-- burger menu mobile start -->
+    <div class="burger-menu-mobile hidden-desktop">
+      <div class="menu-mobile-header">
+        <div class="container">
+          <div class="menu-mobile-header-wrapper">
+            <a href="tel:+375296253030" class="menu-mobile-header-item">
+              <svg class="menu-mobile-header-icon">
+                <use xlink:href="svg/svg/symbols.svg#icon-phone" />
+              </svg>          
+            </a>
+            <a href="#" class="menu-mobile-header-item">
+              <svg class="menu-mobile-header-icon">
+                <use xlink:href="svg/svg/symbols.svg#icon-mail" />
+              </svg>          
+            </a>
+            <button class="menu-mobile-header-item poor-vision-btn">
+              <svg class="menu-mobile-header-icon">
+                <use xlink:href="svg/svg/symbols.svg#icon-eye" />
+              </svg>         
+            </button>
+            <div class="menu-mobile-header-item">
+              <select class="ui-select ui-select__lang">
+                <option value="ru">
+                  Рус
+                </option>
+                <option value="by">
+                  Бел
+                </option>
+                <option value="en">
+                  En
+                </option>
+              </select>
+            </div>
+            <div class="menu-mobile-header-item">
+              <svg class="header-search">
+                <use xlink:href="svg/svg/symbols.svg#icon-search" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-mobile-main">
+        <div class="container">
+          <nav class="menu-mobile-nav">
+            <ul>
+              <li>
+                <a href="#">
+                  о нас
+                </a>
+                <ul>
+                  <li>
+                    <a href="#">
+                      О нас
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      УСТОЙЧИВОЕ РАЗВИТИЕ
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      руководство
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      официальные сообщества
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Видео галерея
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      ISO
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
+                </a>
+                <ul >
+                  <li>
+                    <a href="#">
+                      Экспедирование грузов
+                    </a>
+                  </li>
+                  <li data-image="service-2">
+                    <a href="#">
+                      Контейнерные перевозки
+                    </a>
+                  </li>
+                  <li data-image="service-3">
+                    <a href="#">
+                      Мультимодальные перевозки
+                    </a>
+                  </li>
+                  <li data-image="service-4">
+                    <a href="#">
+                      Перевозки с предоставлением подвижного состава
+                    </a>
+                  </li>
+                  <li data-image="service-5">
+                    <a href="#">
+                      Таможенное оформление
+                    </a>
+                  </li>
+                  <li data-image="service-6">
+                    <a href="#">
+                      Терминальные услуги
+                    </a>
+                  </li>
+                  <li data-image="service-7">
+                    <a href="#">
+                      Оформление электронных перевозочных документов
+                    </a>
+                  </li>
+                  <li data-image="service-8">
+                    <a href="#">
+                      Экспедирование грузов
+                    </a>
+                  </li>
+                  <li data-image="service-9">
+                    <a href="#">
+                      Контейнерные перевозки
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  Структура
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Информация
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Новости
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="menu-mobile-footer">
+        <div class="container">
+          <div class="menu-mobile-order">
+            <a href="#" class="ui-btn ui-btn-main ui-btn-big ui-btn-primary">
+              Заказать перевозку
+              <svg class="ui-btn-icon">
+                <use xlink:href="svg/svg/symbols.svg#shape-short" />
+              </svg>
+            </a>
+            <div class="menu-mobile-messengers">
+              <svg class="icon">
+                <use xlink:href="svg/svg/symbols.svg#messengers" />
+              </svg>
+            </div>
+          </div>
+          <div class="menu-mobile-socials hidden">
+            <div class="menu-mobile-socials-text">
+              <div class="menu-mobile-socials-title">
+                <span> напишите нам в мессенджерах:</span>
+              </div> 
+              <a href="tel:+375296253030" class="menu-mobile-socials-link">
+                +375 29 625 30 30
+              </a>
+            </div>
+            <div class="menu-mobile-socials-list">
+              <div class="menu-mobile-socials-item">
+                <svg class="menu-mobile-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#telegram" />
+                </svg>
+              </div>
+              <div class="menu-mobile-socials-item">
+                <svg class="menu-mobile-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#whatsapp" />
+                </svg>
+              </div>
+              <div class="menu-mobile-socials-item">
+                <svg class="menu-mobile-socials-icon">
+                  <use xlink:href="svg/svg/symbols.svg#viber" />
+                </svg>
+              </div>
+            </div>
+            <button class="menu-mobile-socials-close">
+              <svg class="icon">
+                <use xlink:href="svg/svg/symbols.svg#cross" />
+              </svg>
+            </button>
+          </div>
+        </div>        
+      </div>
+    </div>
+    <!-- burger menu mobile end -->
   </div>
 
 

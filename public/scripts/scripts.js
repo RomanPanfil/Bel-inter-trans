@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
    // form styler
    $('.ui-select').styler();
 
-   // добавление тугглера в nav 
+  // добавление тугглера в nav 
   const navLis = document.querySelectorAll('.header-nav > ul > li');
 
   navLis.forEach(li => {
@@ -385,14 +385,16 @@ document.addEventListener('DOMContentLoaded', () => {
   (function() {
     if (!document.querySelector('.header-search') || !document.querySelector('.search-popup') || !document.querySelector('.search-popup-close')) return
 
-    const searchButton = document.querySelector('.header-search');
+    const searchButton = document.querySelectorAll('.header-search');
     const searchPopup = document.querySelector('.search-popup');
     const closePopup = document.querySelectorAll('.search-popup-close');
 
-    searchButton.addEventListener('click', () => {
-      searchPopup.classList.add('active');
-      document.querySelector('body').classList.add('non-scroll');
-    });
+    searchButton.forEach(btn => {
+      btn.addEventListener('click', () => {
+        searchPopup.classList.add('active');
+        document.querySelector('body').classList.add('non-scroll');
+      });
+    })
 
     closePopup.forEach(close => {
       close.addEventListener('click', () => {
@@ -855,18 +857,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerBtn = document.querySelector('.header-burger');
     const burgerBtnIcon = document.querySelector('.header-burger span');
     const burgerMenu = document.querySelector('.burger-menu');
+    const burgerMenuMobile = document.querySelector('.burger-menu-mobile');
     const headerNav = document.querySelector('.header-nav');
     const searchField = document.querySelector('.header-search-field');
+
+    const menuLis = document.querySelectorAll('.burger-menu-left li');
+    const menuNews = document.querySelector('.burger-menu-news');
+    const menuItems = document.querySelectorAll('.burger-menu-middle .burger-menu-middle-item');
+
+    const main = document.querySelector('.main');
 
     if(!burgerBtn || !burgerMenu) return
 
     burgerBtn.addEventListener('click', () => {
       burgerMenu.classList.toggle('active');
+      burgerMenuMobile.classList.toggle('active');
       burgerBtnIcon.classList.toggle('active');
       headerNav.classList.toggle('hidden');
       searchField.classList.toggle('hidden');
+      main.classList.toggle('no-visible-mobile');
 
-      document.querySelector('.wrapper').classList.toggle('non-scroll')
+      // делаем активным пункт меню "О нас"
+      menuLis[0].classList.toggle('active');
+      menuItems[0].classList.toggle('active');
+      menuNews.classList.toggle('active');
+
+      document.querySelector('.wrapper').classList.toggle('non-scroll');
+
+      // закрытие меню клавишей esc
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          burgerMenu.classList.remove('active');
+          burgerMenuMobile.classList.remove('active');
+          burgerBtnIcon.classList.remove('active');
+          headerNav.classList.remove('hidden');
+          searchField.classList.remove('hidden');
+          menuLis[0].classList.remove('active');
+          menuItems[0].classList.remove('active');
+          menuNews.classList.remove('active');
+          document.querySelector('.wrapper').classList.remove('non-scroll');
+        } 
+      });
     })
   })();
 
@@ -974,11 +1005,88 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })();
 
+  // мобильное меню
+  (function() {
+    // добавление тугглера в nav 
+    const navLis = document.querySelectorAll('.menu-mobile-nav > ul > li');
+
+    navLis.forEach(li => {
+      const a = li.querySelector('a'); // выбираем элемент <a>
+      const ul = li.querySelector('ul');
+
+      if (ul && a) { // проверяем, что элементы <ul> и <a> существуют
+        const icon = document.createElement('span');
+        icon.setAttribute('class', 'icon');
+        a.appendChild(icon); // вставляем иконку внутрь элемента <a>
+      }
+    });
+
+    function deactivateAll() {
+      navLis.forEach(li => {
+        li.classList.remove('active');
+      });
+    }
+
+    function toggleMenu(li) {
+      if (li.classList.contains('active')) {
+        li.classList.remove('active');
+      } else {
+        deactivateAll();
+        li.classList.add('active');
+      }
+    }
+
+    navLis.forEach(li => {
+      const a = li.querySelector('a');     
+      const icon = li.querySelector('.icon');
+    
+      if (a) {
+        a.addEventListener('click', (ev) => {          
+          const href = a.getAttribute('href');
+          if (href === '#' || href === 'javascript:void(0)') {
+            ev.preventDefault();
+            toggleMenu(li);
+          }
+        });
+      }
+    
+      if (icon) {       
+        icon.addEventListener('click', (ev) => {              
+          ev.preventDefault();
+          ev.stopPropagation();
+          toggleMenu(li);
+        });
+      }
+    });
+
+  })();
+
+  // открытие списка мессендеров в мобильном меню
+  (function() {
+    const messengersBnts = document.querySelector('.menu-mobile-messengers');
+    const order = document.querySelector('.menu-mobile-order');
+    const socials = document.querySelector('.menu-mobile-socials');
+    const close = document.querySelector('.menu-mobile-socials-close');
+
+    if(!messengersBnts) return;
+
+    function toggleMessengers() {
+      order.classList.toggle('hidden');
+      socials.classList.toggle('hidden');
+    }
+
+    messengersBnts.addEventListener('click', toggleMessengers);
+
+    close.addEventListener('click', toggleMessengers)
+
+  })();
+
 });
 
 // слайдер "Услуги" на мобильном разрешении
 (function(){
   const servicesListItems = document.querySelectorAll('.services-list-item');
+  const swiperWrapper = document.querySelector('.swiper-wrapper');
 
   servicesListItems.forEach(item => {
 
@@ -987,7 +1095,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     slide.appendChild(item.cloneNode(true));
     
-    document.querySelector('.swiper-wrapper').appendChild(slide);
+    if(swiperWrapper) {
+      swiperWrapper.appendChild(slide);
+    }    
 
   });
 
