@@ -289,9 +289,7 @@ html:not(.vi) {
 	cursor: pointer;	
 	color: #1F2839;
 	@include fz(20);
-	font-weight: 500;	
-	// height: 35px;
-	// line-height: 35px;
+	font-weight: 500;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	text-transform: uppercase;
@@ -304,16 +302,12 @@ html:not(.vi) {
 
 	@media(max-width: 1280px) {
 		@include fz(18);
-		// height: 30px;
-		// line-height: 30px;
 		padding-top: 2px;
 		padding-bottom: 2px;
 	}
 
 	@media(max-width: 960px) {
 		@include fz(14);
-		// height: 35px;
-		// line-height: 35px;
 		padding-top: 4px;
 		padding-bottom: 4px;
 	}
@@ -352,8 +346,6 @@ html:not(.vi) {
 		@include ls(-0.1);	
 		font-weight: 400;
 		text-transform: unset;
-		// height: 40px;
-		// line-height: 38px;
 		background-color: $bg-blue-light;
 		border-color: $bg-blue-light;
 		padding-left: 24px;
@@ -363,8 +355,6 @@ html:not(.vi) {
 
 		@media(max-width: 1140px) {
 			@include fz(14);
-			// height: 34px;
-			// line-height: 32px;
 			padding-left: 20px;
 			padding-right: 20px;
 			padding-top: 6px;
@@ -380,8 +370,6 @@ html:not(.vi) {
 		@media(max-width: 480px) {
 			padding-left: 16px;
 			padding-right: 16px;
-			// height: 40px;
-			// line-height: 40px;
 		}
 	}
 }

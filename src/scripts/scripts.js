@@ -503,10 +503,15 @@ document.addEventListener('DOMContentLoaded', () => {
   (function() {
     const menuItems = document.querySelectorAll('.item-menu');
     const menuList = document.querySelector('.post-side-navigation-list');
+    const navigation = document.querySelector('.post-side-navigation');
 
     const hash = location.hash;
     const params = new URLSearchParams(location.search);
     const query = params.toString();
+
+    if(!menuItems.length && navigation) {
+      navigation.classList.add('hidden');
+    }
     
     if(!menuList) return
 
@@ -1081,6 +1086,92 @@ document.addEventListener('DOMContentLoaded', () => {
 
   })();
 
+  // поиск
+  (function() {
+    document.querySelectorAll('.search-block-input').forEach(input => {
+
+      const parent = input.parentElement;
+      const clearButton = parent.querySelector('.search-block-clear');
+    
+      input.addEventListener('input', () => {
+        if(input.value.trim() !== '') {
+          clearButton.classList.add('active');
+        } else {
+          clearButton.classList.remove('active');
+        }
+      });
+    
+      clearButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        input.value = '';
+        clearButton.classList.remove('active'); 
+      });
+    
+    });
+
+  })();
+
+  // видео-прелоадер
+  function setCookie(name, value, exp_y, exp_m, exp_d, path, domain, secure) {
+    let cookie_string = name + "=" + escape(value);
+  
+    if (exp_y)
+    {
+      let expires = new Date(exp_y, exp_m, exp_d);
+      cookie_string += "; expires=" + expires.toGMTString();
+    }
+  
+    if (path)
+      cookie_string += "; path=" + escape(path);
+  
+    if (domain)
+      cookie_string += "; domain=" + escape(domain);
+  
+    if (secure)
+      cookie_string += "; secure";
+  
+    document.cookie = cookie_string;
+  }
+  
+  function getCookie(cookie_name) {
+    let results = document.cookie.match('(^|;) ?' + cookie_name + '=([^;]*)(;|$)');
+  
+    if (results)
+      return (unescape(results[2]));
+    else
+      return null;
+  }
+  
+  const preloader = document.querySelector('.preloader');
+  
+  const endPreloader = () => {
+    if(preloader) {     
+      clearTimeout(preload_timeout);
+      window.removeEventListener('load', endPreloader); 
+  
+      setTimeout(() => {
+          preloader.classList.remove('active');
+      }, 6000);
+  
+      setTimeout(() => {
+        preloader.remove();
+      }, 6500);
+    }
+  };
+  
+  let preloader_cookie = getCookie('preloader');
+  
+  if (preloader_cookie === null) {
+    setCookie('preloader', true);
+    preloader.classList.add('active');
+    preload_timeout = setTimeout(endPreloader, 5800);
+    window.addEventListener('load', endPreloader);
+  } else if(preloader){
+    window.addEventListener('load', function() {
+      preloader.remove()
+    });
+  }
+
 });
 
 // слайдер "Услуги" на мобильном разрешении
@@ -1121,7 +1212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clickable: true,        
       },
       breakpoints: {
-        769: {
+        600: {
           slidesPerView: 2,
           spaceBetween: 30,         
         }

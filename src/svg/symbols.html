@@ -160,6 +160,10 @@
 			<path d="M18.943 2.943a1.333 1.333 0 0 0-1.886-1.886L10 8.114 2.943 1.057a1.333 1.333 0 0 0-1.886 1.886L8.114 10l-7.057 7.057a1.333 1.333 0 1 0 1.886 1.886L10 11.886l7.057 7.057a1.333 1.333 0 1 0 1.886-1.886L11.886 10l7.057-7.057z" fill="#fff"></path>
 		</symbol>
 	
+		<symbol id="cross-grey" viewBox="0 0 20 20">
+			<path d="M15.59 5.59a.833.833 0 1 0-1.18-1.18L10 8.822l-4.41-4.41a.833.833 0 0 0-1.18 1.178L8.822 10l-4.41 4.41a.833.833 0 0 0 1.178 1.18L10 11.177l4.41 4.411a.833.833 0 1 0 1.18-1.178L11.177 10l4.411-4.41z" fill="#E7EBF3"></path>
+		</symbol>
+	
 		<symbol id="icon-at-sign" viewBox="0 0 24 24">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 1.288a11 11 0 1 0 4.188 19.446 1 1 0 1 0-1.216-1.588A9 9 0 1 1 21 12v1a2 2 0 0 1-4 0V8a1 1 0 0 0-2 0 5 5 0 1 0 .74 7.319A4 4 0 0 0 23 13v-1.001a11 11 0 0 0-8.5-10.712zM9 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0z" fill="#2861CF"></path>
 		</symbol>
@@ -295,7 +299,7 @@
 </svg>
 
 <header>
-    <h1 id="logo">Gulp SVG Sprites <small>(34 icons in &lt;symbol&gt; mode)</small></h1>
+    <h1 id="logo">Gulp SVG Sprites <small>(35 icons in &lt;symbol&gt; mode)</small></h1>
     <h4>Files Generated:</h4>
     <ol>
         <li><a href="svg/symbols.svg">svg/symbols.svg</a></li>
@@ -327,6 +331,23 @@
             <button onclick="invertBackground('icon-box-cross')">Invert Background</button>
             <div class="snippet-popover" id="snippet-cross">
                 <pre><code>&lt;svg class=&quot;icon cross&quot;&gt;&lt;use xlink:href=&quot;#cross&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="cross-grey">
+            <div class="icon-box" id="icon-box-cross-grey">
+                <svg class="icon cross-grey">
+                    <use xlink:href="#cross-grey" />
+                </svg>
+            </div>
+            <h2>cross-grey</h2>
+            <button onclick="showPopover('snippet-cross-grey')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-cross-grey')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-cross-grey">
+                <pre><code>&lt;svg class=&quot;icon cross-grey&quot;&gt;&lt;use xlink:href=&quot;#cross-grey&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
                 <button onclick="hidePopover()">Close</button>
             </div>
         </li>
