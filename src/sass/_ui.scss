@@ -62,6 +62,18 @@ h2, .h2, .ui-h2 {
 	@media(max-width: 1140px) {
 		@include fz(42);
 	}
+
+	@media(max-width: 960px) {
+		@include fz(38);
+	}
+
+	@media(max-width: 768px) {
+		@include fz(34);
+	}
+
+	@media(max-width: 480px) {
+		@include fz(26);
+	}
 }
 h3, .h3, .ui-h3 {
 	@include fz($h3);
@@ -200,6 +212,10 @@ html:not(.vi) {
 	letter-spacing: -1px;
 	text-transform: uppercase;
 	margin-bottom: 44px;
+
+	@media(max-width: 480px) {
+		margin-bottom: 32px;
+	}
 }
 
 .ui-more {
@@ -266,6 +282,14 @@ html:not(.vi) {
 
 	@media(max-width: 1280px) {
 		margin-bottom: 80px;
+	}
+
+	@media(max-width: 960px) {
+		margin-bottom: 60px;
+	}
+
+	@media(max-width: 480px) {
+		margin-bottom: 42px;
 	}
 
 	&__min {
@@ -594,6 +618,14 @@ html:not(.vi) {
 			padding-bottom: 16px;
 		}
 
+		@media(max-width: 480px) {
+			@include fz(14);
+			padding-left: 42px;
+			padding-right: 42px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
 		.icon {
 			width: 26px;
 			height: 20px;
@@ -608,6 +640,12 @@ html:not(.vi) {
 				width: 24px;
 				height: 18px;		
 				margin-right: 14px;
+			}
+
+			@media(max-width: 480px) {
+				width: 22px;
+				height: 14px;
+				margin-right: 10px;
 			}
 		}
 
@@ -631,6 +669,21 @@ html:not(.vi) {
 		background-color: $bgc;
 		border-radius: 50%;
 
+		@media(max-width: 960px) {
+			width: 60px;
+			height: 60px;
+		}
+
+		@media(max-width: 599px) {
+			width: 40px;
+			height: 40px;
+		}
+
+		@media(max-width: 480px) {
+			width: 30px;
+			height: 30px;
+		}
+
 		.icon {
 			width: 30px;
 			height: 30px;
@@ -640,6 +693,21 @@ html:not(.vi) {
 			transform: translate(-50%, -50%);
 			fill: $primary;
 			transition: fill 0.3s;
+
+			@media(max-width: 960px) {
+				width: 20px;
+				height: 20px;
+			}
+
+			@media(max-width: 599px) {
+				width: 15px;
+				height: 15px;
+			}
+			
+			@media(max-width: 480px) {
+				width: 12px;
+				height: 12px;
+			}
 		}
 	}
 }
