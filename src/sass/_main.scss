@@ -4121,6 +4121,10 @@ body.sticky-wrap {
 
 .order {
   margin-bottom: 30px;
+
+  @media(max-width: 480px) {
+    margin-bottom: 0;
+  }
   
   &-item {   
     margin-bottom: 56px;     
@@ -4130,6 +4134,16 @@ body.sticky-wrap {
       font-weight: 400;
       @include ls(-1);
       margin-bottom: 30px;
+
+      @media(max-width: 599px) {
+        @include fz(24);
+        margin-bottom: 28px;
+      }
+
+      @media(max-width: 480px) {
+        @include fz(20);
+        margin-bottom: 22px;
+      }
     }
   }
 
@@ -5160,9 +5174,21 @@ body.sticky-wrap {
   &-item {
     margin-bottom: 100px;
 
+    @media(max-width: 480px) {
+      margin-bottom: 80px;
+    }
+
     &-title {      
       display: flex;
       margin-bottom: 55px;
+
+      @media(max-width: 599px) {
+        margin-bottom: 40px;
+      }
+
+      @media(max-width: 480px) {
+        margin-bottom: 32px;
+      }
 
       &-text {
         @include fz(48);      
@@ -5171,6 +5197,16 @@ body.sticky-wrap {
         text-transform: uppercase;
         margin-right: 18px;
         line-height: 1.2;
+
+        @media(max-width: 599px) {
+          @include fz(36);
+          max-width: 80%;
+          word-wrap: break-word;
+        }
+
+        @media(max-width: 480px) {
+          @include fz(28);
+        }
       }
 
       &-share {
@@ -5182,6 +5218,12 @@ body.sticky-wrap {
         border: 1px solid $border;
         background-color: $bgc;
         transition: background-color 0.3s;
+        flex-shrink: 0;
+
+        @media(max-width: 480px) {
+          width: 34px;
+          height: 34px;
+        }
 
         &:hover {
           background-color: $primary;
@@ -5203,12 +5245,21 @@ body.sticky-wrap {
         stroke: $primary;
         stroke-width: 2px;
         transition: stroke 0.3s, fill 0.3s;
+
+        @media(max-width: 480px) {
+          width: 16px;
+          height: 16px;
+        }
       }
     }    
   }
 
   &-more {
     margin-bottom: 60px;
+
+    @media(max-width: 480px) {
+      margin-bottom: 40px;
+    }
 
     &-head {
       display: flex;
@@ -5222,9 +5273,36 @@ body.sticky-wrap {
         text-transform: unset;
         padding-left: 30px;
         padding-right: 30px;
+        max-width: 100%;
+
+        @media(max-width: 480px) {
+          @include fz(14);
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+
+        span {
+          max-width: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: inline-block;
+          vertical-align: middle;
+
+          @media(max-width: 320px) {
+            max-width: 88%;
+          }
+        }
 
         &-icon {
           margin-left: 10px;
+
+          @media(max-width: 480px) {
+            width: 18px;
+            height: 18px;
+            margin-left: 4px;
+          }
         }
       }
     }
@@ -5245,6 +5323,10 @@ body.sticky-wrap {
 
       &.open {
         padding-bottom: 70px;
+
+        @media(max-width: 480px) {
+          padding-bottom: 50px;
+        }
       }
       
       p {
@@ -5266,6 +5348,10 @@ a.contacts-item {
 .contacts {
   &-items {
     margin-bottom: 60px;
+
+    @media(max-width: 480px) {
+      margin-bottom: 40px;
+    }
   }
 
   &-item {
@@ -5273,7 +5359,19 @@ a.contacts-item {
     @include fz(20);
     margin-bottom: 20px;
     padding-left: 34px;
-    display: block;   
+    display: block;
+
+    @media(max-width: 599px) {
+      @include fz(18);
+      margin-bottom: 14px;
+      padding-left: 30px;
+    }
+
+    @media(max-width: 480px) {
+      @include fz(16);
+      margin-bottom: 12px;
+      padding-left: 26px;
+    }
 
     &-text {
       color: $font;
@@ -5288,7 +5386,17 @@ a.contacts-item {
       height: 24px;
       position: absolute;
       left: 0;
-      top: 2px;     
+      top: 2px;
+
+      @media(max-width: 599px) {
+        width: 22px;
+        height: 22px;
+      }
+      
+      @media(max-width: 480px) {
+        width: 18px;
+        height: 18px;
+      }
 
       &:not(.contacts-icon__phone) {
         fill: $primary;
@@ -5307,9 +5415,38 @@ a.contacts-item {
     font-weight: 500;
     @include ls(-1);
 
+    @media(max-width: 1680px) {
+      @include fz(112);
+    }
+
+    @media(max-width: 1280px) {
+      @include fz(102);
+    }
+
+    @media(max-width: 1140px) {
+      @include fz(94);
+    }
+
+    @media(max-width: 599px) {
+      @include fz(86);
+    }
+
+    @media(max-width: 480px) {
+      @include fz(72);
+    }
+
     span {
       @include fz(18);
       font-weight: 400;
+      white-space: nowrap;
+
+      @media(max-width: 599px) {
+        @include fz(16);
+      }
+
+      @media(max-width: 480px) {
+        @include fz(12);
+      }
     }
   }
 
@@ -5318,14 +5455,27 @@ a.contacts-item {
     padding-left: 16px;
     padding-right: 16px;
 
+    @media(max-width: 480px) {
+      margin-bottom: 40px;
+    }
+
     &-title {
       color: $font-light;
       @include fz(14);
       margin-bottom: 10px;
+
+      @media(max-width: 480px) {
+        @include fz(13);
+        margin-bottom: 6px;
+      }
     }
 
     &-text {
       @include fz(18);
+
+      @media(max-width: 480px) {
+        @include fz(16);
+      }
     }
   }
 

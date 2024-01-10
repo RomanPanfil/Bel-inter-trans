@@ -726,7 +726,12 @@ html:not(.vi) {
 
 .ui-field {
 	position: relative;
-	margin-bottom: 34px;	
+	margin-bottom: 34px;
+	display: flex;
+
+	@media(max-width: 480px) {
+		margin-bottom: 24px;
+	}
 
 	label.error {
 		position: absolute;
@@ -753,27 +758,64 @@ html:not(.vi) {
 	@include fz(14);
 	text-transform: uppercase;
 	padding-left: 20px;
-	padding-right: 20px;
-	margin-bottom: 10px;	
+	padding-right: 14px;
+	margin-bottom: 10px;
+
+	@media(max-width: 599px) {
+		@include fz(13);
+		margin-bottom: 8px;
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	
+	@media(max-width: 480px) {
+		@include fz(12);
+		margin-bottom: 6px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
 	&-required {
 		@include fz(20);
 		color: $primary;
+		position: absolute;
+		right: 0;
+		top: -6px;
+
+		@media(max-width: 480px) {
+			@include fz(16);
+		}
 	}
 }
 
 .ui-input {	
 	border: none;
 	border-bottom: 1px solid $input_border;
-	// padding-top: 38px;
+	border-radius: 0;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
 	@include fz(20);	
 	outline: none;	
-	width: 100%;
-	margin-top: 34px;
+	width: 100%;	
+	padding-top: 34px;
 	background-color: transparent;
+
+	@media(max-width: 599px) {
+		@include fz(18);
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-bottom: 12px;	
+		padding-top: 26px;
+	}
+
+	@media(max-width: 480px) {
+		@include fz(16);
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;	
+		padding-top: 24px;
+	}
 
 	&::placeholder {
 		color: $font-light;		
@@ -795,7 +837,9 @@ html:not(.vi) {
 .ui-textarea {
 	border: none;
 	border-bottom: 1px solid $input_border;
-	margin-top: 34px;
+	border-radius: 0;
+	// margin-top: 34px;
+	padding-top: 34px;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 20px;
@@ -805,6 +849,22 @@ html:not(.vi) {
 	resize: none;	
 	height: 160px;
 	background-color: transparent;
+
+	@media(max-width: 599px) {
+		@include fz(18);
+		padding-top: 26px;
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-bottom: 12px;
+	}
+
+	@media(max-width: 480px) {
+		@include fz(16);
+		padding-top: 24px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+	}
 
 	&::placeholder {
 		color: $font-light;	
@@ -1044,7 +1104,15 @@ html:not(.vi) {
 		position: relative;
 		border-bottom: 1px solid $input_border;
 		width: 100%;
-		@include fz(20);		
+		@include fz(20);
+
+		@media(max-width: 599px) {
+			@include fz(18);			
+		}
+		
+		@media(max-width: 480px) {
+			@include fz(16);			
+		}
 
 		.jq-selectbox__select {
 			position: relative;
@@ -1053,6 +1121,22 @@ html:not(.vi) {
 			padding-right: 20px;
 			padding-bottom: 20px;
 			overflow: hidden;
+
+			@media(max-width: 599px) {				
+				padding-left: 12px;
+				padding-right: 12px;
+				padding-bottom: 12px;
+				padding-top: 26px;
+			}
+
+			@media(max-width: 480px) {
+				@include fz(16);
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-bottom: 10px;
+				padding-top: 24px;
+			}
+
 			&-text {
 				color: $font-light;
 				display: block;
@@ -1086,12 +1170,30 @@ html:not(.vi) {
 				max-height: 365px !important;	
 				margin-top: 40px;
 				margin-bottom: 40px;
+
+				@media(max-width: 599px) {
+					margin-top: 30px;
+					margin-bottom: 30px;			
+				}
+
+				@media(max-width: 480px) {
+					margin-top: 20px;
+					margin-bottom: 20px;			
+				}
 			}
 
 			li {
 				white-space: normal;
 				&:not(:last-child) {
 					margin-bottom: 28px;
+
+					@media(max-width: 599px) {
+						margin-bottom: 18px;			
+					}
+
+					@media(max-width: 480px) {
+						margin-bottom: 14px;			
+					}
 				}
 				&:first-child {
 					padding-top: 0;
