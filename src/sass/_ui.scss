@@ -543,6 +543,18 @@ html:not(.vi) {
 		padding-bottom: 6px;
 		line-height: 1;
 		@include fz(17);
+
+		@media(max-width: 768px) {
+			@include fz(16);	
+		}
+
+		@media(max-width: 480px) {
+			@include fz(14);
+			padding-top: 4px;
+			padding-bottom: 4px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 
 	&-big {

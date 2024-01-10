@@ -5104,17 +5104,55 @@ body.sticky-wrap {
   border-radius: 20px;
   margin-bottom: 80px;
 
+  @media(max-width: 1140px) {
+    padding: 48px;
+    margin-bottom: 70px;
+  }
+
+  @media(max-width: 768px) {
+    padding: 32px;
+    margin-bottom: 60px;
+  }
+
+  @media(max-width: 480px) {
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+
   &-title {
     @include fz(54);
     @include ls(-1);
     text-transform: uppercase;
     margin-bottom: 34px;
+
+    @media(max-width: 960px) {
+      @include fz(42);
+      margin-bottom: 20px;
+    }
+
+    @media(max-width: 768px) {
+      @include fz(32);
+      margin-bottom: 20px;
+    }
+
+    @media(max-width: 480px) {
+      @include fz(26);
+      margin-bottom: 14px;
+    }
   }
 
   &-text {
     line-height: 1.6;
     max-width: 1107px;
     margin-bottom: 40px;
+
+    @media(max-width: 768px) {
+      @include fz(14);
+    }
+
+    @media(max-width: 480px) {
+      @include fz(13);
+    }
   }
 }
 

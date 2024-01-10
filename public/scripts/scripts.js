@@ -1092,6 +1092,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const parent = input.parentElement;
       const clearButton = parent.querySelector('.search-block-clear');
+
+      if(!clearButton) return
     
       input.addEventListener('input', () => {
         if(input.value.trim() !== '') {
@@ -1143,6 +1145,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   const preloader = document.querySelector('.preloader');
+
+  if(!preloader) return;
   
   const endPreloader = () => {
     if(preloader) {     

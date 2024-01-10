@@ -2219,6 +2219,22 @@ img {
   font-size: 17px;
   font-size: 1.0625rem;
 }
+@media (max-width: 768px) {
+  .ui-btn-little {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .ui-btn-little {
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .ui-btn-big {
   padding-left: 60px;
   padding-right: 60px;
@@ -10737,6 +10753,24 @@ body.sticky-wrap {
   border-radius: 20px;
   margin-bottom: 80px;
 }
+@media (max-width: 1140px) {
+  .electronic-appeal {
+    padding: 48px;
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .electronic-appeal {
+    padding: 32px;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 480px) {
+  .electronic-appeal {
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+}
 .electronic-appeal-title {
   font-size: 54px;
   font-size: 3.375rem;
@@ -10745,10 +10779,43 @@ body.sticky-wrap {
   text-transform: uppercase;
   margin-bottom: 34px;
 }
+@media (max-width: 960px) {
+  .electronic-appeal-title {
+    font-size: 42px;
+    font-size: 2.625rem;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .electronic-appeal-title {
+    font-size: 32px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .electronic-appeal-title {
+    font-size: 26px;
+    font-size: 1.625rem;
+    margin-bottom: 14px;
+  }
+}
 .electronic-appeal-text {
   line-height: 1.6;
   max-width: 1107px;
   margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .electronic-appeal-text {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .electronic-appeal-text {
+    font-size: 13px;
+    font-size: 0.8125rem;
+  }
 }
 
 .station-item {
