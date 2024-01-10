@@ -524,6 +524,14 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 		padding-bottom: 100px;
 	}
 
+	.burger-menu-wrapper {
+		padding-bottom: 100px;
+	}
+
+	.burger-menu-mobile {
+		margin-bottom: 100px;
+	}
+
 	.inner, .container {
 		padding-left: 100px;
 		padding-right: 100px;
@@ -701,7 +709,7 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
         color:#000;
     }
 
-    a:not(.reception-contacts-tel, .reception-contacts-mail, .ui-tab, .news-card-title) {
+    a:not(.reception-contacts-tel, .reception-contacts-mail, .ui-tab, .news-card-title, .ui-btn-primary) {
         color:#000;
     }
 
@@ -710,6 +718,10 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	}
 
 	.railway-web-link a {
+		color: $font-white;
+	}
+
+	.important-item-text {
 		color: $font-white;
 	}
 }
@@ -1002,6 +1014,38 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 
 	.error-image {
 		filter: brightness(10);
+	}
+
+	.burger-menu-wrapper {
+		background-color: $font-black;		
+	}
+
+	.burger-menu-nav {
+		background-color: $font;
+	}
+
+	.burger-menu-icon {
+		fill: $font-white;
+	}
+
+	.burger-menu-image {
+		filter: brightness(10);
+	}
+
+	.burger-menu-mobile {
+		background-color: $font;
+	}
+
+	.menu-mobile-main {
+		background-color: $font-black;
+	}
+
+	.menu-mobile-nav > ul .icon {
+		filter: brightness(10);
+	}
+
+	.header {
+		background-color: $font-black;
 	}
 }
 
@@ -1349,5 +1393,41 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 
 	.error-image {
 		filter: brightness(10);
+	}
+
+	.electronic-appeal {
+		background-color: $primary_brown_light;
+	}
+
+	.burger-menu-nav {
+		background-color: $primary_brown_bg;
+	}
+
+	.burger-menu-wrapper {
+		background-color: $primary_brown;		
+	}
+
+	.burger-menu-icon {
+		fill: $font-yellow;
+	}
+
+	.burger-menu-image {
+		filter: brightness(10);
+	}
+
+	.burger-menu-mobile {
+		background-color: $primary_brown;
+	}
+
+	.menu-mobile-main {
+		background-color: $primary_brown_bg;
+	}
+
+	.menu-mobile-nav > ul .icon {
+		filter: brightness(10);
+	}
+
+	.header {
+		background-color: $primary_brown;
 	}
 }
