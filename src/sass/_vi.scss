@@ -565,6 +565,12 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	.ui-btn-white {
 		border: 1px solid $font-black;
 	}
+
+	.menu-mobile-socials {
+		flex-wrap: wrap;
+		width: auto;
+		justify-content: center;
+	}
 }
 
 
@@ -584,7 +590,9 @@ html.vi .contained-cl-item .circle {width: 54px; height: 54px; line-height: 52px
 	.post-gallery,
 	.video-gallery-banner-image,
 	.article-image,
-	.managment-card-image {
+	.managment-card-image,
+	.main-order-image,
+	.quote-author-avatar {
         visibility: hidden;
         opacity: 0;
         display: none;

@@ -105,9 +105,9 @@ h5, .h5 {
 		@include fz(18);
 	}
 
-	@media(max-width: 1140px) {
-		@include fz(16);
-	}
+	// @media(max-width: 1140px) {
+	// 	@include fz(16);
+	// }
 }
 h6, .h6, .ui-h5 {
 	@include fz($h6);

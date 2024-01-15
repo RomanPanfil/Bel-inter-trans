@@ -264,6 +264,10 @@
 			<path d="M5 15v-4.45c0-5.525 3.912-7.787 8.7-5.025l3.863 2.225 3.862 2.225c4.787 2.763 4.787 7.287 0 10.05l-3.863 2.225-3.862 2.225c-4.787 2.762-8.7.5-8.7-5.025V15z"></path>
 		</symbol>
 	
+		<symbol id="quote" viewBox="0 0 52 37">
+			<path d="M21.105 0H1.523C.682 0 0 .676 0 1.51v19.417c0 .834.682 1.51 1.523 1.51H9.79V35.49c0 .835.682 1.511 1.524 1.511h4.896c.32 0 .63-.1.89-.285a1.51 1.51 0 0 0 .554-.748l4.896-14.562c.052-.154.078-.316.078-.478V1.511C22.628.676 21.946 0 21.105 0zm29.372 0H30.895c-.841 0-1.523.676-1.523 1.51v19.417c0 .834.682 1.51 1.523 1.51h8.268V35.49c0 .835.682 1.511 1.523 1.511h4.895c.32 0 .632-.1.891-.285.26-.186.453-.447.555-.748l4.895-14.562c.051-.154.078-.316.078-.478V1.511C52 .676 51.318 0 50.477 0z" fill="#2861CF"></path>
+		</symbol>
+	
 		<symbol id="required" viewBox="0 0 11 13">
 			<path d="M11 8.788l-.842 1.507-3.028-1.82a8.453 8.453 0 0 1-.59-.404 2.363 2.363 0 0 1-.467-.514c.18.428.269.888.269 1.378V12.5H4.64V8.953c0-.245.012-.471.036-.68.036-.22.101-.435.197-.643-.131.172-.28.325-.448.46a5 5 0 0 1-.555.386l-3.01 1.8L.018 8.77l3.01-1.801c.215-.123.424-.22.627-.294.203-.086.418-.141.645-.166a3.048 3.048 0 0 1-1.272-.478L0 4.212l.842-1.507 3.028 1.82c.215.134.406.275.573.422.18.147.334.319.466.515a3.053 3.053 0 0 1-.215-.662 4.705 4.705 0 0 1-.054-.717V.5h1.702v3.547c0 .245-.018.484-.054.716-.024.22-.077.435-.161.644.131-.184.28-.343.448-.478.167-.135.352-.27.555-.405l3.01-1.782.842 1.507-3.01 1.782a4.782 4.782 0 0 1-.609.313c-.19.086-.394.14-.609.165.406.05.812.202 1.218.46L11 8.788z" fill="#2861CF"></path>
 		</symbol>
@@ -299,7 +303,7 @@
 </svg>
 
 <header>
-    <h1 id="logo">Gulp SVG Sprites <small>(35 icons in &lt;symbol&gt; mode)</small></h1>
+    <h1 id="logo">Gulp SVG Sprites <small>(36 icons in &lt;symbol&gt; mode)</small></h1>
     <h4>Files Generated:</h4>
     <ol>
         <li><a href="svg/symbols.svg">svg/symbols.svg</a></li>
@@ -773,6 +777,23 @@
             <button onclick="invertBackground('icon-box-play')">Invert Background</button>
             <div class="snippet-popover" id="snippet-play">
                 <pre><code>&lt;svg class=&quot;icon play&quot;&gt;&lt;use xlink:href=&quot;#play&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="quote">
+            <div class="icon-box" id="icon-box-quote">
+                <svg class="icon quote">
+                    <use xlink:href="#quote" />
+                </svg>
+            </div>
+            <h2>quote</h2>
+            <button onclick="showPopover('snippet-quote')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-quote')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-quote">
+                <pre><code>&lt;svg class=&quot;icon quote&quot;&gt;&lt;use xlink:href=&quot;#quote&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
                 <button onclick="hidePopover()">Close</button>
             </div>
         </li>
