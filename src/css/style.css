@@ -5563,8 +5563,8 @@ img {
 .header-nav > ul > li {
   position: relative;
   display: inline-block;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
@@ -5575,8 +5575,8 @@ img {
 }
 @media (max-width: 1680px) {
   .header-nav > ul > li {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 16px;
+    font-size: 1rem;
   }
 }
 @media (max-width: 1366px) {
@@ -5787,11 +5787,17 @@ img {
   border-bottom: 1px solid #E3E8F2;
 }
 .header-nav > ul > li > ul > li ul > li a {
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media (max-width: 1680px) {
+  .header-nav > ul > li > ul > li ul > li a {
+    font-size: 16px;
+    font-size: 1rem;
+  }
 }
 @media (max-width: 1366px) {
   .header-nav > ul > li > ul > li ul > li a {
