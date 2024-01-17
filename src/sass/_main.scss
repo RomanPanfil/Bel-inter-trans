@@ -280,6 +280,13 @@
     ul {
       border-radius: 6px;
 
+      li {
+        .sub {
+          font-weight: 400;
+          padding-left: 20px;
+        }
+      }
+
       & > li {
         &:first-child {
           border-top-left-radius: 6px;
@@ -361,6 +368,8 @@
 
         a {
           transition: color 0.3s;
+          display: inline-block;
+          vertical-align: middle;
         }
         
 
@@ -407,6 +416,7 @@
             // width: max-content;
             min-width: 432px;
             position: relative;
+            transition: background-color 0.3s;
             
             @media(max-width: 1680px) {
               min-width: 400px;
@@ -465,7 +475,7 @@
               // }  
 
               &:hover {
-                background-color: $primary;
+                // background-color: $primary;
                 color: $font-white
               }             
             }    
