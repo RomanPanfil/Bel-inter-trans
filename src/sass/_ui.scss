@@ -31,8 +31,16 @@ h1, .h1 {
 	margin-top: 0;
 	line-height: 1.15;
 
+	@media(max-width: 1680px) {
+		@include fz(76);
+	}
+
 	@media(max-width: 1366px) {
 		@include fz(72);
+	}
+
+	@media(max-width: 1280px) {
+		@include fz(68);
 	}
 
 	@media(max-width: 1140px) {
@@ -223,6 +231,7 @@ html:not(.vi) {
 
 	@media(max-width: 1366px) {
 		margin-bottom: 40px;
+		gap: 20px;
 	}
 
 	@media(max-width: 480px) {
@@ -564,6 +573,32 @@ html:not(.vi) {
 		padding-bottom: 26px;
 		@include fz(20);
 
+		@media(max-width: 1366px) {
+			padding-left: 46px;
+			padding-right: 46px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			@include fz(18);
+		}
+
+		@media(max-width: 1280px) {
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-top: 18px;
+			padding-bottom: 18px;
+			@include fz(16);
+		}
+
+		@media(max-width: 992px) {
+			padding-left: 60px;
+			padding-right: 60px;
+			padding-top: 26px;
+			padding-bottom: 26px;
+			@include fz(20);
+		}
+
+		
+
 		@media(max-width: 480px) {
 			@include fz(14);
 			padding-left: 42px;
@@ -575,6 +610,24 @@ html:not(.vi) {
 		.ui-btn-icon {
 			width: 17px;
 			height: 17px;
+
+			@media(max-width: 1366px) {
+				width: 14px;
+				height: 14px;
+				margin-left: 14px;
+			}
+
+			@media(max-width: 1280px) {
+				width: 13px;
+				height: 13px;
+				margin-left: 12px;
+			}
+
+			@media(max-width: 992px) {
+				width: 17px;
+				height: 17px;
+				margin-left: 14px;
+			}
 
 			@media(max-width: 480px) {
 				width: 12px;
@@ -1661,6 +1714,16 @@ html:not(.vi) {
 		display: inline-block;
 		font-size: 0;
 
+		@media(max-width: 1366px) {
+			width: 70px;
+			height: 70px;
+		}
+
+		@media(max-width: 1280px) {
+			width: 66px;
+			height: 66px;
+		}
+
 		&.swiper-button-disabled {
 			cursor: not-allowed;
 			.ui-nav-icon {
@@ -1674,6 +1737,14 @@ html:not(.vi) {
 
 		&:first-child {
 			margin-right: 20px;
+
+			@media(max-width: 1366px) {
+				margin-right: 18px;
+			}
+
+			@media(max-width: 1280px) {
+				margin-right: 16px;
+			}
 		}
 	}
 
@@ -1685,6 +1756,16 @@ html:not(.vi) {
 		width: 32px;
 		height: 32px;
 		fill: $font;
+
+		@media(max-width: 1366px) {
+			width: 28px;
+			height: 28px;
+		}
+
+		@media(max-width: 1280px) {
+			width: 26px;
+			height: 26px;
+		}
 
 		&__prev {
 			transform: translate(-50%, -50%) rotate(180deg);

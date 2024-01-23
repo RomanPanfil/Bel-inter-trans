@@ -499,15 +499,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // })();
 
 
-   // меню навигации по тексту
+  // меню навигации по тексту
   (function() {
     const menuItems = document.querySelectorAll('.item-menu');
     const menuList = document.querySelector('.post-side-navigation-list');
     const navigation = document.querySelector('.post-side-navigation');
 
     const hash = location.hash;
-    const params = new URLSearchParams(location.search);
-    const query = params.toString();
+    let params = new URLSearchParams(location.search);
+    let query = params.toString();
+
+    const spoiler = params.get('spoiler');    
 
     if(!menuItems.length && navigation) {
       navigation.classList.add('hidden');
@@ -533,20 +535,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
       menuList.appendChild(li);
   
-      if(hash && hash.includes('item')) {
+      if(hash && hash.includes('item')) {       
   
         const index = hash.replace('#item', '') - 1;
         
         setTimeout(() => {
           document.querySelectorAll('.post-side-navigation-item')[index].click();
         }, 1000)
-      }      
+      }   
+      
     });
+
+    
+
+    if (spoiler) {
+      const button = document.querySelector(`.ui-btn[data-spoiler="${spoiler}"]`);
+
+      if (button) {
+        const content = button.closest('.station-more').querySelector('.station-more-text');
+
+        setTimeout(() => {
+          const rect = content.getBoundingClientRect();
+          const y = rect.top + window.pageYOffset - 200;
+      
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+          });
+      
+          button.click();
+        }, 1000)
+      }
+    }
+
+    // обновление query при клике на спойлер
+    const buttons =  document.querySelectorAll('.station-more-head .ui-btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        setTimeout(() => {          
+        params = new URLSearchParams(location.search);
+        query = params.toString();
+        }, 1) 
+      })
+    })
   
    
     let currentActive = menuList.querySelector('.active');
 
     document.addEventListener('scroll', () => {
+     
       let nextIndex;
     
       menuItems.forEach((item, index) => {    
@@ -820,9 +857,15 @@ document.addEventListener('DOMContentLoaded', () => {
         clickable: true,        
       },
       breakpoints: {
-        1281: {
+        1367: {
           slidesPerView: 2,
           spaceBetween: 30,
+          autoplay: false,
+          loop: false, 
+        },
+        1141: {
+          slidesPerView: 2,
+          spaceBetween: 20,
           autoplay: false,
           loop: false,          
         }
@@ -847,15 +890,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (content.classList.contains('open')) {
           const textHeight = content.scrollHeight;
           content.style.maxHeight = textHeight + 'px';
-          button.querySelector('span').textContent = 'Свернуть описание';         
+          button.querySelector('span').textContent = 'Свернуть описание';
+          
+          // Добавляем параметр
+          const url = new URL(window.location);
+          url.searchParams.set('spoiler', this.dataset.spoiler);
+          history.pushState(null, null, url);
         } else {
           content.style.maxHeight = 0;
-          button.querySelector('span').textContent = initialText;          
+          button.querySelector('span').textContent = initialText;
+          
+          // Удаляем параметр
+          const url = new URL(window.location);
+          url.searchParams.delete('spoiler');
+          history.pushState(null, null, url);
         }
       });
     })  
 
   })();
+
 
   // открытие и закрытие бургер-меню
   (function() {
