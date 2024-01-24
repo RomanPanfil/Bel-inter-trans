@@ -7131,6 +7131,8 @@ body.sticky-wrap {
 }
 .post-other {
   margin-bottom: 50px;
+  font-size: 0px;
+  font-size: 0rem;
 }
 @media (max-width: 1366px) {
   .post-other {
@@ -7147,10 +7149,19 @@ body.sticky-wrap {
     margin-bottom: 20px;
   }
 }
-.post-other-link {
-  display: inline-block;
+.post-other a {
+  color: #1F2839;
   font-size: 14px;
   font-size: 0.875rem;
+}
+@media (max-width: 480px) {
+  .post-other a {
+    font-size: 12px;
+    font-size: 0.75rem;
+  }
+}
+.post-other-link {
+  display: inline-block;
   border-radius: 24px;
   background-color: #F4F8FF;
   margin-right: 10px;
@@ -7162,8 +7173,6 @@ body.sticky-wrap {
 }
 @media (max-width: 480px) {
   .post-other-link {
-    font-size: 12px;
-    font-size: 0.75rem;
     margin-right: 8px;
     padding: 6px 12px;
     margin-bottom: 8px;
@@ -8861,7 +8870,6 @@ body.sticky-wrap {
 }
 .video-gallery-banner-image {
   border-radius: 20px;
-  background-color: #2861CF;
   overflow: hidden;
   aspect-ratio: 6;
 }
@@ -13223,10 +13231,16 @@ a.contacts-item:hover .contacts-item-text {
 
 .preloader {
   position: fixed;
+  z-index: 999;
+  -webkit-transition: right 0.65s, left 0.65s, top 0.65s, width 0.65s, height 0.65s, opacity 0.8s;
+  -o-transition: right 0.65s, left 0.65s, top 0.65s, width 0.65s, height 0.65s, opacity 0.8s;
+  transition: right 0.65s, left 0.65s, top 0.65s, width 0.65s, height 0.65s, opacity 0.8s;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: #FFFFFF;
   display: none;
   -webkit-box-align: center;
@@ -13235,17 +13249,25 @@ a.contacts-item:hover .contacts-item-text {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 99;
 }
 .preloader.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+
 .preloader video {
   width: 760px;
   height: auto;
   max-width: 100%;
-  margin: 0 auto;
 }
+
+.preloader.move {
+  -webkit-animation: move 0.65s ease-out forwards;
+          animation: move 0.65s ease-out forwards;
+}
+
+@-webkit-keyframes move {}
+
+@keyframes move {}
 /*# sourceMappingURL=sourcemaps/style.css.map */

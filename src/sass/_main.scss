@@ -1651,6 +1651,7 @@ body.sticky-wrap {
 
   &-other {
     margin-bottom: 50px;
+    @include fz(0);
 
     @media(max-width: 1366px) {
       margin-bottom: 40px;
@@ -1664,18 +1665,27 @@ body.sticky-wrap {
       margin-bottom: 20px;
     }
 
-    &-link {
-      display: inline-block;
+    a {
+      color: $font;
       @include fz(14);
+
+      @media(max-width: 480px) {
+        @include fz(12);       
+      }
+    }
+
+    &-link {
+      display: inline-block;      
       border-radius: 24px;
       background-color: $bg-blue-light;
       margin-right: 10px;
       padding: 8px 16px;
       margin-bottom: 10px;
-      transition: background-color 0.3s, color 0.3s;
+      transition: background-color 0.3s, color 0.3s;      
 
-      @media(max-width: 480px) {
-        @include fz(12);
+      
+
+      @media(max-width: 480px) {       
         margin-right: 8px;
         padding: 6px 12px;
         margin-bottom: 8px;
@@ -3261,8 +3271,7 @@ body.sticky-wrap {
     }
 
     &-image {
-      border-radius: 20px;
-      background-color: $primary;
+      border-radius: 20px;     
       overflow: hidden;
       // height: 290px;
       aspect-ratio: 6;
@@ -7026,26 +7035,80 @@ a.contacts-item {
 }
 
 // preloader
+// .preloader {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background-color: $bgc;
+//   display: none;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 99;
+
+//   &.active {
+//     display: flex;
+//   }
+
+//   video {
+//     width: 760px;
+//     height: auto;
+//     max-width: 100%;
+//     margin: 0 auto;
+//   }
+// }
+
+
 .preloader {
-  position: fixed;
+  position: fixed; 
+  z-index: 999; 
+  transition: right 0.65s, left 0.65s, top 0.65s, width 0.65s, height 0.65s, opacity 0.8s;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: $bgc;
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 99;
 
   &.active {
     display: flex;
   }
+}
 
-  video {
-    width: 760px;
-    height: auto;
-    max-width: 100%;
-    margin: 0 auto;
+.preloader video {
+  width: 760px;
+  height: auto;
+  max-width: 100%;
+}
+
+.preloader.move {
+  animation: move 0.65s ease-out forwards;      
+}
+
+@keyframes move {
+  0% {
+  //   left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%); 
+  // background-color: transparent;
+  // width: max-content;
+  // height: max-content;
+  }
+
+  25% {
+    // background-color: red; 
+    // transform: translate(0%);   
+    // background-color: transparent;
+  }
+  100% {
+  //  width: max-content;
+  //  height: max-content;
+  // transform: translate(0%);  
+  
   }
 }
