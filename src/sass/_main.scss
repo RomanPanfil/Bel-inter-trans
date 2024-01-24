@@ -1668,6 +1668,7 @@ body.sticky-wrap {
     a {
       color: $font;
       @include fz(14);
+      line-height: 1;  
 
       @media(max-width: 480px) {
         @include fz(12);       
@@ -1679,11 +1680,9 @@ body.sticky-wrap {
       border-radius: 24px;
       background-color: $bg-blue-light;
       margin-right: 10px;
-      padding: 8px 16px;
+      padding: 10px 16px;
       margin-bottom: 10px;
-      transition: background-color 0.3s, color 0.3s;      
-
-      
+      transition: background-color 0.3s, color 0.3s;
 
       @media(max-width: 480px) {       
         margin-right: 8px;
