@@ -2251,7 +2251,7 @@ body.sticky-wrap {
 
   td {
     padding: 20px;
-    min-width: 140px;
+    // min-width: 140px;
     line-height: 1.2;
     vertical-align: top;
 
@@ -2273,9 +2273,9 @@ body.sticky-wrap {
 
     }
 
-    &:first-child {
-      width: 320px;
-    }
+    // &:first-child {
+    //   width: 320px;
+    // }
   }
 
   &-image {

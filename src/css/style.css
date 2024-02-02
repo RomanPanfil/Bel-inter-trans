@@ -7715,7 +7715,6 @@ body.sticky-wrap {
 }
 .article td {
   padding: 20px;
-  min-width: 140px;
   line-height: 1.2;
   vertical-align: top;
 }
@@ -7737,9 +7736,6 @@ body.sticky-wrap {
 }
 .article td:not(:last-child) {
   border-right: 1px solid #E3E8F2;
-}
-.article td:first-child {
-  width: 320px;
 }
 .article-image {
   border-radius: 20px;
