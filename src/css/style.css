@@ -13233,9 +13233,9 @@ a.contacts-item:hover .contacts-item-text {
 .preloader {
   position: fixed;
   z-index: 999;
-  -webkit-transition: right 0.65s, left 0.65s, top 0.65s, width 0.65s, height 0.65s, opacity 0.8s;
-  -o-transition: right 0.65s, left 0.65s, top 0.65s, width 0.65s, height 0.65s, opacity 0.8s;
-  transition: right 0.65s, left 0.65s, top 0.65s, width 0.65s, height 0.65s, opacity 0.8s;
+  -webkit-transition: right 0.8s, left 0.8s, top 0.8s, width 0.8s, height 0.8s, opacity 0.9s, background-color 2s;
+  -o-transition: right 0.8s, left 0.8s, top 0.8s, width 0.8s, height 0.8s, opacity 0.9s, background-color 2s;
+  transition: right 0.8s, left 0.8s, top 0.8s, width 0.8s, height 0.8s, opacity 0.9s, background-color 2s;
   top: 0;
   left: 0;
   right: 0;
@@ -13256,6 +13256,26 @@ a.contacts-item:hover .contacts-item-text {
   display: -ms-flexbox;
   display: flex;
 }
+.preloader-video {
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity 0.8s;
+  -o-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+}
+.preloader-image {
+  display: none;
+  opacity: 0;
+  width: 760px;
+  height: auto;
+  max-width: 100%;
+  -webkit-transform: translateY(-48%);
+      -ms-transform: translateY(-48%);
+          transform: translateY(-48%);
+  -webkit-transition: opacity 0.8s;
+  -o-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+}
 
 .preloader video {
   width: 760px;
@@ -13266,6 +13286,15 @@ a.contacts-item:hover .contacts-item-text {
 .preloader.move {
   -webkit-animation: move 0.65s ease-out forwards;
           animation: move 0.65s ease-out forwards;
+  background-color: transparent;
+}
+.preloader.move .preloader-video {
+  display: none;
+  opacity: 0;
+}
+.preloader.move .preloader-image {
+  display: block;
+  opacity: 1;
 }
 
 @-webkit-keyframes move {}

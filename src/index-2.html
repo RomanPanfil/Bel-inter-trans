@@ -225,7 +225,7 @@
         </div>
     </a> -->
     <main class="main">
-        <a href="#" class="actual">
+        <!-- <a href="#" class="actual">
             <div class="container">
               <div class="row valign-center">
                 <div class="col-lg-2 hidden-mobile">
@@ -253,7 +253,7 @@
                 </div>
               </div>
             </div>
-        </a>
+        </a> -->
       <div class="main-block">
         <div class="container">
           <h1 class="main-title">
@@ -1372,6 +1372,138 @@
         </div>        
       </div>
     </div>
+
+
+    <!-- preloader start -->
+    <div class="preloader">
+      <div class="container">
+        <video src="./media/5.mp4" playsinline muted autoplay preload="auto" lass="preloader-video"></video> 
+        <img src="./images/logo.svg" alt="logo" loading="lazy" class="preloader-image"> 
+      </div>
+    </div>
+    
+    <script>
+          let preloader = document.querySelector('.preloader');
+          
+          // function setCookie(name,value,days) {
+          //   let date = new Date(Date.now() + days*86400000).toUTCString();
+          //   document.cookie = name +'='+ value +'; path=/; expires=' + date;
+          // }
+
+          function setCookie(name, value, exp_y, exp_m, exp_d, path, domain, secure) {
+            let cookie_string = name + "=" + escape(value);
+          
+            if (exp_y)
+            {
+              let expires = new Date(exp_y, exp_m, exp_d);
+              cookie_string += "; expires=" + expires.toGMTString();
+            }
+          
+            if (path)
+              cookie_string += "; path=" + escape(path);
+          
+            if (domain)
+              cookie_string += "; domain=" + escape(domain);
+          
+            if (secure)
+              cookie_string += "; secure";
+          
+            document.cookie = cookie_string;
+          }
+
+          function getCookie(name) {
+            let matches = document.cookie.match(new RegExp(
+              "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+          }
+
+          // Проверка наличия куки
+          let preloaderCookie = getCookie('preloader');
+
+          if(!preloaderCookie) {
+            // показ прелоадера
+            document.querySelector('.preloader').classList.add('active')
+
+            // установка куки
+            setCookie('preloader', 'shown');
+
+            // запуск анимации 
+            setTimeout(() => {          
+                moveVideo();            
+            }, 5500);
+            
+
+          } else {
+            document.querySelector('.preloader').remove
+          }
+
+
+         function moveVideo() {
+          let preloader = document.querySelector('.preloader');  
+          let video = document.querySelector('.preloader video');
+          let image = document.querySelector('.preloader-image')
+          let logo = document.querySelector('.header-logo');
+
+          let logoCoords = logo.getBoundingClientRect();  
+
+          document.querySelector('.preloader').classList.add('move');
+
+          video.style.opacity = '0';
+          logo.style.opacity = '0';
+          
+          
+          setTimeout(() => {
+            let preloader = document.querySelector('.preloader');  
+            let video = document.querySelector('.preloader video');
+            let logo = document.querySelector('.header-logo');
+
+            let styles = getComputedStyle(logo);
+            let width = parseInt(styles.width);
+            let height = parseInt(styles.height);
+            
+            let logoPos = logo.getBoundingClientRect();
+
+            let scrollTop = document.documentElement.scrollTop;
+            let scrollLeft = document.documentElement.scrollLeft;
+            
+            // через 300мс удаляем
+            setTimeout(() => {
+              preloader.style.left = Math.round(logoPos.left + scrollLeft) + 'px';
+              preloader.style.top = Math.round(logoPos.top + scrollTop) + 'px';
+              preloader.style.opacity = '0';
+          
+            
+              preloader.style.bottom = 'unset';
+              preloader.style.right = 'unset';
+
+              preloader.style.width = width + 'px';
+              preloader.style.height = height + 'px';
+
+              video.style.width = width + 'px';
+              video.style.height = height + 'px';
+              video.style.display = 'none';
+
+              setTimeout(() => {
+                logo.style.opacity = '1';
+              }, 600)
+  
+              window.scrollTo(0, 0);
+            }, 300);      
+
+          }, 350); // время анимации
+
+          setTimeout(() => {          
+            preloader.remove();            
+          }, 6000);
+        }
+
+
+
+
+        
+        </script>
+    <!-- preloader end -->
   </div>
 
 

@@ -7062,7 +7062,7 @@ a.contacts-item {
 .preloader {
   position: fixed; 
   z-index: 999; 
-  transition: right 0.65s, left 0.65s, top 0.65s, width 0.65s, height 0.65s, opacity 0.8s;
+  transition: right 0.8s, left 0.8s, top 0.8s, width 0.8s, height 0.8s, opacity 0.9s, background-color 2s;
   top: 0;
   left: 0;
   right: 0;
@@ -7077,6 +7077,22 @@ a.contacts-item {
   &.active {
     display: flex;
   }
+
+  &-video {
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.8s;
+  }
+
+  &-image {
+    display: none;
+    opacity: 0;
+    width: 760px;
+    height: auto;
+    max-width: 100%;
+    transform: translateY(-48%);
+    transition: opacity 0.8s;
+  }
 }
 
 .preloader video {
@@ -7086,7 +7102,18 @@ a.contacts-item {
 }
 
 .preloader.move {
-  animation: move 0.65s ease-out forwards;      
+  animation: move 0.65s ease-out forwards;   
+  background-color: transparent;
+
+  .preloader-video {
+    display: none;
+    opacity: 0;
+  }
+  
+  .preloader-image {
+    display: block;
+    opacity: 1;   
+  }
 }
 
 @keyframes move {
@@ -7107,7 +7134,7 @@ a.contacts-item {
   100% {
   //  width: max-content;
   //  height: max-content;
-  // transform: translate(0%);  
+  // transform: translate(0%);
   
   }
 }

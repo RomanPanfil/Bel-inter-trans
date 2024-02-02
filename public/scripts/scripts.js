@@ -973,6 +973,11 @@ document.addEventListener('DOMContentLoaded', () => {
       li.addEventListener('click', (event) => {
         let target = event.target;
 
+        const a = li.querySelector('a');
+        if (a && a.querySelector('svg')) {
+          event.preventDefault();
+        }
+
         if (target.tagName === 'A' && target.querySelector('svg')) {
           event.preventDefault();
         }
