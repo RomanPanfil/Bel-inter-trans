@@ -1204,21 +1204,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   const preloader = document.querySelector('.preloader');
+  let logo = document.querySelector('.header-logo');
 
   if(!preloader) return;
   
   const endPreloader = () => {
-    if(preloader) {     
+    if(preloader) {          
+      logo.style.opacity = '0';
+      logo.style.transform = 'scale(0)';
+
       clearTimeout(preload_timeout);
       window.removeEventListener('load', endPreloader); 
+
+      setTimeout(() => {    
+        preloader.style.opacity = '0';
+        // preloader.style.transform = 'scale(0)';
+      }, 3500);
   
-      setTimeout(() => {
-          preloader.classList.remove('active');
-      }, 6000);
+      setTimeout(() => {    
+        preloader.classList.remove('active');
+      }, 4000);
   
       setTimeout(() => {
         preloader.remove();
-      }, 6500);
+        logo.style.opacity = '1';
+        logo.style.transform = 'scale(1)'; 
+      }, 4500);
     }
   };
   
@@ -1233,7 +1244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', function() {
       preloader.remove()
     });
-  }
+  }     
 
 });
 
