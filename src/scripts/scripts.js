@@ -1207,6 +1207,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let logo = document.querySelector('.header-logo');
 
   if(!preloader) return;
+ 
+  let preVideo = document.getElementById("preloader");
+  if (preVideo) {
+    preVideo.muted = true;
+    preVideo.play();
+  } 
   
   const endPreloader = () => {
     if(preloader) {          
