@@ -1208,11 +1208,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if(!preloader) return;
  
-  let preVideo = document.getElementById("preloader");
+  let preVideo = document.getElementById("preloader"); 
+
   if (preVideo) {
-    preVideo.muted = true;
-    preVideo.play();
-  } 
+    preVideo.oncanplay = () => {
+      preVideo.muted = true;
+      preVideo.play();
+    };
+  }
   
   const endPreloader = () => {
     if(preloader) {          
