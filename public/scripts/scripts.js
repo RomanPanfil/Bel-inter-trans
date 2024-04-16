@@ -578,34 +578,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1) 
       })
     })
-  
-   
-    let currentActive = menuList.querySelector('.active');
 
-    document.addEventListener('scroll', () => {
-     
-      let nextIndex;
+    let currentActive = menuList.querySelector('.active');
+    const menuOffset = menuList.getBoundingClientRect().top;
     
-      menuItems.forEach((item, index) => {    
+    document.addEventListener('scroll', () => {
+      let nextIndex;
+      menuItems.forEach((item, index) => {
         const rect = item.getBoundingClientRect();
-        
-        if(rect.top < 130) {
+        if (rect.top - menuOffset < 130) {
           nextIndex = index;
-        }    
+        }
       });
     
-      if(nextIndex !== undefined) {        
+      if (nextIndex !== undefined) {
         currentActive.classList.remove('active');
-        
         const nextActive = menuList.children[nextIndex];
         nextActive.classList.add('active');
-        
         currentActive = nextActive;
-
-        const url = `${location.pathname}` + (query ? `?${query}` : '') +  `#item${nextIndex+1}`;
-        history.pushState(null, '', url);        
-      }    
-    });  
+        const url = `${location.pathname}${query ? `?${query}` : ''}#item${nextIndex + 1}`;
+        history.pushState(null, '', url);
+      }
+    });
   })();
 
   // копирование ссылки на станцию
