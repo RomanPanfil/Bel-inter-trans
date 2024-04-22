@@ -870,22 +870,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // открытие спойлера
   (function() {
     const buttons = document.querySelectorAll('.station-more-head .ui-btn');
-
     buttons.forEach(button => {
-      const initialText = button.querySelector('span').textContent;      
-
-      button.addEventListener("click", function() { 
+      const initialText = button.querySelector('span').textContent;
+      button.addEventListener("click", function() {
         const content = this.closest('.station-more').querySelector('.station-more-text');
         const icon = this.querySelector('.ui-btn-icon');
-      
+        const parentItem = this.closest('.station-item');
         content.classList.toggle("open");
-        icon.classList.toggle("open");        
-
+        icon.classList.toggle("open");
+  
         if (content.classList.contains('open')) {
           const textHeight = content.scrollHeight;
           content.style.maxHeight = textHeight + 'px';
           button.querySelector('span').textContent = 'Свернуть описание';
-          
           // Добавляем параметр
           const url = new URL(window.location);
           url.searchParams.set('spoiler', this.dataset.spoiler);
@@ -893,15 +890,22 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           content.style.maxHeight = 0;
           button.querySelector('span').textContent = initialText;
-          
           // Удаляем параметр
           const url = new URL(window.location);
           url.searchParams.delete('spoiler');
           history.pushState(null, null, url);
+  
+          // Прокручиваем страницу на 130px выше верха родителя .station-item
+          setTimeout(() => {
+            const parentTop = parentItem.getBoundingClientRect().top + window.pageYOffset - 130;
+            window.scrollTo({
+              top: parentTop,
+              behavior: 'smooth'
+            });
+          }, 100);
         }
       });
-    })  
-
+    })
   })();
 
 
